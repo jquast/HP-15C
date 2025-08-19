@@ -3,15 +3,25 @@ Jeff's Own HP-15C Simulator
 
 This is a fork of the `HP-15C <https://hp-15c-simulator.de/>`_ to fix one single bug: that keyboard input is lost.
 
+The bug
+=======
+
 From Torsten's `FAQ <https://hp-15c-simulator.de/FAQ>`_:
 
    > If I rapidly type a sequence of numbers, the entered keyboard number(s) are ignored. For example, if I type 123 quickly, the 2 is missed and I get 13 on the display.
 
-   >  While a key on the computer keyboard is being pressed, all other key presses are ignored. When you pressed the , you were still holding down the . This is exactly how the real HP-15C behaves. 
+   >  While a key on the computer keyboard is being pressed, all other key presses are ignored. When you pressed the 2️⃣, you were still holding down the 1️⃣. This is exactly how the real HP-15C behaves.
 
-I reached out to Torsten Manz in many successive e-mails, but he strongly suggests that, although he gets several requests to fix it, that it is an intentional design for exacting emulated behavior and is not a priority to be fixed.
+I reached out to Torsten Manz in many successive e-mails to explain in detail that the TCL/TK discarding rapid successive inputs is a bug, but he strongly suggests that although he gets several requests to fix it, that it is working as designed, it is a more exacting emulated behavior of the HP-15C, and it is not a priority to be fixed.
 
-I suggest that a calculator should discarding keyboard input when users are typing too quickly, that it is a high priority bug that should be addressed, and is the purpose of this fork.
+I suggest that a calculator should NEVER discard keyboard input when typed "too quickly", causes miscalculations, and should be considered a **high priority bug and not a feature**.
+
+The Feature
+===========
+
+Further, after studying the source code I believe the emulated behavior of blocking *subsequent* keys 30ms after any keypress is also a bug, that this behavior is not found in the real calculator, and that the TCL/TK code by Mr. Torsten makes an incorrect determination of converting rapid simultanous keypresses into blocking multi-presses as suggested.
+
+On a Genuine HP-12C I can slowly press down 1️⃣, and while still holding it down, press and hold down 2️⃣. Then, release 1️⃣ and 2️⃣ in that order. I do not belive that a genuine HP-15C will be any different when done quickly.
 
 Installing
 ==========
@@ -19,13 +29,6 @@ Installing
 No binary distributions are released, run the source directly, for example::
 
     tclsh HP-15.tcl
-
-This is just a copy of the source code, Version 5.0.01, provided for your
-convenience. You may also attempt to apply the patch,
-`bugfix-HP-15C-keystrokes-lost.patch <bugfix-HP-15C-keystrokes-lost.patch>`_ to
-any later version. The fix is described below, it moves the placement of a
-closing brace, and changes a 30ms timer to 10.
-
 
 Bug Details
 ===========
