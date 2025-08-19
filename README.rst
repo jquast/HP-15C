@@ -31,11 +31,6 @@ very rapidly without loss, displayed in this video:
 
 .. image:: HP-15CsimImproved.gif
 
-This repository is a full copy of the source code, Version 5.0.01, with the
-patch applied for your convenience. You may also attempt to apply the patch file
-`bugfix-HP-15C-keystrokes-lost.patch <bugfix-HP-15C-keystrokes-lost.patch>`_ to
-any later version.
-
 A Feature, really?
 ==================
 
@@ -59,12 +54,6 @@ No binary distributions are released, run the source directly, for example::
 
 Details of Bugfix
 =================
-
-With the bugfix applied in this repository, keystrokes are not lost.
-
-A video of numbers '3' and '1' typed very rapidly, in succession:
-
-.. image:: HP-15CsimImproved.gif
 
 The fix is described below,
 
