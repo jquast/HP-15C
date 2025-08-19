@@ -3,8 +3,9 @@ Jeff's Own HP-15C Simulator
 
 This is a fork of the `HP-15C <https://hp-15c-simulator.de/>`_ to fix one single bug: that keyboard input is lost.
 
-The bug
-=======
+In this Video, numbers 3 and 1 are typed, but the number '1' is discarded.
+
+.. image:: HP-15CsimOrig.gif
 
 From Torsten's `FAQ <https://hp-15c-simulator.de/FAQ>`_:
 
@@ -30,8 +31,14 @@ No binary distributions are released, run the source directly, for example::
 
     tclsh HP-15.tcl
 
-Bug Details
-===========
+Details of Bugfix 
+=================
+
+In this Video, with bugfix applied, numbers 3 and 1 are typed very rapidly without loss:
+
+.. image:: HP-15CsimImproved.gif
+
+The fix is described below,
 
 ::
 
@@ -68,6 +75,11 @@ Bug Details
      Cheers,
      Jeff Quast
      contact@jeffquast.com
+
+This repository is a full copy of the source code, Version 5.0.01,
+provided for your convenience. You may also attempt to apply the patch,
+`bugfix-HP-15C-keystrokes-lost.patch <bugfix-HP-15C-keystrokes-lost.patch>`_ to
+any later version.
 
 Licensing
 =========
