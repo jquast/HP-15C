@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="formats/layout.css">
+  <link rel="stylesheet" type="text/css" href="formats/formats.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HP-15C: Preferences</title>
+</head>
+<body>
+<div class="sidenav">
+
+  <div id="logo_frame">
+    <div id="logo" style="text-align:center;">
+      <a href="index.html"><img src="images/HP-15C_small.png" title="Home" width="116" height="81" alt="HP-15C_small.png 116x81" style="padding-top: 10px; border-width:0"></a><br>
+      <span style="font-size:75%; color:#6CB7BD;">Version 5.0.01, Build 6512</span>
+    </div>
+  </div>
+  <div id="navigation_frame">
+  <div id="navigation">
+    <a href="introduction.html" class="Content1">Introduction</a><br>
+    <br>
+    <a href="usage.html" class="Content1">Usage</a><br>
+    <br>
+    <a href="programs.html" class="Content1">Programs</a><br>
+    <br>
+    <a href="menus.html" class="Content1">Menus</a><br>
+    <br>
+    <a href="keyboard.html" class="Content1">Keyboard</a><br>
+    <br>
+    <a href="devices.html" class="Content1">Devices</a><br>
+    <br>
+    <a href="preferences.html" class="Content1">Preferences</a><br>
+      <div class="Content2">
+        <a href="preferences.html#simulator">Simulator</a><br>
+        <a href="preferences.html#menus">Menus</a><br>
+        <a href="preferences.html#files">Files</a><br>
+        <a href="preferences.html#devices">Devices</a><br>
+        <a href="preferences.html#fonts">Fonts</a><br>
+        <a href="preferences.html#browser">Help File Browser</a><br>
+      </div>
+    <br>
+    <a href="FAQ.html" class="Content1">FAQ</a><br>
+    <br>
+    <a href="links.html" class="Content1">Links</a><br>
+    </div>
+  </div>
+  <div id="contact_frame_1">
+    <div class="contact">
+    &copy; 2025 Torsten Manz
+    <a href="mailto:info@HP-15C-Simulator.de" title="Write an email to the author.">
+      <img src="images/mail_logo.gif" width="20" height="14" alt="mail_logo.gif 20x14" style="border-width:0; vertical-align: top;">
+    </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="contnav">
+
+  <div id="header_border">
+    <div id="header_frame">
+      <div id="header" style="text-align:center;">
+        <span style="font-size:200%;font-weight:bold;color:#545454;">HP-15C Simulator</span>
+        <br><br>
+        <span style="font-size:150%;font-weight:bold;">For Windows, Linux and macOS</span>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <h1><a id="preferences">Preferences</a></h1>
+    <p>
+    The Preferences dialogue box allows you to modify the Simulator parameters.
+    It can be found in the <span class="KeyLabel">ON</span> popup menu: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">O</span>
+    "Preferences&#8230;".
+    <p>
+    Press "OK" or "Apply" to activate the new settings for the current session.
+    The settings are not saved on the hard disk and will not become permanent until you save the current session. If you have unchecked
+    "Save on exit" (see below), you must save the current session manually by pressing
+    <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">M</span>.
+    <p>
+    The following items can be set in the dialogue box. Default values are used if no memory file is found on startup.
+
+    <h2><a id="simulator">Simulator</a></h2>
+    <ul>
+      <li><strong>Strict HP-15C behaviour</strong>
+      <p>
+      The real HP-15C stores numbers internally with 10 digits, and rounds each result to the 10th digit. The Tcl/Tk interpreter
+      stores numbers in the IEEE-754 format with 17 digits and a different rounding mechanism. When this option is enabled, the
+      number of relevant digits is set to 10 and each number is rounded to the 10th digit.
+      <p>
+      The following calculation shows the effect of the two settings:
+      <div style="margin-left:20px">
+      <p>
+      <span class="fKey">f</span> <span class="fKeyLabel">FIX</span> <span class="KeyLabel">9</span>
+      <p>
+      <span class="KeyLabel">2</span> <span class="KeyLabel">ENTER</span> <span class="KeyLabel">3</span>
+      <span class="KeyLabel">&divide;</span>
+      <p>
+      <span class="KeyLabel">0</span> <span class="KeyLabel">.</span> <span class="KeyLabel">6</span> <span class="KeyLabel">6</span>
+      <span class="KeyLabel">&#8722;</span>
+      <p>
+      <span class="KeyLabel">1</span> <span class="KeyLabel">0</span> <span class="KeyLabel">0</span> <span class="KeyLabel">0</span>
+      <span class="KeyLabel">&#215;</span>
+      </div>
+      <p>
+      Result with "Strict HP-15C behaviour" enabled (10 digit precision):
+      <p>
+      <img class="Image" src="images/prefs_strict_hp15c_on.png" width="310" height="70" alt="Strict HP-15C behaviour ON">
+      <p>
+      Result with "Strict HP-15C behaviour" disabled (17 digit precision):
+      <p>
+      <img class="Image" src="images/prefs_strict_hp15c_off.png" width="310" height="70" alt="Strict HP-15C behaviour OFF">
+      <p>
+      In the second case, the number is only rounded to the last digit on the display. Internally the number is stored as
+      <code>6.666666666666599</code>, giving full precision. For more information, see the section on number encoding in the
+      <a href="#differences" class="internal">Differences</a> section.
+      <p>
+      Default: Off
+      </li>
+
+      <li><strong>HP-15C digit separators after reset</strong>
+      <p>
+      By default, e.g. after a reset, the Simulator separates the integral and the fractional parts of a number with a comma,
+      and separates groups of three digits in the integer part with a period (a decimal point).
+      <p>
+      On the original HP-15C from HEWLETT-PACKARD the digit separators were the other way round. When this option is checked
+      the Simulator behaves like the original HP-15C. Even after a reset.
+      <p>
+      Default: oFF
+      </li>
+
+      <li><strong>Pause length</strong>
+      <p>
+      Time in milliseconds that a program pauses during execution when it encounters a
+      <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">PSE</span> statement. The valid range is 0 to 2000.
+      <p>
+      This is also the time the display update is delayed after the last key is released in <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">PREFIX</span>,
+      <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span> and <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">i</span>.
+      <p>
+      Default: 1000
+      </li>
+
+      <li><strong>Delay value</strong>
+      <p>
+      Time in milliseconds that a program pauses after <em>each</em> statement. A value of around 100 gives a good idea of the
+      performance of the real HP-15C. A value of 0 will give maximum performance. The valid range is 0 to 999.
+      <p>
+      Default: 0
+      </li>
+
+      <li id="fgdirectly"><strong>Access "f" and "g" functions directly</strong>
+      <p>
+      If this option is enabled, you can click directly on the gold and blue secondary functions. You do not need to press or
+      click <span class="fKey">f</span> or <span class="gKey">g</span> first. If disabled, the gold functions cannot be
+      clicked and clicking on a blue function is the same as clicking on the main key function.
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Highlight functions</strong>
+      <p>
+      This option enables mouse-over effects for the blue and gold labels, when direct access to the <span class="fKey">f</span>
+      and <span class="gKey">g</span> functions is enabled.<br>
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Key sequence indicator</strong>
+      <p>
+      The key sequence indicator is a small black square in the lower left corner of the display. It indicates an
+      incomplete sequence. For example, if you press <span class="KeyLabel">STO</span>, the indicator will light up. If you now
+      press <span class="KeyLabel">7</span> the indicator goes out, because the key sequence is complete. If instead, you continue
+      with the <span class="KeyLabel">+</span> key, the indicator remains on. The Simulator is still waiting for the
+      number of the storage register.
+      <p>
+      The key sequence indicator is disabled during program execution.
+      <p>
+      This function is inspired by the similar function on the DM15/DM15L from SwissMicros.
+      <p>
+      Default: Off
+      </li>
+
+      <li><strong>Save memory on exit</strong>
+      <p>
+      If selected, the continuous memory is activated. When you exit the Simulator, the state will be saved to disk.<p>
+      If you uncheck this option, you will have to save the memory manually to make the new setting permanent!<p>
+      Default: On
+      </li>
+
+      <li><strong>Use "C locale" for clipboard</strong>
+      <p>
+      When this option is selected, a period is used as decimal point in the clipboard. This setting is independent of the
+      current display settings for the decimal point and the digit separator.
+      <p>
+      Default: Off
+      </li>
+
+      <li><strong>Copy program when in PRGM mode</strong>
+      <p>
+      By default, pressing <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">C</span> copies the contents of the
+      <span class="register">X</span> register to the clipboard. If this option is enabled and the Simulator is in PRGM mode,
+      <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">C</span> copies the program code to the clipboard instead.
+      <p>
+      Default: Off
+      </li>
+      <li><strong>Save window position</strong>
+      <p>
+      The last window position of the simulator is saved when set. The simulator will open at this position, the next time it
+      is started.<br>
+      If the simulator window is not fully visible at the old position, the value is ignored. The simulator is then placed by
+      the operating system's window manager.
+      <p>
+      Default: Off
+      </li>
+    </ul>
+
+    <p style="text-align:right"><a href="#simulator" class="internal">&#9664; Simulator</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="menus">Menus</a></h2>
+    <ul>
+      <li><strong>Show menu</strong>
+      <p>
+      On Windows and Linux, this activates a menu bar at the top of the simulator window.<br>
+      On macOS, the menu bar at the top of the screen is always active.
+      <p>
+      Default: Off (always checked under macOS)
+      </li>
+
+      <li><strong>Native macOS popup menus</strong>
+      <p>
+      Earlier versions of Tcl/Tk did not allow fixed-width fonts in popup menus under macOS; a feature needed for the simulator
+      popup menus. Newer combinations of Tcl/Tk and macOS; no longer have this limitation and native popup menus are now used by
+      default. Disable this option if you experience problems with the stack and the
+      memory popup menus.
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Number of recent programs</strong>
+      <p>
+      The number of entries in the recent programs submenu. The valid range is between 10 and 30.
+      <p>
+      Default: 10
+      </li>
+
+      <li><strong>Show full path</strong>
+      <p>
+      When this option is selected, the full path of a recently used program is displayed in the submenu. If not selected, only
+      the base filename is displayed
+      <p>
+      Default: Off
+      </li>
+
+      <li><strong>Program mnemonics</strong>
+      <p>
+      If this option is enabled, the program steps are displayed as mnemonics in the popup menu
+      (<span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">S</span>). If disabled, the program steps are displayed with
+      their key codes. Note that this setting has no effect on the display.
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Coloured program menu</strong>
+      <p>
+      When this option is selected, the following commands are displayed in colour in the program popup menu: <span class="fKeyLabel">LBL</span>, <span class="gKeyLabel">RTN</span>,
+      <span class="KeyLabel">GTO</span> and <span class="KeyLabel">GSB</span>.
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Lines per column in program menu</strong>
+      <p>
+      The program popup menu displays the program steps in a multi-column format. This value defines the number
+      of program steps per column. The valid range is between 10 and 50.
+      <p>
+      Default: 30
+      </li>
+
+      <li><strong>Register and label addresses with decimal point</strong>
+      <p>
+      This option controls how addresses of storage registers and labels between 10 and 19 are displayed. If enabled, the address
+      is formatted with a decimal point, e.g. <code>,0</code> or <code>.0</code>, and if disabled, as a two-digit integer, e.g. <code>10</code>.<br>
+      <p>
+      This option changes the format in the following situations:
+      <ul>
+      <li>Storage register menu</li>
+      <li>Program menu (if mnenomics are enabled)</li>
+      <li>GSB menu</li>
+      <li>Documentation dialogue</li>
+      <li>HTML export</li>
+      </ul>
+      <p>
+      Default: Off
+      </li>
+
+      <li><strong>Two-column storage menu</strong>
+      <p>
+      By default, the storage popup menus display the available data storage registers in two columns.
+      Deselect this setting if you want the storage menus to display all the data storage registers in one column.
+      <p>
+      <strong>macOS:</strong> This option has has no effect when "<strong>Native macOS popup menus</strong>"
+      (see below) is enabled.  macOS does not allow multi-column popup menus.
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Storage register descriptions</strong>
+      <p>
+      The storage register description from a loaded program can be displayed in the storage menus. Only the first 25 characters
+      of a description are used.
+      <p>
+      Default: Off
+      </li>
+
+      <li><strong>Sort labels in GSB menu</strong>
+      <p>
+      This controls whether the labels in the GSB menu are sorted or whether they appear in the order in which they occur in the program.
+      If the labels are sorted, the letter labels are sorted before the number labels.
+      <p>
+      Default: Off
+      </li>
+
+      <li><strong>Matrix notation</strong>
+      <p>
+      Two different styles are available for the matrix content menus: One with row and column headings like in a spreadsheet and one with the
+      "row,column" information before each matrix element.
+      <p>
+      Default: Rows/Columns
+      </li>
+
+      <li><strong>Matrix separator</strong>
+      <p>
+      When a matrix descriptor is in the display, pressing <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">C</span>
+      copies the contents of the matrix to the clipboard. One line for each row and the elements of a row are separated by the selected
+      separator.<br>
+      Be careful to select the "comma" separator as it may conflict with the thousands separator or the decimal point.
+      <p>
+      Default: Semicolon
+      </li>
+
+      <li><strong>Matrix submenus in stack menu</strong>
+      <p>
+      A matrix item in the stack menu can be either a submenu button or just a label. In the case of a submenu button, moving
+      the mouse over the button opens a submenu with the contents of the matrix.
+      <p>
+      <strong>macOS:</strong> This only works if "Native macOS popup menus" are enabled.<br>
+      <strong>Windows, Linux:</strong> If matrix submenus are enabled, clicking on an item, e.g.
+      "<code>y: &nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;2&nbsp;&#9654;</code>, does <em>not</em> scroll down the stack.
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Language</strong>
+      <p>
+      This option controls the language used for menus and pop-ups. By default, the system language is used. If this language is
+      not supported, British English is selected. The new setting is active immediately, except for the Preferences dialogue box.
+      This dialogue box will use the new language the next time it is opened.
+      <p>
+      Default: System
+      </li>
+    </ul>
+
+    <p style="text-align:right"><a href="#menus" class="internal">&#9664; Menus</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="files">Files</a></h2>
+    <h3>HP-15C Programs</h3>
+    <ul>
+      <li><strong>Encode programs in UTF-16 (LE)</strong>
+      <p>
+      By default, the program files are encoded in UTF-16 (LE). Disable this option to encode them using the system default encoding.<br>
+      Note that HTML exports are always encoded in UTF-8.
+      <p>
+      Default: On
+      </li>
+      <li><strong>Confirm overwrite</strong>
+      <p>
+      Defines the behaviour of the Save Program dialogue box if the selected file already exists.
+      If enabled, the dialogue box will ask for confirmation before overwriting the existing file. If disabled, the file is
+      overwritten without confirmation.
+      <p>
+      Default: On
+      </li>
+    </ul>
+
+    <h3>HTML Files</h3>
+    <ul>
+      <li><strong>Structure in English</strong>
+      <p>
+      This setting determines the language used for HTML headings (<code>&lt;h#&gt;</code>), such as "Program Title", "Usage",
+      etc., when exporting a program to an HTML file. If this option is selected, British English is used; if the option
+      is unchecked, the currently selected menu language is used.<br>
+      This also sets a period as the decimal separator and a comma as the thousands separator.
+      <p>
+      This setting has no effect on the text of the program description itself.
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Indent subroutines</strong>
+      <p>
+      If this option is enabled, subroutines are indented in the HTML export to show the program structure. The start of
+      a subroutine, i.e. <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">LBL</span> followed by
+      <span class="fKeyLabel">A</span>…<span class="fKeyLabel">E</span>,
+      <span class="KeyLabel">0</span>…<span class="KeyLabel">9</span> or
+      <span class="KeyLabel">.</span>&thinsp;<span class="KeyLabel">0</span>…<span class="KeyLabel">.</span>&thinsp;<span class="KeyLabel">9</span>
+      and the return command <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">RTN</span> are not indented.
+      <p>
+      Default: On
+      </li>
+
+      <li id="missingdocu"><strong>Warn on missing documentation</strong>
+      <p>
+      If this option is enabled, a warning message is displayed if you export a file as HTML and one of the following elements is empty:
+      <ul>
+      <li>Program</li>
+      <li>Program Title</li>
+      <li>Usage</li>
+      </ul>
+      <p>
+      Default: On
+      </li>
+      <li><strong>Single-column program listing</strong>
+      <p>
+      By default, the program listing uses one column for programs with up to 25 steps, two columns for programs with up to 50
+      steps and three columns for programs with 51 or more steps. If this option is enabled, the program listing will always use
+      only one column.
+      <p>
+      Default: Off
+      </li>
+      <li><strong>Keys in black and white</strong>
+      <p>
+      By default, the keys are printed in colour. Enable this option to print them in black and white.<br>
+      This can be useful if you print out the documentation on a black and white printer, such as a laser printer.
+      <p>
+      Default: Off
+      </li>
+    </ul>
+
+    <h3>Description</h3>
+    <ul>
+      <li id="docuonload"><strong>Open after loading a program</strong>
+      <p>
+      If enabled, the Program Description dialogue box opens automatically after a program has been loaded.<br>
+      If the program has no documentation, the Program Description dialogue is never openened automatically.
+      <p>
+      Default: Off
+      </li>
+
+      <li id="automaticpreview"><strong>Automatic preview</strong>
+      <p>
+      If this option is enabled <strong>and</strong> the "Usage" field of a program description contains HTML tags or entities,
+      the Program Description dialogue box opens in Preview mode. Otherwise it opens in Edit mode. Once the dialogue is open,
+      you can switch between the two modes.<br>
+      <p>
+      Default: On
+      </li>
+
+      <li id="unicodesyms"><strong>Always insert Unicode characters</strong>
+      <p>
+      If checked, the symbols are inserted as Unicode characters. If unchecked, HTML entities are inserted.
+      This has no effect on the Preview mode; Unicode characters and their corresponding HTML entities will look the same.
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Toolbar style</strong>
+      <p>
+      The menu buttons in the toolbar for the HTML tags can display icons or text.
+      <p>
+      Default: Icons
+      </li>
+
+      <li><strong>Show icons in tag menu</strong>
+      <p>
+      Enables or disables icons in the context menu. Under macOS, the context menu does not normally have icons for the menu item.
+      <p>
+      Default: Window, Linux: On; macOS: Off
+      </li>
+
+      <li><strong>Highlight tags</strong>
+      <p>
+      This section provides options to configure how tags are displayed in the "Usage" field of the Program Description dialogue box.
+      <p>
+      Defaults: Colour: #800080 (RGB 128, 0, 128), bold: checked
+      </li>
+
+      <li><strong>Text markers</strong>
+      <p>
+      Allows you to select the colour used to highlight all occurrences of a text in the program description in Edit mode.
+      <p>
+      Default: #FFFF00 (RGB 255, 255, 0)
+      </li>
+
+      <li><strong>Show resources in tabs</strong>
+      <p>
+
+      Resources can be grouped either as a block or in individual tabs for Labels, Memory Registers and Flags.
+      <p>
+      This does not affect whether the resources are displayed at all. This is controlled by the "Resources" button below the description.
+      <p>
+      Default: On
+      </li>
+
+      <li><strong>Author information</strong>
+      <p>
+      Information about the authorship of programs can be added in this field. This value is inserted into an empty "Usage" field,
+      when the Program Description dialogue box is opened.
+      <p>
+      Default: Empty
+      </li>
+    </ul>
+
+    <p style="text-align:right"><a href="#files" class="internal">&#9664; Files</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="devices">Devices</a></h2>
+    <ul>
+      <li><strong>DM15 Support</strong>
+        <p>
+        This activates the support for the DM15, i.e. the menu items for the DM15 will be visible or hidden.
+        <p>
+        Default: Off
+        <ul style="list-style-type:disc">
+          <li><strong>Serial Interface Port</strong>
+          <p>
+          The number of the serial port assigned by the operating system to the USB port of the DM15.
+          <p>
+          Default: Not set
+          </li>
+          <li><strong>Timeout</strong>
+          <p>
+          The timeout in seconds for the serial port.
+          <p>
+          Default: 2 seconds
+          </li>
+          <li><strong>Number of registers</strong>
+          <p>
+          Sets the number of data storage registers available in the HP-15C Simulator. The three options reflect the firmware versions available on the DM15.<br>
+          <p>
+          Default: 64 registers
+          </li>
+        </ul>
+        </li>
+        <li><strong>HP&thinsp;15C&thinsp;CE Support</strong>
+        <p>
+        This activates the support for the HP&thinsp;15C&thinsp;CE, i.e. the menu items for the HP&thinsp;15C&thinsp;CE will be visible or hidden.
+        <p>
+        Default: Off
+        <ul style="list-style-type:disc">
+          <li><strong>Number of registers</strong>
+          <p>
+          Sets the number of data storage registers available in the HP-15C Simulator. The two options reflect the available modes on the HP&thinsp;15C&thinsp;CE.
+          <p>
+          Default: 96 registers
+          </li>
+          <li><strong>192 register mode</strong>
+          <p>
+          After a reset, the HP&thinsp;15C&thinsp;CE's 192-register mode has 94 storage registers and 99 pool registers. This is where this
+          mode differs from all other modes on all HP-15C derivates and clones. After a reset, the modes have 19 storage registers and the remaining
+          are pool registers.
+          <p>
+          If this option is activated, the simulator will behave like the HP&thinsp;15C&thinsp;CE. If it is deactivated, the simulator
+          has 19 storage registers and 174 pool registers after a reset.
+          <p>
+          Default: Off
+          </li>
+        </ul>
+        <strong>Note:</strong><br>
+        If the DM15 support or the HP&thinsp;15C&thinsp;CE support is disabled, the "Number of registers" is set to the smallest
+        value for the other device. If support for both is disabled, the Simulator reverts 64 registers as on the original HP-15C.
+        <p>
+      </li>
+      <li><strong>Transmitted data</strong>
+        <p>
+        The ten check boxes, five for reading and five for writing, determine what data is exchanged between the calculator and the
+        HP-15C Simulator.
+        <p>
+        Default: "Program" checked for both reading and writing.
+        </li>
+        <li><strong>Ask for each operation</strong>
+        <p>
+        When this option is selected the data to be exchanged between the source and the target device is interactively queried for
+        each operation. The selection is set as the default for the next operation.
+        <p>
+        Default: On
+      </li>
+    </ul>
+
+    <p style="text-align:right"><a href="#devices" class="internal">&#9664; Devices</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="fonts">Fonts</a></h2>
+    <ul>
+      <li><strong>Font set</strong>
+      <p>
+      The layout of the Simulator is highly dependent on the combination of fonts, font sizes and the monitor resolution.
+      The Simulator  therefore provides predefined font sets for common display resolutions. These font sets have been fine-tuned
+      to give a good representation of the real HP-15C body aspect ratio which is the "Golden Ratio".
+      <p>
+      The following table lists the available font sets for each platform and display resolution:
+      <table class="TblLayout">
+        <thead>
+          <tr>
+            <th class="TblHead">Platform</th>
+            <th class="TblHead">Font set</th>
+            <th class="TblHead">Size</th>
+            <th class="TblHead">Fonts used in set</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="TblTopLeft" rowspan="2">UNIX/Linux<br>Mac OS</th>
+            <td class="TblTopLeft">DejaVu fonts</td>
+            <td class="TblTopLeft">small, normal, large and huge</td>
+            <td class="TblTopLeft">DejaVu Sans</td>
+          </tr>
+          <tr>
+            <td class="TblTopLeft">Microsoft fonts</td>
+            <td class="TblTopLeft">small and normal</td>
+            <td class="TblTopLeft">Arial<br>Microsoft Sans Serif</td>
+          </tr>
+          <tr>
+            <th class="TblTopLeft">MS Windows<br>(all versions)</th>
+            <td class="TblTopLeft">Microsoft fonts</td>
+            <td class="TblTopLeft">small, normal, large and huge</td>
+            <td class="TblTopLeft">Arial<br>Microsoft Small Fonts<br>Microsoft Sans Serif</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+      Remarks:
+      <ul>
+        <li>The "HP-15C Simulator Font" is used with all sets.</li>
+        <li>If you want to change fonts or font sizes or add new font sets, you need to edit the Simulator source code.
+        I suggest to not change existing font sets at all.</li>
+        <li>"DejaVu" fonts can be found on the Internet (see the <a href="links.html" class="internal">Links</a> page).</li>
+      </ul>
+      <p>
+      </li>
+      <li id="extunicode"><strong>Extended Unicode chars for key faces</strong>
+      <p>
+      The Simulator can use certain Unicode characters to make the keys look more like the original HP-15C keys.
+      <p>
+      All current operating systems should provide fonts with the necessary characters. If this option is enabled and a
+      character is not available, you will see keys like this
+      <p>
+      <img class="KeyImage" src="images/key_backspace_char_missing.png" width="47" height="50" alt="Unicode char &quot;backspace&quot; missing"> instead of
+      <img class="KeyImage" src="images/key_backspace_char_ok.png" width="47" height="50" alt="Unicode char &quot;backspace&quot; available"> or
+      <img class="KeyImage" src="images/key_rolldown_char_missing.png" width="47" height="50" alt="Unicode character &quot;multiply&quot; missing"> instead of
+      <img class="KeyImage" src="images/key_rolldown_char_ok.png" width="47" height="50" alt="Unicode character &quot;multiply&quot; available">.
+      <p>
+      In this case, you should disable this option or install a suitable font.
+      <p>
+      Default: On
+      </li>
+      <li><strong>Graphic display instead of "HP15C Simulator Font" </strong>(Windows only)
+      <p>
+      When this option is selected, a graphical display is used instead of the the "HP-15C Simulator Font".<br>
+      This is useful if you need administrator rights to install fonts but cannot get them; e.g. on company computers.<br>
+      Please note that this will reduce the Simulator performance by about 30%!
+      <p>
+      Default: Off
+      </li>
+    </ul>
+
+    <p style="text-align:right"><a href="#fonts" class="internal">&#9664; Fonts</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="browser">Help File Browser</a></h2>
+    <p>
+    This setting allows you to specify the browser used to display the Online Help.
+    <p>
+    When the Simulator is started for the first time, or if no browser is set, the Simulator checks for available browsers in all
+    directories specified by the <code>PATH</code> environment variable. If available, the operating system's default method for
+    opening a web page is added to the top of the list of browsers. This results in the following list of possible browsers per operating system:
+    <table class="TblLayout">
+      <thead>
+        <tr>
+          <th class="TblHead">Platform</th>
+          <th class="TblHead">Browser list</th>
+        </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <td class="TblTopLeft">UNIX/Linux</td>
+          <td class="TblMenuItem"><code>firefox chrome mozilla opera konquerer</code></td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">macOS</td>
+          <td class="TblMenuItem"><code>open firefox safari chrome opera</code></td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Windows</td>
+          <td class="TblMenuItem"><code>start firefox safari chrome mozilla opera iexplore hh</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+    Remarks:
+    <ul>
+    <li><span class="Command">open</span> in the macOS list will always run the default browser.</li>
+    <li><span class="Command">start</span> in the Windows list will always run the default browser.</li>
+    <li><span class="Command">hh</span> is the browser used with the online help on Windows XP/Vista/7.</li>
+    </ul>
+    <p>
+    All the browsers found are listed, and the first one in the list is set as the Help file browser.
+    You can select another browser from the list or use the "Browse…" button to find another one.
+
+    <p style="text-align:right"><a href="#browser" class="internal">&#9664; Browser</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+    <p style="text-align:right"><a href="FAQ.html#top" class="internal">FAQ &#9654;</a>
+  </div>
+
+</div>
+</body>
+</html>

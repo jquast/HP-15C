@@ -1,0 +1,57 @@
+--- HP-15C.tcl.orig_5.0.01	2025-08-17 16:20:33.166004811 -0400
++++ HP-15C.tcl	2025-08-17 15:57:56.616685798 -0400
+@@ -9047,35 +9047,37 @@
+     return
+   }
+ 
++  # Handle visual feedback - only set if no key is currently pressed
+   if {[lindex [.gui gettags pressed] 0] eq ""} {
+     .gui addtag pressed withtag $btn
+     .gui itemconfigure $btn\_h -outline $LAYOUT(button_bg)
+     .gui move $btn 0 -1
+     set KBD(state) 0
+     update idletasks
++  }
+ 
+-# This is where USER mode is handled
+-    if {$status(user) && [regexp {^(42_)*1[1-5]$} $code]} {
+-      if {[regexp {^42_} $code] || $status(f)} {
+-        regsub {^42_} $code {} code
+-        if {$keyseq eq "42"} {
+-          set keyseq ""
+-          set_status fg_off
+-        }
+-      } elseif {$keyseq eq ""} {
+-        set code 32_$code
+-      } else {
+-        set code 42_$code
+-      }
+-    } elseif {$status(user) && $status(f) && [regexp {^43_1[1-5]$} $code]} {
+-        regsub {^43_} $code {} code
++  # Process the key logic regardless of visual state
++  # This is where USER mode is handled
++  if {$status(user) && [regexp {^(42_)*1[1-5]$} $code]} {
++    if {[regexp {^42_} $code] || $status(f)} {
++      regsub {^42_} $code {} code
++      if {$keyseq eq "42"} {
+         set keyseq ""
+         set_status fg_off
++      }
++    } elseif {$keyseq eq ""} {
++      set code 32_$code
++    } else {
++      set code 42_$code
+     }
+-
+-    dispatch_key $code
++  } elseif {$status(user) && $status(f) && [regexp {^43_1[1-5]$} $code]} {
++      regsub {^43_} $code {} code
++      set keyseq ""
++      set_status fg_off
+   }
+ 
++  dispatch_key $code
++
+ }
+ 
+ # ------------------------------------------------------------------------------

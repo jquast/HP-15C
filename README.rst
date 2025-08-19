@@ -9,13 +9,28 @@ From Torsten's `FAQ <https://hp-15c-simulator.de/FAQ>`_:
 
    >  While a key on the computer keyboard is being pressed, all other key presses are ignored. When you pressed the , you were still holding down the . This is exactly how the real HP-15C behaves. 
 
-A slow-motion video of the bug in his emulation,
+I reached out to Torsten Manz in many successive e-mails, but he strongly suggests that, although he gets several requests to fix it, that it is an intentional design for exacting emulated behavior and is not a priority to be fixed.
 
-A slow-motion video of the bug not present in an authentic HP-12C calculator.
+I suggest that a calculator should discarding keyboard input when users are typing too quickly, that it is a high priority bug that should be addressed, and is the purpose of this fork.
 
-I reached out to Torsten Manz in many successive e-mails, but he strongly suggests that, although he gets several requests to fix it, that it is an intentional design for exacting emulated behavior.
+Installing
+==========
 
-However, I suggest users should be allowed to use more than 1 finger to enter digits into the computer emulated version of the keyboard, and, more importantly, that discarding keyboard input is a terrible bug for any computer calculator program, and should never be done under any circumstances.
+No binary distributions are released, run the source directly, for example::
+
+    tclsh HP-15.tcl
+
+This is just a copy of the source code, Version 5.0.01, provided for your
+convenience. You may also attempt to apply the patch,
+`bugfix-HP-15C-keystrokes-lost.patch <bugfix-HP-15C-keystrokes-lost.patch>`_ to
+any later version. The fix is described below, it moves the placement of a
+closing brace, and changes a 30ms timer to 10.
+
+
+Bug Details
+===========
+
+::
 
      Date: Sun, 17 Aug 2025 16:29:44 -0400
      From: "Jeff Quast" <contact@jeffquast.com>
@@ -28,15 +43,13 @@ However, I suggest users should be allowed to use more than 1 finger to enter di
      
      In HP-15C.tcl v5.0.01, proc key_press at L9041 begins by handling active GUI buttons, *only* if 
      any other key is not already currently active, eventually calling dispatch_key to process it.
-     
-```
+   
      >  if {[lindex [.gui gettags pressed] 0] eq ""} {
      >     # process GUI button stuff
      >     # USER mode stuff
      >     
      >     dispatch_key $code
      >   }
-```
      
      Combined with the timer defined at L9086, "after 30", in proc key_release to release the visual
      GUI button, this effectively skips processing of any subsequent keystrokes for 30ms after each 
@@ -52,3 +65,29 @@ However, I suggest users should be allowed to use more than 1 finger to enter di
      Cheers,
      Jeff Quast
      contact@jeffquast.com
+
+Licensing
+=========
+
+Jeff's Own HP-15C Simulator is a Modified Version of HP-15C 5.0.01 by Torsten Manz.
+
+(c) 1997-2025 Torsten Manz
+(c) 2025 Jeff Quast <contact@jeffquast.com>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+---
+This is a modified version of the original software.
+The source code for this program is available at https://github.com/jquast/HP-15C/.
+The original source code can be found at https://hp-15c-simulator.de/.

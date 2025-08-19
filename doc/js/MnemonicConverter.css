@@ -1,0 +1,15 @@
+.MCerror {
+  font-weight: bold;
+  color: black;
+  background: #E1A83E;
+}
+
+.MCcommand {
+  font-weight: bold;
+  color: #0000ff;
+}
+
+.MCargument {
+  font-weight: normal;
+  color: #0000ff;
+}

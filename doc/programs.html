@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="formats/layout.css">
+  <link rel="stylesheet" type="text/css" href="formats/formats.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HP-15C: Programs</title>
+</head>
+<body>
+
+<div class="sidenav">
+
+  <div id="logo_frame">
+    <div id="logo" style="text-align:center;">
+      <a href="index.html"><img src="images/HP-15C_small.png" title="Home" width="116" height="81" alt="HP-15C_small.png 116x81" style="padding-top: 10px; border-width:0"></a><br>
+      <span style="font-size:75%; color:#6CB7BD;">Version 5.0.01, Build 6512</span>
+    </div>
+  </div>
+  <div id="navigation_frame">
+  <div id="navigation">
+    <a href="introduction.html" class="Content1">Introduction</a><br>
+    <br>
+    <a href="usage.html" class="Content1">Usage</a><br>
+    <br>
+    <a href="programs.html" class="Content1">Programs</a><br>
+      <div class="Content2">
+        <a href="programs.html#prgmmode">PRGM Mode</a><br>
+        <a href="programs.html#prgmdocu">Documentation</a><br>
+        <a href="programs.html#prgmfiles">Program Files</a><br>
+        <a href="mnemonics.html">Mnemonic Converter</a><br>
+      </div>
+    <br>
+    <a href="menus.html" class="Content1">Menus</a><br>
+    <br>
+    <a href="keyboard.html" class="Content1">Keyboard</a><br>
+    <br>
+    <a href="devices.html" class="Content1">Devices</a><br>
+    <br>
+    <a href="preferences.html" class="Content1">Preferences</a><br>
+    <br>
+    <a href="FAQ.html" class="Content1">FAQ</a><br>
+    <br>
+    <a href="links.html" class="Content1">Links</a><br>
+    </div>
+  </div>
+  <div id="contact_frame_1">
+    <div class="contact">
+    &copy; 2025 Torsten Manz
+    <a href="mailto:info@HP-15C-Simulator.de" title="Write an email to the author.">
+      <img src="images/mail_logo.gif" width="20" height="14" alt="mail_logo.gif 20x14" style="border-width:0; vertical-align: top;">
+    </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="contnav">
+
+  <div id="header_border">
+    <div id="header_frame">
+      <div id="header" style="text-align:center;">
+        <span style="font-size:200%;font-weight:bold;color:#545454;">HP-15C Simulator</span>
+        <br><br>
+        <span style="font-size:150%;font-weight:bold;">For Windows, Linux and macOS</span>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <h1><a id="usage">Programs</a></h1>
+    <h2><a id="prgmmode">PRGM mode</a></h2>
+    <h3>Writing Programs</h3>
+    <p>
+    To write a program on the HP-15C, you must switch to PRGM mode by pressing <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">P/R</span>.
+    In the Simulator you can also press <span class="ShortCut">F9</span> on the keyboard or click on <span class="gKeyLabel">P/R</span>.
+    The display format will change and the word "PRGM" will appear in the lower right corner of the display:
+    <p>
+    <img class="Image" src="images/prgm_step_000.gif" width="310" height="70" alt="prgm_step_000.gif 310x70">
+    <p>
+    You can now start typing commands, just as you would do in Run mode. The HP-15C will record the keys as you type, but will not
+    execute any commands. HP-15C programs are more like macros than like true programs.
+    <p>
+    All programs in this documentation use the decimal comma style, where the comma acts as the decimal separator and the period as the
+    thousands separator.
+    <p>
+    Each program begins with a label. Valid labels are the letters "<code>A</code>" to "<code>E</code>", the numbers "<code>0</code>"
+    to "<code>9</code>" and "<code>.0</code>" to "<code>.9</code>". As an example, we will write a program that starts with label
+    "<code>A</code>". Click <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">LBL</span>&nbsp;<span class="fKeyLabel">A</span> or
+    key in <span class="ShortCut">F8</span>&nbsp;<span class="ShortCut">Q</span>.
+    This is the first program step and it is displayed like this:
+    <p>
+    <img class="Image" src="images/prgm_step_001.gif" width="310" height="70" alt="prgm_step_001.gif 310x70">
+    <p>
+    Each key on the HP-15C is identified by a two-digit code that corresponds to its position on the keypad.
+    The first digit indicates the row (starting from one) and the second digit indicates the column (where 0 means 10). For
+    example, <span class="fKeyLabel">LBL</span> is on the first key in the second row and has the key code "<code>21</code>".
+    Digit keys, however, differ from that rule; the digit itself identifies them.
+    <p>
+    The key codes for a three-key sequence are separated by a thousands separator. The codes in a two-key sequence are separated by blanks.
+    There are also four-key sequences, like
+    <span class="KeyLabel">STO</span>&nbsp;<span class="KeyLabel">&#43;</span>&nbsp;<span class="KeyLabel">.</span>&nbsp;<span class="KeyLabel">5</span>
+    which adds the contents of the <span class="register">X</span>-register to register 15. Those sequences are displayed like this
+    <p>
+    <img class="Image" src="images/prgm_step_021.gif" width="310" height="70" alt="prgm_step_021.gif 310x70">
+    <p>
+    To complete the program, enter the following key sequence:
+    <div style="margin-left:20px">
+    <span class="KeyLabel">2</span>
+    <span class="KeyLabel">&#215;</span>
+    <span class="KeyLabel">9</span>
+    <span class="KeyLabel">.</span>
+    <span class="KeyLabel">8</span>
+    <span class="KeyLabel">&divide;</span>
+    <span class="KeyLabel">&#8730;x&#773;</span>
+    <span class="gKey">g</span> <span class="gKeyLabel">RTN</span>
+    </div>
+    <p>
+    This little program computes the time it takes for an object to fall from a given height to the ground in
+    the earth's gravity field. The gravitational acceleration is approximately <code>9.8 m/s<sup>2</sup></code>.
+    <p>
+    In PRGM mode, you can display the program popup menu by right-clicking the display. You can find a complete description of this
+    popup menu in the <a href="menus.html#prgmenu" class="internal">Pop-up Menu</a> section.
+    <p>
+    <img class="Image" src="images/prgm_mnemonics_col.gif" width="164" height="204" alt="prgm_mnemonics_col.gif 164x204">
+    <p>
+    To run a program you must switch to Run mode. Click <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">P/R</span>,
+    or press <span class="ShortCut">F9</span>, again.
+    <p>
+    In PRGM mode, you can paste text from the system clipboard into the simulator by using
+    <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">V</span> or <span class="ShortCut">B2</span> when it is in
+    <a href="#prgmfileformat" class="internal">Program File Format</a>.<br>
+    The <a href="mnemonics.html" class="internal">Mnemonic Converter</a> generates that format.
+
+    <h3>Running a Program</h3>
+    <p>
+    To run a program click the <span class="KeyLabel">GSB</span> key followed by the program label. So
+    <span class="KeyLabel">GSB</span>&nbsp;<span class="fKeyLabel">A</span> will run the program that begins with
+    <span class="fKeyLabel">LBL</span>&nbsp;<span class="fKeyLabel">A</span>. While a program is running, the display flashes "running":
+    <p>
+    <img class="Image" src="images/prgm_step_run.gif" width="310" height="70" alt="prgm_step_run.gif 310x70">
+    <p>
+    On the Simulator, programs with an alpha label can also be run by clicking on the gold labels
+    <span class="fKeyLabel">A</span> through <span class="fKeyLabel">E</span>, if the
+    '<a class="internal" href="preferences.htm#fgdirectly">Access "f" and "g" functions directly</a>' option is enabled in the preferences.
+    Programs with numeric labels can only be run using the <span class="KeyLabel">GSB</span> key. In addition, the Simulator provides
+    several shortcuts for running programs. A complete list can be found in the <a class="internal" href="keyboard.htm#keys_prgm_run">Program (Run mode)</a>
+    section of the "Keyboard" chapter.
+    <p>
+    <strong>Any keystroke</strong> or <strong>any mouse click on a simulator key</strong> interrupts a running program. Mouse clicks outside of the
+    keyboard area do not interrupt a program. For example, you can move the simulator window around the screen while a program is running without interrupting it.
+    <p>
+    The <span class="KeyLabel">GTO</span> key cannot be used to run a program. If the simualator is in Run mode,
+    <span class="KeyLabel">GTO</span>&nbsp;<span class="fKeyLabel">A</span> will only position the program pointer on the
+    step with label "<code>A</code>", but will not run the program. To run the program now, click <span class="KeyLabel">R/S</span>
+    or press <span class="ShortCut">F5</span>.
+
+    <p style="text-align:right"><a href="#prgmmode" class="internal">&#9664; PRGM Mode</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2 id="prgmdocu">Program Documentation</h2>
+    <p>
+    With the Simulator, you can add documentation to your programs, a feature not available on the real HP-15C. The documentation
+    has no effect on the program itself. Documented programs are fully compatible with the real HP-15C.
+    <h3>The Description Dialogue</h3>
+    To document a program, press <span class="ShortCut">F12</span> or select "Program description&#8230;" from the <span class="KeyLabel">ON</span> popup
+    menu to open the Program Description dialogue box. The dialogue has the following elements:
+    <ul>
+      <li><strong>Program Title</strong><p>
+      A one-line description of the purpose of the program.</li>
+      <li><strong>Usage</strong><p>
+      A multiline text field to describe the purpose of a program and how to use it.
+      <p>
+      <strong>Preview mode</strong><br>
+      Preview mode renders the description to give you an idea, of what the HTML export will look like.
+      You cannot change the description in Preview mode.
+      <p>
+      When you open the documentation dialogue, Preview mode is automatically switched on if the option <a class="internal" href="preferences.htm#automaticpreview">Automatic preview</a>
+      is enabled in the preferences <strong>and</strong> the "Usage" field contains HTML tags.
+      <p>
+      <strong>Edit mode</strong><br>
+      The mode for adding or changing the program description. Standard editor shortcuts, such as
+      <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">X</span>, <span class="ShortCut">C</span>,
+      <span class="ShortCut">V</span>, <span class="ShortCut">Z</span> (undo) and <span class="ShortCut">Y</span> (redo) are supported.
+      <p>
+      There are several ways to enrich the documentation with HTML tags or HP-15C specific CSS classes:
+      <ul>
+        <li>The toolbar below the text field</li>
+        <li>A right-click pop-up menu</li>
+        <li>Using keyboard shortcuts (see table below) </li>
+        <li>and finally, manually typing in tags</li>
+      </ul>
+      <p>
+      If the whole area of a tag is highlighted, e.g.
+      "<span style="background: #D1D1D1">&lt;bold&gt;<em>some text</em>&lt;/bold&gt;</span>", applying the same tag again will remove the tag (undo).
+      <p>
+      When applying a list item tag, there are two ways to treat the selected text:
+      <ul>
+        <li>As a single list item: The button <span class="ShortCut">li</span> / <span class="ShortCut"><img src="images/li.png" alt="One list item" width=12 height=12></span> or the menu item "List item"</li>
+        <li>Multiple list items separated by a new lines or hard breaks: The button <span class="ShortCut">li…li</span> / <span class="ShortCut"><img src="images/lili.png" alt="Multiple list items" width=12 height=12></span> or the menu item "Multiple list items": </li>
+      </ul>
+      <p>
+      Hard line breaks should only be used to structure the text, i.e. to insert a blank line. The layout of the final text should be
+      checked by resizing the Documentation dialogue box in Preview mode. Blank lines at the end of the text are deleted when the documentation is saved.
+      <p>
+      The following table lists the HTML tags and HP-15C specific classes supported in Preview mode and the corresponding keyboard shortcuts
+      in Edit mode. Where more than one tag is listed, the keyboard shortcut will insert the first one in the list.
+      <table class="TblLayout" style="width:97%">
+        <colgroup>
+          <col style="width: 15%;">
+          <col style="width: 15%;">
+          <col style="width: 17%;">
+          <col style="">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="TblHead" rowspan="2">HTML tag</th>
+            <th class="TblHead" colspan="2">Shortcut</th>
+            <th class="TblHead" rowspan="2">Description</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th class="TblHead"></th>
+            <th class="TblHead">Windows, Linux</th>
+            <th class="TblHead">macOS</th>
+            <th class="TblHead"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="TblCentered">&lt;strong&gt;, &lt;b&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">B</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">B</span></td>
+            <td class="TblTopLeft">Text conventionally styled in bold</td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;em&gt;, &lt;i&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">I</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">I</span></td>
+            <td class="TblTopLeft">Text conventionally styled in italic</td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;pre&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">P</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">P</span></td>
+            <td class="TblTopLeft">A block of preformatted text</td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;sup&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">S</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">S</span></td>
+            <td class="TblTopLeft">Superscript text</td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;sub&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">T</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">T</span></td>
+            <td class="TblTopLeft">Subscript text</td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;ul&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">U</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">U</span></td>
+            <td class="TblTopLeft">Unordered list of items</td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;ol&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">O</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">O</span></td>
+            <td class="TblTopLeft">Ordered list of items</td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;li&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">L</span>
+            <td class="TblCentered"><span class="ShortCut">option</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">L</span></td>          </td>
+            <td class="TblTopLeft">Represents a list item.
+            </td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;code&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">C</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">C</span></td>
+            <td class="TblTopLeft">Code fragment, conventionally using a monospace font</td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;h1&gt;&hellip;&lt;h6&gt;</td>
+            <td class="TblCentered">-</td>
+            <td class="TblCentered">-</td>
+            <td class="TblTopLeft">Headings 1 through 6 for the sections</td>
+          </tr>
+          <tr>
+            <td class="TblCentered">&lt;a&gt;</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">A</span></td>
+            <td class="TblCentered"><span class="ShortCut">option</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">A</span></td>
+            <td class="TblTopLeft">Represents a hyperlink.<br>When the selected text is a valid URL, it is set as value of the "href" attribute.</td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th class="TblHead">HP-15C CSS class</th>
+            <th class="TblHead"></th>
+            <th class="TblHead"></th>
+            <th class="TblHead"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="TblCentered">HP15CRegister</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">R</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">R</span></td>
+            <td class="TblTopLeft">Registers, e.g. <span class="register">X</span></td>
+          </tr>
+          <tr>
+            <td class="TblCentered">HP15CKey</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">K</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">K</span></td>
+            <td class="TblTopLeft">Primary HP-15C key functions,e.g. <span class="KeyLabel">SST</span></td>
+          </tr>
+          <tr>
+            <td class="TblCentered">HP15CfKeyLabel</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">F</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">F</span></td>
+            <td class="TblTopLeft">Gold alternate HP-15C key functions,e.g. <span class="fKeyLabel">LBL</span></td>
+          </tr>
+          <tr>
+            <td class="TblCentered">HP15CgKeyLabel</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">G</span></td>
+            <td class="TblCentered"><span class="ShortCut">shift</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">G</span></td>
+            <td class="TblTopLeft">Blue alternate HP-15C key functions, e.g. <span class="gKeyLabel">BST</span></td>
+          </tr>
+          <tr>
+            <td class="TblCentered">HP15CfKey</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">F</span></td>
+            <td class="TblCentered"><span class="ShortCut">options</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">F</span></td>
+            <td class="TblTopLeft">Gold prefix f-key <span class="fKey">f</span></td>
+          </tr>
+          <tr>
+            <td class="TblCentered">HP15CgKey</td>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">G</span></td>
+            <td class="TblCentered"><span class="ShortCut">options</span>&ndash;<span class="ShortCut">command</span>&ndash;<span class="ShortCut">G</span></td>
+            <td class="TblTopLeft">Blue prefix g-key <span class="gKey">g</span></td>
+          </tr>
+        </tbody>
+      </table>
+      Additional keyboard shortcuts in Edit mode:
+      <table class="TblLayout" style="width:97%">
+        <colgroup>
+          <col style="width: 17%;">
+          <col style="width: 17%;">
+          <col style="">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="TblHead" colspan="2" rowspan="2">Shortcut</th>
+            <th class="TblHead" rowspan="2">Description</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th class="TblHead">Windows, Linux</th>
+            <th class="TblHead">macOS</th>
+            <th class="TblHead"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="TblCentered"><span class="ShortCut">F3</span></td>
+            <td class="TblCentered"><span class="ShortCut">F3</span></td>
+            <td class="TblTopLeft">Find next occurrence of search string</td>
+          </tr>
+          <tr>
+            <td class="TblCentered"><span class="ShortCut">F5</span></td>
+            <td class="TblCentered"><span class="ShortCut">F5</span></td>
+            <td class="TblTopLeft">Refresh the HTML-tag highlighting</td>
+          </tr>
+          <tr>
+            <td class="TblCentered"><span class="ShortCut">F6</span></td>
+            <td class="TblCentered"><span class="ShortCut">F6</span></td>
+            <td class="TblTopLeft">Toggle between Preview and Edit mode</td>
+          </tr>
+          <tr>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">F</span></td>
+            <td class="TblCentered"><span class="ShortCut">option</span>&ndash;<span class="ShortCut">F</span></td>
+            <td class="TblTopLeft">Toggles the search and replace window.</td>
+          </tr>
+          <tr>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">_</span></td>
+            <td class="TblCentered"><span class="ShortCut">option</span>&ndash;<span class="ShortCut">-</span></td>
+            <td class="TblTopLeft">Inserts Unicode character "&mdash;" (Em Dash). Useful to type fraction lines in pre-formatted code</td>
+          </tr>
+          <tr>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">&gt;</span></td>
+            <td class="TblCentered">n/a</td>
+            <td class="TblTopLeft">Inserts Unicode character "&rarr;" (right arrow)</td>
+          </tr>
+          <tr>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">&lt;</span></td>
+            <td class="TblCentered">n/a</td>
+            <td class="TblTopLeft">Inserts Unicode character "&larr;" (left arrow)</td>
+          </tr>
+          <tr>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">&times;</span></td>
+            <td class="TblCentered"><span class="ShortCut">command</span>&ndash;<span class="ShortCut">&times;</span></td>
+            <td class="TblTopLeft">Inserts Unicode character "&middot;" (middot). Multiplication sign or dot operator</td>
+          </tr>
+          <tr>
+            <td class="TblCentered"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">B3</span></td>
+            <td class="TblCentered"><span class="ShortCut">command</span>&ndash;<span class="ShortCut">B3</span></td>
+            <td class="TblTopLeft">Opens the symbols menu at the cursor position</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+      </li>
+      <li><strong>Labels</strong><p>
+      One field for each label in a program step starting with <span class="fKey">f</span> <span class="fKeyLabel">LBL</span>, <span class="KeyLabel">GTO</span> or <span class="KeyLabel">GSB</span>.
+      <p>
+      It is possible to use a label more than once in a program, but you can only have one description for all occurrences.
+      <p>
+      If a label description starts with a "#", it will not appear in the <span class="KeyLabel">GSB</span> menu. This allows it
+      to hide subprograms that should only be called from within the programy.
+      </li>
+      <li><strong>Data Storage Registers</strong><p>
+      A one-line field for each data storage register in a program step starting with <span class="KeyLabel">STO</span> or <span class="KeyLabel">RCL</span>.
+      </li>
+      <li><strong>Flags</strong><p>
+      A one-line field for each Flag in a program step starting with <span class="gKeyLabel">SF</span>, <span class="gKeyLabel">CF</span> or <span class="gKeyLabel">F?</span>.
+      </li>
+      <li><strong>Reload</strong><p>
+      When this button is pressed, the current program is analysed and the dialogue box is redrawn with the current set of labels,
+      data storage registers and flags. See the next section for more details.
+      </li>
+      <li><strong>OK</strong><p>
+      Stores the documentation in the Simulator memory. The documentation is NOT written to the program file at this time.
+      </li>
+      <li><strong>Cancel</strong><p>
+      The documentation in the Simulator memory remains unchanged.
+      </li>
+    </ul>
+    <p>
+    Changes to the documentation are indicated by a * in the title bar of the window.
+    <p>
+    The elements in the dialogue box, i.e. labels, data storage registers and flags, are displayed in
+    <ul>
+      <li>1 column, if no more than 1 element of a type is used</li>
+      <li>2 columns, if no more than 30 elements are used in total</li>
+      <li>3 columns, when more than 30 elements are used in total or more than 10 elements of the same type are used, or the vertical screen
+      size is 800 pixels or less.</li>
+    </ul>
+    <h3>Documentation Life Cycle</h3>
+    <p>
+    When you start documenting a program, the documentation is only in the simulator memory. To include it in the program, you must
+    save the program file. This also applies to changes to the documentation: You must always save the program manually. When you
+    open a documented program file, the documentation is copied into the simulator memory. Any existing documentation will be overwritten.
+    <p>
+    If you delete a label or flag or if you no longer use a data storage register, its description will not be deleted until you close
+    the Simulator or save the program file. In these cases, the documentation is purged, i.e. descriptions that are no longer
+    used are deleted and not saved.
+    <p>
+    If you reuse a previously deleted element before closing the Simulator or saving the program, the previous description of that element
+    will be re-used in the program description.
+
+    <p style="text-align:right"><a href="#prgmdocu" class="internal">&#9664; Documentation</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2 id="prgmfiles">Program Files</h2>
+    <h3>Saving and Opening Programs</h3>
+    <p>
+    The current program is always part of the memory file and is therefore automatically saved each time the memory is saved.
+    In addition, programs can also be saved separately: Pressing <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">S</span>
+    opens the operating system's Save File dialogue box. The default file name for new programs is "<code>New.15c</code>" or the first
+    40 characters of the "Program title", if available. The Simulator supports the file extensions "<code>.15c</code>" and
+    "<code>.txt</code>"; the default is "<code>.15c</code>".
+    <p>
+    To open a program file press <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">O</span>.
+    The standard operating system dialogue box for opening files opens. When a program is loaded, all currently loaded
+    programs are deleted. If the new program is larger than the available memory, the display will show
+    <span class="DisplayInline">&nbsp;&nbsp;ERROR&nbsp;&nbsp;4&nbsp;</span> and the program will not be loaded. It is not possible
+    to merge programs during loading. For information on how to do this manually, see the next section on file format.
+    <p>
+    The Simulator remembers the last directory used to read or write a program file. This directory is used as the start directory
+    the next time a dialogue box is opened.
+
+    <h3 id="prgmfileformat">Program File Format</h3>
+    <p>
+    Simulator program files are simple text files. The following figure shows the program file for the small program
+    used in the previous sections:
+    <table class="TblLayout">
+      <thead>
+        <tr>
+          <th class="TblHead">HP-15C Simulator program</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblMenuItem"><pre><code>
+   # --------------------------------------------
+   # HP-15C Simulator program
+   # Created with version 3.0.00
+   # --------------------------------------------
+
+      000 {             }
+      001 {    42 21 11 } f LBL A
+      002 {           2 } 2
+      003 {          20 } &#215;
+      004 {           9 } 9
+      005 {          48 } .
+      006 {           8 } 8
+      007 {          10 } &divide;
+      008 {          11 } &radic;x&#773;
+      009 {       43 32 } g RTN
+
+   # --------------------------------------------
+          </code></pre></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+    As on the real HP-15C, step "<code>000</code>" is always empty.
+    <p>
+    Each line in a program file must be of one of the following types:
+    <ul>
+      <li><strong>Documentation</strong>
+      <p>
+      Documentation lines begin with "<strong><code>#<em>&lt;type&gt;</em>:</code></strong>" where <em>&lt;type&gt;</em> can be one of the following:
+      <table style="padding-left: 1em;">
+        <tr><td><strong>T</strong></td><td>Program title.</td></tr>
+        <tr><td><strong>D</strong></td><td>Program Description, i.e. the contents of the "Usage" field.</td></tr>
+        <tr><td><strong>L<em>n</em></strong></td><td>Label description. <strong><em>n</em></strong> is a number between -1  and -5 for
+        the labels A through E or a number between 0 and 19 for the labels 0 to .9.</td></tr>
+        <tr><td><strong>R<em>n</em></strong></td><td>Data storage register description. <strong><em>n</em></strong> is a number between 0
+        and 19 for the registers 0 to .9 or "<code>I</code>" for the index register.</td></tr>
+        <tr><td><strong>F<em>n</em></strong></td><td>Flag description. <strong><em>n</em></strong> is the flag number from 0 to 9.</td></tr>
+      </table>
+      <p>
+      Manual editing of the documentation is not recommended; use the Program Description dialogue box instead.
+      </li>
+      <li><strong>Comment</strong>
+      <p>
+      Comment lines begin with a "<code>#</code>" not followed by one of the documentation letters. They are for internal use only.
+      <p>
+      </li>
+      <li><strong>Blank line</strong>
+      <p>
+      A blank line is a line that contains only white spaces or has a length of zero. Blank lines are skipped.<br></li>
+      <li><strong>Program step</strong>
+      <p>
+      Any line that is not recognised as a comment or a blank line is expected to contain a program step.
+      The line must then have the form:
+      <p>
+      <span style="padding-left: 1em;"><code>[line_number] "{" key_sequence "}" [mnemonic]</code></span>
+      <p>
+      The "<code>key_sequence</code>" must be a valid HP-15C key sequence enclosed in curly braces;
+      "<code>line_number</code>" and "<code>mnemonic</code>" are optional, and whitespace is ignored.</li>
+    </ul>
+    <p>
+    Program files are encoded in UTF-16 (LE) by default to preserve all special characters used in mnemonics. You can
+    change the encoding to the system default encoding (see <a class="internal" href="preferences.htm#files">Files</a>), but then
+    mnemonics with special characters may not be stored correctly. Key sequences are not affected as key codes
+    contain only digits.
+    <p>
+    When reading a file, only the key sequences are used. Line numbers and mnemonics are stored for
+    documentation purposes only.
+    <p>
+    When writing a program file, the Simulator uses the file format described above. As the files are simple text files,
+    you can edit them with any text editor that supports UTF-16 (LE). When editing the files, you only need to address the key sequences.<br>
+    For example, you can increase the accuracy of the acceleration due to gravity in the program example from <code>9.8&nbsp;m/s<sup>2</sup></code>
+    to <code>9.81&nbsp;m/s<sup>2</sup></code>. To do this, simply insert a new program step with the key code for the number <code>1</code>
+    after the line "<code>006</code>":
+    <table class="TblLayout">
+      <thead>
+        <tr>
+          <th class="TblHead">HP-15C Simulator program</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblMenuItem"><pre><code>
+      ...
+      003 {          20 } &#215;&nbsp;&nbsp;
+      004 {           9 } 9
+      005 {          48 } .
+      006 {           8 } 8
+                    { 1 }
+      007 {          10 } &divide;
+      ...
+        </code></pre></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+    Neither the line number nor the mnemonic need be specified. The program steps are automatically renumbered when the file is read.
+    When program is written back with the Simulator, the full file format is used. Missing information, such as the mnemonics,
+    will be added by the Simulator.
+    <p>
+    Omitting all optional information gives us to the simplest form of the example program file.
+    <table class="TblLayout">
+      <thead>
+        <tr>
+          <th class="TblHead">Simplified file format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblMenuItem"><pre><code>
+   {42 21 11}&nbsp;&nbsp;
+   {2}
+   {20}
+   {9}
+   {48}
+   {8}
+   {10}
+   {11}
+   {43 32}
+         </code></pre></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>HTML Export</h3>
+    <p>
+    The program code together with the documentation can be exported to an HTML file. HTML exports cannot be reloaded into the Simulator!
+    They are for documentation purposes only.
+    <p>
+    To export a program to HTML, open the Save Program dialogue box and select <code>"HTML Files (*.htm, *.html)"</code> as the file type.
+    The HTML files are UTF-8 encoded.
+    <p>
+    <strong>macOS</strong>:<br>
+    Some versions of Tcl/Tk do not display the standard Save dialogue box with the file type list box activated. In this case,
+    open the dialogue either via "File | Export program to HTML&#8230;" or via the shortcut
+    <span class="ShortCut">&#8984;</span>&ndash;<span class="ShortCut">E</span>. In both cases, the default file type is set to
+    <code>"HTML Files (*.htm, *.html)"</code>. You can always force the file type by manually setting the file extension
+    "<code>.htm</code>" manually to force an HTML export.
+    <p>
+    If any of the following are empty, you will be asked if you still want to save the file anyway:
+      <ul>
+      <li>Program</li>
+      <li>Program Title</li>
+      <li>Usage</li>
+      </ul>
+    The warning message can be disabled in the <a class="internal" href="preferences.htm#missingdocu">Preferences</a> dialogue box.
+    <p>
+    When you press <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">F1</span> or <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">F1</span>
+    on the Simulator, it will search for an HTML file with the same name as the program file and with the extension "<code>.htm</code>"
+    or "<code>.html</code>" in the same directory from which the program was loaded. If a program help file is found, it will be opened in the help
+    file browser.
+    <p>
+    All the programs in the <a href="https://HP-15C-Simulator.de/download" target="_blank" class="internal">Program Examples</a> package come with an HTML help file.
+
+    <p style="text-align:right"><a href="#prgmfiles" class="internal">&#9664; Program Files</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+    <p style="text-align:right"><a href="menus.html#top" class="internal">Menus &#9654;</a>
+  </div>
+
+</div>
+</body>
+</html>

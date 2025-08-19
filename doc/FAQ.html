@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="formats/layout.css">
+  <link rel="stylesheet" type="text/css" href="formats/formats.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HP-15C: FAQ</title>
+</head>
+<body>
+
+<div class="sidenav">
+
+  <div id="logo_frame">
+    <div id="logo" style="text-align:center;">
+      <a href="index.html"><img src="images/HP-15C_small.png" title="Home" width="116" height="81" alt="HP-15C_small.png 116x81" style="padding-top: 10px; border-width:0"></a><br>
+      <span style="font-size:75%; color:#6CB7BD;">Version 5.0.01, Build 6512</span>
+    </div>
+  </div>
+  <div id="navigation_frame">
+    <div id="navigation">
+      <a href="introduction.html" class="Content1">Introduction</a><br>
+      <br>
+      <a href="usage.html" class="Content1">Usage</a><br>
+      <br>
+      <a href="programs.html" class="Content1">Programs</a><br>
+      <br>
+      <a href="menus.html" class="Content1">Menus</a><br>
+      <br>
+      <a href="keyboard.html" class="Content1">Keyboard</a><br>
+      <br>
+      <a href="devices.html" class="Content1">Devices</a><br>
+      <br>
+      <a href="preferences.html" class="Content1">Preferences</a><br>
+      <br>
+      <a href="FAQ.html" class="Content1">FAQ</a><br>
+      <br>
+      <a href="links.html" class="Content1">Links</a><br>
+    </div>
+  </div>
+  <div id="contact_frame_1">
+    <div class="contact">
+    &copy; 2025 Torsten Manz
+    <a href="mailto:info@HP-15C-Simulator.de" title="Write an email to the author.">
+      <img src="images/mail_logo.gif" width="20" height="14" alt="mail_logo.gif 20x14" style="border-width:0; vertical-align: top;">
+    </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="contnav">
+
+  <div id="header_border">
+    <div id="header_frame">
+      <div id="header" style="text-align:center;">
+        <span style="font-size:200%;font-weight:bold;color:#545454;">HP-15C Simulator</span>
+        <br><br>
+        <span style="font-size:150%;font-weight:bold;">For Windows, Linux and macOS</span>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <h1><a id="faq">FAQ</a></h1>
+    <ul>
+     <li>
+        <strong>Results from trigonometric functions are always in RAD.</strong>
+        <p>
+        Is the Complex mode switched on? The Complex mode is indicated by a "C" in the status bar and can be switched off
+        by <span class="gKey">g</span> <span class="gKeyLabel">CF</span> <span class="KeyLabel">8</span>.
+     </li>
+     <li>
+        <strong>If I rapidly type a sequence of numbers, the entered keyboard number(s) are ignored. For example, if I
+        type 123 quickly, the 2 is missed and I get 13 on the display.</strong>
+        <p>
+        While a key on the computer keyboard is being pressed, all other key presses are ignored. When you pressed the
+        <span class="ShortCut">2</span>, you were still holding down the <span class="ShortCut">1</span>. This is
+        exactly how the real HP-15C behaves.
+     </li>
+     <li>
+        <strong>Where can I see the version number of the simulator?</strong>
+        <p>
+        The serial number follows the <a href="https://www.keesvandersanden.nl/calculators/serialnumber.php" target="_blank" class="internal">rules for serial numbers</a>
+        of HP calculators of that era. The format is <strong><code>YYWWCsssss</code></strong> with the following meaning:
+        <ul>
+          <li><strong><code>YY</code></strong> = Years since 1960</li>
+          <li><strong><code>WW</code></strong> = Week of the year</li>
+          <li><strong><code>C&ensp;</code></strong> = Country</li>
+          <li><strong><code>sssss</code></strong> = a unique serial</li>
+       </ul><br>
+       The calculator serial number <strong><code>6112G04300</code></strong> means: Built in 2021 (= 1960 +
+       <strong>61</strong>) in the <strong>12</strong><sup>th</sup> week in <strong>G</strong>ermany. 4.3.00 is the version number.
+       <p>
+     </li>
+     <li>
+        <strong>The HP logo and the 15C label on the simulator front are missing</strong>
+        <p>
+        Be sure to uninstall all versions of the "HP15C Simulator Font". Then install the font file from the latest
+        HP-15C package you have downloaded.
+     </li>
+     <li>
+        <strong>Do you plan to implement other models of the Voyager series, e.g. the HP-12C?</strong>
+        <p>
+        I don't own any of the other models and  I have no plans to implement them.
+     </li>
+     <li>
+        <strong>How can I exchange the period (decimal point) and the comma (digit separator)?</strong>
+        <p>
+        Using the mouse: Right-click the <span class="KeyLabel">ON</span> button or the area around the display and select
+        "Swap comma and period".<br>
+        Using the keyboard: Press <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">.</span> (period) or <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">,</span> (comma).
+     </li>
+     <li>
+       <strong>Where can I get a German user manual for the Simulator or the HP-15C Limited Edition?</strong>
+       <p>
+       The manual for the HP-15C Limited Edition is only available in English. However, the HP-15C LE is functionally
+       identical to the original  HP-15C from the 1980s and the Simulator. Therefore the manuals for the original HP-15C
+       also apply to the LE and the Simulator.<br>
+       The HP-15C Owner's Handbooks in Danish, English, German, French and Portuguese are available on the
+       <a href="https://literature.hpcalc.org/" target="_blank" class="internal">HP Calculator Literature</a> page.
+     </li>
+      <li>
+        <strong>Why do some keys show a small square instead of the correct label?</strong>
+        <p>
+        Please see the <a class="internal" href="preferences.htm#extunicode">Font Settings</a>.
+     </li>
+     <li>
+        <strong>Do you plan to port the simulator to other operating systems like Android or iOS?</strong>
+        <p>
+        I do not plan to port it to other platforms. There are several commercial HP-15C emulators available in the
+        iOS and Android app stores.<p>
+        I can also highly recommend <a href="https://play.google.com/store/apps/details?id=org.efalk.rpncalc" target="_blank" class="internal">RpnCalc</a>.
+        It does not have all the features of the HP-15C, but it is free and more than sufficient for everyday use. I use
+        it on all my Android devices.
+     </li>
+     <li>
+        <strong>Is there a configuration interface or tool to re-map the keyboard shortcuts?</strong>
+        <p>
+        There is no such thing. The keyboard shortcuts follow standards, like <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">O</span>
+        to open a program, or are straightforward, like <span class="ShortCut">E</span> for <span class="KeyLabel">e<sup>x</sup></span> or
+        <span class="ShortCut">S</span> for <span class="KeyLabel">SIN</span>. The small number of candidates for remapping
+        does not justify the effort.
+     </li>
+     <li>
+       <strong>I installed the HP-15C font but the Simulator keeps complaining that the font isn't installed.</strong>
+       <p>
+       In my experience, this is a problem specific to the KDE desktop environment. This problem has not been reported
+       for other desktop environments.
+       <p>
+       The KDE font installer does not always update the font system of the underlying X-Windows system.
+       When this happens, newly installed fonts are available for native KDE (QT) applications, but not for pure X11 applications.
+       You will need to install the font manually.
+       <p>
+       The steps to manually install a font depend on the Linux distribution you are using. On many systems, namely
+       Debian-based distributions, it is sufficient to copy the font to the <code>~/.fonts</code> directory.
+       <p>
+       If this does not solve the problem, please see the X.Org page about
+       <a href="https://www.x.org/releases/X11R7.7/doc/xorg-docs/fonts/fonts.html" target="_blank" class="internal">Fonts in X11R7.7</a>
+      </li>
+      <li>
+        <strong>On macOS I get the message: "HP-15C.app" cannot be opened because the developer cannot be verified</strong>
+        <p>
+        The following steps work in 2025. The actual steps may change with future versions of macOS.
+        <ul>
+          <li><strong>Go to System Settings</strong><p>
+            Click the Apple menu in the top-left corner of your screen.<br>
+            Select System Settings (or System Preferences in older versions).<br>
+            Navigate to Privacy & Security.
+          </li>
+          <li><strong>Locate the Security Section:</strong><p>
+            Scroll down to the Security section.<br>
+            If you recently tried to open the app, you should see a message that says, "HP-15C was blocked because it is not from
+            an identified developer."<br>
+            Next to this message, there should be an Open Anyway button. Click it.
+          </li>
+          <li><strong>Authenticate and Confirm:</strong><p>
+            You may be prompted to enter your administrator password to confirm the action.<br>
+            After clicking Open Anyway, you'll see a dialog asking if you're sure you want to open the app. Click Open to proceed.
+           </li>
+        </ul>
+     </li>
+
+    </ul>
+
+    <p style="text-align:right"><a href="links.htm#top" class="internal">Links &#9654;</a>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="formats/layout.css">
+  <link rel="stylesheet" type="text/css" href="formats/formats.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HP-15C: Usage</title>
+</head>
+<body>
+
+<div class="sidenav">
+
+  <div id="logo_frame">
+    <div id="logo" style="text-align:center;">
+      <a href="index.html"><img src="images/HP-15C_small.png" title="Home" width="116" height="81" alt="HP-15C_small.png 116x81" style="padding-top: 10px; border-width:0"></a><br>
+      <span style="font-size:75%; color:#6CB7BD;">Version 5.0.01, Build 6512</span>
+    </div>
+  </div>
+  <div id="navigation_frame">
+  <div id="navigation">
+    <a href="introduction.html" class="Content1">Introduction</a><br>
+    <br>
+    <a href="usage.html" class="Content1">Usage</a><br>
+      <div class="Content2">
+        <a href="usage.html#operation">Operation</a><br>
+        <a href="usage.html#runmode">Run Mode</a><br>
+        <a href="usage.html#cmplxmode">Complex Mode</a><br>
+        <a href="usage.html#differences">Differences</a><br>
+      </div>
+    <br>
+    <a href="programs.html" class="Content1">Programs</a><br>
+    <br>
+    <a href="menus.html" class="Content1">Menus</a><br>
+    <br>
+    <a href="keyboard.html" class="Content1">Keyboard</a><br>
+    <br>
+    <a href="devices.html" class="Content1">Devices</a><br>
+    <br>
+    <a href="preferences.html" class="Content1">Preferences</a><br>
+    <br>
+    <a href="FAQ.html" class="Content1">FAQ</a><br>
+    <br>
+    <a href="links.html" class="Content1">Links</a><br>
+    </div>
+  </div>
+  <div id="contact_frame_1">
+    <div class="contact">
+    &copy; 2025 Torsten Manz
+    <a href="mailto:info@HP-15C-Simulator.de" title="Write an email to the author.">
+      <img src="images/mail_logo.gif" width="20" height="14" alt="mail_logo.gif 20x14" style="border-width:0; vertical-align: top;">
+    </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="contnav">
+
+  <div id="header_border">
+    <div id="header_frame">
+      <div id="header" style="text-align:center;">
+        <span style="font-size:200%;font-weight:bold;color:#545454;">HP-15C Simulator</span>
+        <br><br>
+        <span style="font-size:150%;font-weight:bold;">For Windows, Linux and macOS</span>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <h1><a id="usage">Usage</a></h1>
+    <h2><a id="operation">Operation</a></h2>
+    <h3>Online Help</h3>
+    <p>
+    To view this Online Help from within the Simulator press <span class="ShortCut">F1</span>.
+    <p>
+    By default, the Simulator uses the Mozilla web browser to display the online help. If this is not installed
+    on your system, the Simulator will automatically select another browser. You can also specify your preferred
+    browser in the <a class="internal" href="preferences.htm#browser">Help File Browser</a> section of the preferences.
+    <h3>Using the Mouse</h3>
+    <p>
+    Each key on the real HP-15C has three functions: A primary function in white and two secondary
+    functions in gold and blue. Pressing the key itself calls up the primary function. To call up a secondary
+    function, click on one of the two shift keys <span class="fKey">f</span> or <span class="gKey">g</span>,
+    followed by the key with the secondary function. The Simulator behaves in exactly the same way when you click
+    the keys with the mouse.
+    <p>
+    On the Simulator, you can also access the secondary functions also by clicking directly on the gold and blue
+    labels. You do not need to click the <span class="fKey">f</span> or <span class="gKey">g</span> key first.
+    This behaviour can be disabled in the <a class="internal" href="preferences.htm#simulator">Simulator</a> section of the Preferences.
+    <p>
+    When you move the mouse over a gold or blue label, the label is be highlighted, i.e. the foreground and background colours are
+    swapped. If a shift key is active, the letters "f" or "g" are displayed in the status line of the display, the highlighting is only
+    active for the corresponding functions. The highlighting can be disabled in the
+    <a class="internal" href="preferences.htm#simulator">Simulator</a> section of the Preferences. The highlighting is always off
+    when the direct access to the secondary functions is disabled.
+    <p>
+    If you click on a gold label when the blue functions are active, indicated by the letter "g" in the display, the blue function
+    is called and not the gold one you clicked on. So the sequence
+    <span class="gKey">g</span>&nbsp;<span class="fKeyLabel">&#8594;H.MS</span> does <em>not</em> call the function
+    <span class="fKeyLabel">&#8594;H.MS</span> but <span class="gKeyLabel">&#8594;H</span>. The behaviour is the same when the gold
+    functions are active and you click on a blue label.<br>
+    <p>
+    In general, clicking on any of the three parts of a Simulator key while a secondary function indicator is shown
+    in the display will invoke the corresponding secondary function of that key.
+    <h3>Using the Keyboard</h3>
+    <p>
+    Each Simulator key is mapped to a specific keyboard key (see section <a class="internal" href="keyboard.htm#keyboard">Keyboard</a>).
+    Pressing the keyboard key has the same effect as clicking the key with the mouse. This allows the simulator to be used in
+    almost the same way as the real HP-15C.
+    For example, the <span class="KeyLabel">SIN</span> key is mapped to the keyboard key <span class="ShortCut">S</span>;
+    so pressing <span class="ShortCut">S</span> computes the sine of the value in the display. To
+    compute the inverse sine you can either click on <span class="gKeyLabel">SIN<sup>-1</sup></span> or type the
+    sequence <span class="ShortCut">G</span> <span class="ShortCut">S</span> on the computer keyboard.
+    <p>
+    On the real HP-15C only two keys, <span class="KeyLabel">SST</span> and <span class="gKeyLabel">BST</span> in
+    PRGM mode, have auto-repeat functionality. On the Simulator the auto-repeat functionality depends on the operating system:
+    <ul>
+      <li>Windows: No auto-repeat for any key.</li>
+      <li>Linux: If auto-repeat is enabled in the system settings, all keys have auto-repeat functionality.</li>
+    </ul>
+    <p>
+    Exceptions tp this rule are:
+    <ul>
+      <li><span class="ShortCut">&rarr;</span> or <span class="KeyLabel">SST</span> (in Run mode)</li>
+      <li><span class="ShortCut">I</span> or <span class="fKeyLabel">(i)</span></li>
+      <li><span class="ShortCut">space</span> or <span class="fKeyLabel">PREFIX</span></li>
+      <li><span class="gKeyLabel">MEM</span></li>
+    </ul>
+    <p>
+    These keys behave differently for the &lt;KeyPress&gt; (&lt;ButtonPress&gt;) and the &lt;KeyRelease&gt;
+    (&lt;ButtonRelease&gt;) events, and therefore have no auto-repeat functionality. See the keyboard page for a
+    detailed description.
+
+    <h3>Combining Mouse and Keyboard</h3>
+    <p>
+    Mouse and keyboard operations can be mixed without any restrictions. Suppose you have entered a time value as a
+    decimal number. To convert this value into hours, minutes, and seconds, the HP-15C provides
+    the function <span class="fKeyLabel">&#8594;H.MS</span>. Any of the following mouse/keyboard sequences will invoke this function:
+    <table class="TblNoBorder">
+      <colgroup>
+        <col style="width: 6em;">
+        <col style="width: 6em;">
+        <col style="width: 6em;">
+        <col style="width: 2em;">
+        <col style="">
+      </colgroup>
+      <tbody>
+        <tr>
+          <td><span class="ShortCut">F</span> <span class="ShortCut">2</span></td>
+          <td><span class="ShortCut">F</span> <span class="KeyLabel">2</span></td>
+          <td><span class="ShortCut">F</span> <span class="fKeyLabel">&#8594;H.MS</span></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span class="fKey">f</span> <span class="ShortCut">2</span><br></td>
+          <td><span class="fKey">f</span> <span class="KeyLabel">2</span></td>
+          <td><span class="fKey">f</span> <span class="fKeyLabel">&#8594;H.MS</span></td>
+          <td></td>
+          <td><span class="fKeyLabel">&#8594;H.MS</span> (click the gold label, if direct access is enabled)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3><a id="special">Abbreviated Keyboard Sequences</a></h3>
+    <p>
+    Like the real HP-15C, the Simulator allows abbreviated key sequences for some of the gold secondary functions.
+    This means that the <span class="fKey">f</span> key is obsolete if it follows another prefix key in a key sequence.
+    For example, the sequence <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">LBL</span>&nbsp;<span class="fKey">f</span>
+    <span class="fKeyLabel">A</span> can be keyed in as <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">LBL</span>&nbsp;<span class="fKeyLabel">A</span>
+    and the sequence
+    <span class="KeyLabel">STO</span>&nbsp;<span class="fKey">f</span>&nbsp;<span class="fKeyLabel">RAN #</span>
+    can be abbreviated to <span class="KeyLabel">STO</span>&nbsp;<span class="fKeyLabel">RAN #</span>.
+    <p>
+    Any pending command can be cancelled with <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">PREFIX</span> and
+    without losing the value in the <span class="register">X</span>-register.
+
+    <h3><a id="clipboard">Clipboard</a></h3>
+    <p>
+    The contents of the <span class="register">X</span>-register can be copied to and from the clipboard using the standard keyboard
+    shortcuts <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">C</span> and
+    <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">V</span>.<br>
+    When a number is copied <em>to</em> the clipboard, its internal representation is used, not the format used on the display.
+    To copy the number in the format used on the display press
+    <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">C</span>.
+    <p>
+    For example, if the format is set to <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">ENG</span>&nbsp;<span class="KeyLabel">4</span>,
+    the result of <span class="KeyLabel">7</span>&nbsp;<span class="gKey">g</span> <span class="gKeyLabel">LOG</span> is displayed as
+    <span class="DisplayInline">&nbsp;845.10&nbsp;&nbsp;-03</span>.
+    <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">C</span> copies this as
+    <code>845.10e-03</code>, whereas <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">C</span> copies it as
+    <code>0.8450980400142568</code>, i.e. the internal representation using the full precision.
+    <p>
+    By default, the Simulator uses the same character for the decimal point as in the display, i.e. period or a comma.
+    To allow different settings for the clipboard and the display, you can force the use of the "C locale" for the clipboard
+    (see the <a class="internal" href="preferences.htm#simulator">Simulator</a> section of the preferences). In the example above
+    the number will be copied as either <code>4567,105</code> (the period is a comma) or as <code>4567.105</code> (the period is a point),
+    depending on the current settings.
+    <p>
+    When a number is copied <em>from</em> the clipboard, the format of the number is analysed according to the following rules:
+    <p>
+    <ol>
+      <li>Only the first line, i.e. up to the first newline character, of the clipboard data is used.</li>
+      <li>All characters at the beginning and the end of the clipboard data, that can not be part of a number, are removed:
+        <ul>
+          <li><code>##1.234##</code> becomes <code>1.234</code></li>
+          <li><code>"1.6"</code> becomes <code>1.6</code></li>
+          <li><code>-123+</code> becomes <code>-123</code></li>
+          <li><code>123.456,76€</code> becomes <code>123.456,76</code></li>
+        </ul>
+        <p>
+      </li>
+      <li>
+      If the clipboard data contains
+      <ol type="a">
+        <li>at least one comma <em>and</em> at least one period, the rightmost comma or period is used as the decimal point.</li>
+        <li>exactly one comma or one period, it is interpreted as a decimal point.</li>
+        <li>more than one comma <em>or</em> more than one period, they are interpreted as thousand separator characters.</li>
+      </ol>
+      </li>
+    </ol>
+    All of the following types of input will result in the same integer value of <code>123456789</code>:
+    <ul>
+      <li><code>&nbsp;123.456.789,00</code> : most countries in Europe</li>
+      <li><code>&nbsp;123'456'789.00</code> : Switzerland</li>
+      <li><code>&nbsp;123 456 789,00</code> : France, Latvia and others</li>
+      <li><code>12,34,56,789.00</code> : Canada</li>
+      <li><code>&nbsp;&nbsp;123456,789.00</code> : Philippines</li>
+      <li><code>&nbsp;123 456 789.00</code> and <code>12.34.56.789,00</code></li>
+      <li><code>&nbsp;123,456,789</code> and <code>123.456.789</code></li>
+    </ul>
+
+    <h3>Continuous Memory</h3>
+    <p>
+    When the real HP-15C is turned off, the memory contents are retained in its Continuous Memory. The Simulator mimics this behaviour
+    by writing the memory contents to a file when it is &quot;turned off&quot;. The name of the memory file is "<code>HP-15C.mme</code>", the location depends on the operating system:
+    <table class="TblLayout">
+     <thead>
+        <tr>
+          <th class="TblHead">OS</th>
+          <th class="TblHead">Path</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblTopLeft">UNIX, Linux and macOS</td>
+          <td class="TblMenuItem">$HOME/.HP-15C</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Windows 7/8/10</td>
+          <td class="TblMenuItem">%APPDATA%/HP-15C</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+    At startup the Simulator checks for a memory file and tries to load it. If no file is found, all registers are set to zero and all
+    status settings are set to their default values. If an existing file cannot be read in, an error is reported and the default settings are used.
+    <p>
+    To save the memory manually, press <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">M</span>. To reload the
+    previously saved memory, press <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">L</span>.
+    To reset the memory of the Simulator completely, press <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">R</span>.
+    The display will show <span class="DisplayInline">&nbsp;&nbsp;PR&nbsp;ERROR&nbsp;</span> (Power Error). This is the same as removing
+    the batteries from the real HP-15C.
+    <p>
+    The following items are saved in the memory file:
+    <ul>
+      <li>Stack and <span class="register">LSTx</span>-register</li>
+      <li>Program registers</li>
+      <li>Program documentation</li>
+      <li>Flags</li>
+      <li>Status information:
+      <ul>
+        <li>Settings for digit separator and decimal point</li>
+        <li>Display mode and precision</li>
+        <li>Trigonometric mode</li>
+        <li>Initial value for random number</li>
+        <li>User mode status<br><br></li>
+      </ul>
+      </li>
+      <li>Preferences</li>
+    </ul>
+    <p>
+    Some statuses are not saved, and are reset to their default values each time the Simulator is started:
+    <ul>
+      <li><span class="fKey">f</span> and <span class="gKey">g</span> are reset</li>
+      <li>A running program is stopped</li>
+      <li>Input is terminated</li>
+      <li>Run mode is switched on</li>
+      <li>Display blinking is stopped, i.e. Flag 9 is set to zero</li>
+      <li>Error status is reset</li>
+    </ul>
+
+    <h3><a id="hp15cmodes">Modes</a></h3>
+    <p>
+    The HP-15C has two input modes: The Run mode and the PRGM mode. The Run mode is the normal operation mode in which you can perform
+    all your calculations. The PRGM mode is used to enter programs, which can then be executed in the Run mode. When the HP-15C is
+    turned on, it is always in Run mode.
+    <p>
+    You can also choose between the Real mode and the Complex mode to calculate with complex numbers. By default, the HP-15C is in the Real mode.
+    <p>
+    Run/PRGM mode and REAL/Complex mode are independent of each other. For example, you can enter a program in the Real mode and then
+    run it in Complex mode and vice versa.
+    <p>
+    The Run mode is described below; the PRGM mode is described in the <a class="internal" href="programs.html">Programs</a> section.
+
+    <p style="text-align:right"><a href="#operation" class="internal">&#9664; Operation</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="runmode">Run Mode</a></h2>
+    <h3>Reverse Polish Notation</h3>
+    <p>
+    Like all HP calculators of its time, the HP-15C uses Reverse Polish Notation (RPN).
+    In the widely used infix notation, expressions are written in the form "<code>13 &#43; 29</code>", whereas in RPN this expressions reads
+    "<code>13 29 &#43;</code>". RPN is a so-called postfix notation: the operators, here the "<code>&#43;</code>", are not placed between
+    the operands, but <em>after</em> them. For the HP-15C, this means that you enter the digits of the first operand and press the
+    <span class="KeyLabel">ENTER</span> key, which pushes the input to the <span class="register">Y</span>-register (see below),
+    then enter the digits of the second operand and select the operation. The operation acts on the numbers in the
+    <span class="register">X</span> and <span class="register">Y</span>-register.
+    <h3>The Stack</h3>
+    <p>
+    The stack of the HP-15C consists of four registers named <span class="register">X</span>, <span class="register">Y</span>,
+    <span class="register">Z</span> and <span class="register">T</span>. The display always shows the contents of the
+    <span class="register">X</span>-register. A fifth register <span class="register">LSTx</span> (last X) stores
+    the last operand used in an operation. This is useful if you want to perform successive operations on the
+    same parameter, or to undo the last operation.
+    <p>
+    When a number is entered, it is stored in the <span class="register">X</span>-register. Functions that require only
+    one parameter, such as the square root or the exponential function, take the value from the <span class="register">X</span>-register,
+    compute the result and write it to the <span class="register">X</span>-register.
+    When you press <span class="KeyLabel">ENTER</span>, the contents of the stack are pushed up, i.e. the number in the
+    <span class="register">Z</span>-register is copied to the <span class="register">T</span>-register, the one in <span class="register">Y</span>
+    is copied to <span class="register">Z</span>, and the one in <span class="register">X</span> is copied to
+    <span class="register">Y</span>. The number previously stored in <span class="register">T</span> is discarded.
+    <p>
+    Operations that require two operands take the values in the <span class="register">Y</span> and
+    <span class="register">X</span>-registers, remove them from the stack, and write the computed result to the
+    <span class="register">X</span>-register. The other registers are `popped´, i.e. their contents are moved
+    down one register. The value in <span class="register">Z</span> is copied to <span class="register">Y</span>, and the value in
+    <span class="register">T</span> is copied to <span class="register">Z</span>. This results in the same value in the
+    <span class="register">Z</span>- and the <span class="register">T</span>-registers.
+    <p>
+    Let us, for example, take the operation "<code>6 &#215; 7</code>", which is keyed in as <span class="KeyLabel">6</span>
+     <span class="KeyLabel">ENTER</span>&nbsp;<span class="KeyLabel">7</span>
+     <span class="KeyLabel">&#215;</span>.
+    The following figure shows the effect on the stack when the keys are pressed (The <span class="register">Z</span>-register
+    is already set with a value from a previous operation):
+
+    <table class="TblStack">
+      <colgroup>
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th class="noBorder"></th>
+          <th class="noBorder"><span class="KeyLabel">6</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder"><span class="KeyLabel">ENTER</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder"><span class="KeyLabel">7</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder"><span class="KeyLabel">&#215;</span></th>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">T</span></td>
+          <td class="Display">&nbsp;0.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;1.11</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;1.11</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;1.11</td>
+        </tr>
+        <tr>
+          <td  class="noBorder"><span class="register">Z</span></td>
+          <td class="Display">&nbsp;1.11</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;1.11</td>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">Y</span></td>
+          <td class="Display">&nbsp;0.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0.00</td>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">X</span></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;7</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;42.00</td>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">LSTx</span></td>
+          <td class="Display">&nbsp;0.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0.00</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;7.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+    Please see the HP-15C Owner's Handbook for a complete description of data entry and the stack.
+
+    <p style="text-align:right"><a href="#runmode" class="internal">&#9664; Run mode</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="cmplxmode">Complex Mode</a></h2>
+    <h3>The Imaginary Stack</h3>
+    <p>
+    Operations on complex numbers use a second stack, called the imaginary stack. This stack holds the imaginary part of complex
+    numbers, while the real parts are stored in the normal real stack. Like the real stack, the imaginary stack has the four registers
+    <span class="register">X</span>, <span class="register">Y</span>, <span class="register">Z</span> and <span class="register">T</span>,
+    plus the <span class="register">LSTx</span>-register. The imaginary stack is automatically created when Complex mode is switched on
+    and it is destroyed when it is switched off.
+    <p>
+    Complex mode is switched on by one of the following functions:
+    <table class="TblLayout">
+     <thead>
+        <tr>
+          <th class="TblHead">HP-15C&nbsp;key</th>
+          <th class="TblHead">Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblTopLeft"><span class="fKey">f</span> <span class="fKeyLabel">I</span></td>
+          <td class="TblTopLeft">Creates a complex number from the values in the <span class="register">X</span>
+            and <span class="register">Y</span>-register of the real stack.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft"><span class="fKey">f</span> <span class="fKeyLabel">Re&#8596;Im</span></td>
+          <td class="TblTopLeft">Exchanges the real and the imaginary part of a complex number.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft"><span class="gKey">g</span> <span class="gKeyLabel">SF</span> <span class="KeyLabel">8</span></td>
+          <td class="TblTopLeft">Sets flag 8, the COMPLEX flag.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+    Flag 8 determines whether the Complex mode is on or off. The only way to switch off Complex mode is to
+    clear flag 8 (<span class="gKey">g</span>&nbsp;<span class="gKeyLabel">CF</span>&nbsp;<span class="KeyLabel">8</span>).
+    The letter "C" in the status line of the display indicates that the HP-15C is in Complex mode:
+    <p>
+    <img class="Image" src="images/complex_1.gif" width="310" height="70" alt="complex_1.gif 310x70">
+    <h3>Entering Complex Numbers</h3>
+    <p>
+    To enter a complex number, enter the real part of the number in the <span class="register">Y</span>-register
+    and the imaginary part in the <span class="register">X</span>-register. To create the complex number click
+    <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">I</span> to create the imaginary stack.
+    The number in the real <span class="register">X</span>-register is then moved to the imaginary
+    <span class="register">X</span>-register and the real stack is popped. The number previously in the real
+    <span class="register">Y</span>-register is now in the real <span class="register">X</span>-register. Thus,
+    the complex number is stored in the two <span class="register">X</span>-registers, the real and the
+    imaginary one.
+    <p>
+    The following example shows how to enter the complex number <code>6&#43;7i</code> and the effect on the real
+    and the imaginary stack. The real stack already contains the results from previous calculations:
+    <table class="TblStack">
+      <colgroup>
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th class="noBorder"></th>
+          <th class="noBorder" colspan="2"><span class="KeyLabel">6</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder" colspan="2"><span class="KeyLabel">ENTER</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder" colspan="2"><span class="KeyLabel">7</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder" colspan="2"><span class="fKey">f</span> <span class="fKeyLabel">I</span></th>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">T</span></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;1</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;1</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;1</td>
+          <td class="Display">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td  class="noBorder"><span class="register">Z</span></td>
+          <td class="Display">&nbsp;1</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;1</td>
+          <td class="Display">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">Y</span></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="Display">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">X</span></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;7</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="Display">&nbsp;7</td>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">LSTx</span></td>
+          <td class="Display">-5</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">-5</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">-5</td>
+          <td class="DisplayInactive">&nbsp;</td>
+          <td class="noBorder"></td>
+          <td class="Display">-5</td>
+          <td class="Display">&nbsp;0</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+    As you can see from this example, the imaginary stack does not exist until you click <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">I</span>.
+    Registers in the imaginary stack that are not yet used are initialised with <code>0</code>.
+    <p>
+    We will now add the complex number <code>2&#43;3i</code> to that in the <span class="register">X</span>-register.
+    The second number is entered in exactly the same way as the first one:
+    <table class="TblStack">
+      <colgroup>
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+        <col style="width: 1em;">
+        <col style="width: 4em;">
+        <col style="width: 4em;">
+      </colgroup>
+      <tbody>
+        <tr>
+          <th class="noBorder"></th>
+          <th class="noBorder" colspan="2"><span class="KeyLabel">2</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder" colspan="2"><span class="KeyLabel">ENTER</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder" colspan="2"><span class="KeyLabel">3</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder" colspan="2"><span class="fKey">f</span> <span class="fKeyLabel">I</span></th>
+          <th class="noBorder"></th>
+          <th class="noBorder" colspan="2"><span class="KeyLabel">&#43;</span></th>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">T</span></td>
+          <td class="Display">&nbsp;1</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="Display">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td  class="noBorder"><span class="register">Z</span></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="Display">&nbsp;7</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="Display">&nbsp;7</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="Display">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">Y</span></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="Display">&nbsp;7</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;2</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;2</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;6</td>
+          <td class="Display">&nbsp;7</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;0</td>
+          <td class="Display">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">X</span></td>
+          <td class="Display">&nbsp;2</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;2</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;3</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;2</td>
+          <td class="Display">&nbsp;3</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;8</td>
+          <td class="Display">&nbsp;10</td>
+        </tr>
+        <tr>
+          <td class="noBorder"><span class="register">LSTx</span></td>
+          <td class="Display">-5</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">-5</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">-5</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">-5</td>
+          <td class="Display">&nbsp;0</td>
+          <td class="noBorder"></td>
+          <td class="Display">&nbsp;2</td>
+          <td class="Display">&nbsp;3</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+    Please note that when you click <span class="KeyLabel">ENTER</span> both stacks are pushed up.
+
+    <h3>Supported Functions</h3>
+    <p>
+    The following functions are able to make use of the imaginary stack:
+    <ul>
+      <li>Functions with one parameter:
+        <p>
+        <div style="padding-left: 1em; word-spacing: 1em;">
+          <span class="KeyLabel">&#8730;x&#773;</span> <span class="gKeyLabel">x<sup>2</sup></span> <span class="gKeyLabel">LN</span> <span class="gKeyLabel">LOG</span>
+          <span class="KeyLabel">&#8543;x</span> <span class="KeyLabel">10<sup>x</sup></span>
+          <span class="KeyLabel">e<sup>x</sup></span> <span class="gKeyLabel">ABS</span>
+          <span class="fKeyLabel">&#8594;R</span> <span class="gKeyLabel">&#8594;P</span>
+          <p>
+          <span class="KeyLabel">SIN</span> <span class="KeyLabel">COS</span> <span class="KeyLabel">TAN</span>
+          <span class="gKeyLabel">SIN<sup>-1</sup></span> <span class="gKeyLabel">COS<sup>-1</sup></span>
+          <span class="gKeyLabel">TAN<sup>-1</sup></span>
+          <span class="fKeyLabel">HYP</span> <span class="gKeyLabel">HYP<sup>-1</sup></span>
+          <p>
+        </div>
+      </li>
+      <li>Functions with two parameters:
+        <p>
+        <div style="padding-left: 1em; word-spacing: 1em">
+          <span class="KeyLabel">&#43;</span> <span class="KeyLabel">&#8722;</span>
+          <span class="KeyLabel">&#215;</span> <span class="KeyLabel">&divide;</span>
+          <span class="KeyLabel">y<sup>x</sup></span>
+          <p>
+        </div>
+      </li>
+      <li>Compare functions:
+        <p>
+        <div style="padding-left: 1em; word-spacing: 1em">
+          <span class="gKeyLabel">x=0</span> <span class="gKeyLabel">TEST</span>&thinsp;<span class="KeyLabel">0</span>&ensp;(<code>x&thinsp;&ne;&thinsp;0</code>)
+          <span class="gKeyLabel">TEST</span>&thinsp;<span class="KeyLabel">5</span>&ensp;(<code>x&thinsp;=&thinsp;y</code>)
+          <span class="gKeyLabel">TEST</span>&thinsp;<span class="KeyLabel">6</span>&ensp;(<code>x&thinsp;&ne;&thinsp;y</code>)
+          <p>
+        </div>
+      </li>
+      <li>Stack operations:
+        <p>
+        <div style="padding-left: 1em; word-spacing: 1em">
+          <span class="KeyLabel">x&#8596;y</span> <span class="KeyLabel">R&#8595;</span>
+          <span class="gKeyLabel">R&#8593;</span> <span class="KeyLabel">ENTER</span>
+          <span class="gKeyLabel">LSTx</span>
+        </div>
+      </li>
+    </ul>
+    <p>
+    All other functions ignore the imaginary stack.
+
+    <p style="text-align:right"><a href="#cmplxmode" class="internal">&#9664; Complex mode</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="differences">Differences</a></h2>
+    <p>
+    This section describes the differences between the real HP-15C and the Simulator.
+    <ul>
+      <li><strong>Register organisation</strong>
+      <p>
+      The memory of the real HP-15C is organised in 67 registers of 7 bytes each. The registers are shared between the data
+      pool and the common pool. The data pool contains registers that are used for storage operations. The common
+      pool contains free registers that can be used for program steps, matrix operations, complex numbers and
+      temporarily by <span class="fKeyLabel">SOLVE</span> and <span class="fKeyLabel">&#8747;<sup>x</sup><sub>y</sub></span>.
+      To redefine the number of registers in the data pool, type in the number in the <span class="register">X</span>
+      register and key in the sequence
+      <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">DIM</span>&nbsp;<span class="fKeyLabel">(i)</span>.
+      <p>
+      The Simulator's `memory´ is not organised in registers. This is less important, as the HP-15C has only one function that
+      gives the user knowledge of the internal structure: <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span>.
+      The Simulator fully mimics the behaviour of this function, so that there is no visible difference between the Simulator
+      and the real HP-15C.
+      <br>
+      </li>
+      <li><strong>Number encoding</strong>
+      <p>
+      The real HP-15C uses Binary-Coded Decimal (BCD) to encode all numbers. The Simulator uses the IEEE encoding of the Tcl/Tk runtime environment.
+      BCD can represent real numbers like <code>0.0006</code> exactly, it is encoded as <code>06000000000996</code>.
+      See <a href="https://www.hpmuseum.org/techcpu.htm" target="_blank" class="internal">The Museum of HP Calculators</a> for a detailed description.
+      On the other hand, the IEEE encoding is always only an approximation of a real number. This can lead to differences in the results as shown in the following example:
+      <p>
+      <table class="TblLayout">
+        <thead>
+          <tr>
+            <th class="TblHead">Key sequence</th>
+            <th class="TblHead">Display</th>
+          </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <td class="TblTopLeft"><span class="KeyLabel">7</span> <span class="KeyLabel">.</span> <span class="KeyLabel">0</span> <span class="KeyLabel">0</span> <span class="KeyLabel">5</span></td>
+            <td class="TblMenuItem"><span class="Display">&nbsp;7.005&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;</span></td>
+          </tr>
+          <tr>
+            <td class="TblTopLeft"><span class="KeyLabel">1</span> <span class="KeyLabel">&#43;</span></td>
+            <td class="TblMenuItem"><span class="Display">&nbsp;8.005&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&thinsp;</span></td>
+          </tr>
+          <tr>
+            <td class="TblTopLeft"><span class="KeyLabel">8</span> <span class="KeyLabel">.</span> <span class="KeyLabel">0</span> <span class="KeyLabel">0</span> <span class="KeyLabel">5</span> <span class="KeyLabel">&#8722;</span></td>
+            <td class="TblMenuItem"><span class="Display">-1.776&nbsp;&nbsp;&nbsp;&nbsp;-15&thinsp;</span></td>
+          </tr>
+        </tbody>
+      </table>
+      Obviously the result should be <code>0.000</code>, and this is what the real HP-15C displays: All numbers used here can be
+      represented exactly when using BCD. The IEEE encoding leads to rounding errors which yield a result other than zero.
+      <p>
+      </li>
+    </ul>
+
+    <p style="text-align:right"><a href="#differences" class="internal">&#9664; Differences</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+    <p style="text-align:right"><a href="programs.html#top" class="internal">Programs &#9654;</a>
+  </div>
+
+</div>
+</body>
+</html>

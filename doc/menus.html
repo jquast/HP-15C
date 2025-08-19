@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="formats/layout.css">
+  <link rel="stylesheet" type="text/css" href="formats/formats.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HP-15C: Menus</title>
+</head>
+<body>
+<div class="sidenav">
+
+  <div id="logo_frame">
+    <div id="logo" style="text-align:center;">
+      <a href="index.html"><img src="images/HP-15C_small.png" title="Home" width="116" height="81" alt="HP-15C_small.png 116x81" style="padding-top: 10px; border-width:0"></a><br>
+      <span style="font-size:75%; color:#6CB7BD;">Version 5.0.01, Build 6512</span>
+    </div>
+  </div>
+  <div id="navigation_frame">
+  <div id="navigation">
+    <a href="introduction.html" class="Content1">Introduction</a><br>
+    <br>
+    <a href="usage.html" class="Content1">Usage</a><br>
+    <br>
+    <a href="programs.html" class="Content1">Programs</a><br>
+    <br>
+    <a href="menus.html" class="Content1">Menus</a><br>
+      <div class="Content2">
+        <a href="menus.html#onmenu">ON</a><br>
+        <a href="menus.html#stackmenu">Stack</a><br>
+        <a href="menus.html#stomenu">Storage</a><br>
+        <a href="menus.html#matmenu">Matrix</a><br>
+        <a href="menus.html#prgmenu">Program</a><br>
+        <a href="menus.html#gsbmenu">GSB</a><br>
+        <a href="menus.html#flagmenu">Flags</a><br>
+        <a href="menus.html#testmenu">Test</a><br>
+        <a href="menus.html#errormenu">Error</a><br>
+      </div>
+    <br>
+    <a href="keyboard.html" class="Content1">Keyboard</a><br>
+    <br>
+    <a href="devices.html" class="Content1">Devices</a><br>
+    <br>
+    <a href="preferences.html" class="Content1">Preferences</a><br>
+    <br>
+    <a href="FAQ.html" class="Content1">FAQ</a><br>
+    <br>
+    <a href="links.html" class="Content1">Links</a><br>
+    </div>
+  </div>
+  <div id="contact_frame_1">
+    <div class="contact">
+    &copy; 2025 Torsten Manz
+    <a href="mailto:info@HP-15C-Simulator.de" title="Write an email to the author.">
+      <img src="images/mail_logo.gif" width="20" height="14" alt="mail_logo.gif 20x14" style="border-width:0; vertical-align: top;">
+    </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="contnav">
+
+  <div id="header_border">
+    <div id="header_frame">
+      <div id="header" style="text-align:center;">
+        <span style="font-size:200%;font-weight:bold;color:#545454;">HP-15C Simulator</span>
+        <br><br>
+        <span style="font-size:150%;font-weight:bold;">For Windows, Linux and macOS</span>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <h1><a id="menus">Menus</a></h1>
+    <h2>Popup Menus and Menu Bar</h2>
+    <h3><a id="popup-menus">Using popup menus</a></h3>
+    <p>
+    Several popup menus are available in the simulator. They are opened by clicking with the right mouse button (<span class="ShortCut">B3</span>) on an element of the
+    user interface, e.g. a button, the display, etc.; or by using a keyboard shortcut of the form
+    <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut"><em>key</em></span></em>
+    <p>
+    If you open a popup menu by clicking on an element of the user interface, the top left corner of the menu appears
+    at the position of the mouse pointer. If you open a popup using a keyboard shortcut, the top left corner of the popup
+    appears at the bottom left corner of the GUI element.
+    <p>
+    In addition to the popup menus, a menu bar can be enabled.
+    <h3><a id="max-osx-menus">macOS specifics</a></h3>
+    <strong>Popup Menus</strong>
+    <p>
+    Earlier versions of Tcl/Tk did not support fixed-width fonts in popup menus on macOS; a feature needed
+    for the simulator popup menus. Therefore popup menus on macOS were simulated with normal windows.
+    Recent combinations of Tcl/Tk and macOS no longer have this limitation anymore and native popup
+    menus are now used by default. However, this has the disadvantage that all native popup menus are always single-column. You can
+    therefore return to the old style menus by unchecking "<strong>Native macOS popup menus</strong>" in the
+    <a class="internal" href="preferences.htm#menus">Menus</a> section of the preferences.
+    <p>
+    The only exception is the program menu, which is always a normal window. This is because coloured entries and multi-column
+    popup menus are not supported by macOS.
+    <p>
+    <strong>Menu bar</strong>
+    <p>
+    Under macOS, the menu bar is always on, as it serves as the application's standard menu bar.
+    <p>
+    <h2><a id="onmenu">ON Menu</a></h2>
+    The <span class="KeyLabel">ON</span> popup menu provides functions that are typical for a "File" menu.
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<span class="KeyLabel">ON</span>,&ensp;<span class="ShortCut">B3</span>&ndash;
+        <img src="images/display_area_small.gif" style="vertical-align: middle;" width="86" height="16" alt="Area around the display">
+        (The area <em>around</em> the display)<br></li>
+        <li>Keyboard: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">O</span>,
+         <span class="ShortCut">F10</span><br></li>
+      </ul>
+    </div>
+    <table class="TblLayout">
+      <colgroup>
+        <col style="width: 22%">
+        <col style="width: 8%">
+        <col style="">
+      </colgroup>
+      <thead class="TblHead">
+      <tr>
+        <th class="TblHead">Menu item</th>
+        <th class="TblHead">Shortcut</th>
+        <th class="TblHead">Description</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblTopLeft">Open program&#8230;</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">O</span></td>
+        	<td class="TblTopLeft">Open an HP-15C program. Opens the standard operating system Load File dialogue
+          box to select a file. The new program will override the current program(s) when loaded.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Recent programs&nbsp;&#9656;</td>
+          <td class="TblshCut">-</td>
+        	<td class="TblTopLeft">Recent programs submenu. See below.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Save program&#8230;</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">S</span></td>
+        	<td class="TblTopLeft">Save the current HP-15C program(s). Opens the standard operating system
+            Save File dialogue box for specifying a file.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeftSep">Program description&#8230;</td>
+          <td class="TblshCutSep"><span class="ShortCut">F12</span></td>
+        	<td class="TblTopLeftSep">Opens the Program Description dialogue box. Used to add and edit the program documentation.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">HTML help: <span style="font-style: italic">text</span></td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">F1</span><br><span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">F1</span></td>
+          <td class="TblTopLeft">Displays the HTML help file for the current program.<br> If an HTML file exists,
+          "<span style="font-style: italic">text</span>" is the filename without an extension. If no file is found,
+          the menu item label is "&lt;not available&gt;" and the item is greyed out.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeftSep">Clear storage registers</td>
+          <td class="TblshCutSep"><span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">Esc</span></td>
+          <td class="TblTopLeftSep">Reset all storage registers to zero.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Memory&nbsp;&#9656;</td>
+          <td class="TblshCut">-</td>
+          <td class="TblTopLeft">Memory submenu. See below.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeftSep">Stay on top</td>
+          <td class="TblshCutSep"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">T</span></td>
+        	<td class="TblTopLeftSep">The Simulator stays on top of all applications on the desktop, even if it does not have the focus.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Swap comma and period</td>
+          <td class="TblshCut"><span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">.</span><br><span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">,</span></td>
+        	<td class="TblTopLeft">Swaps the representation of the decimal point and the digit separator.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Preferences&#8230;</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">,</span><br><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">;</span></td>
+        	<td class="TblTopLeft">This item opens a dialogue box that allows you to configure the Simulator. See
+            <a class="internal" href="preferences.htm#preferences">Preferences</a> for details on configurable items.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeftSep">Help</td>
+          <td class="TblshCutSep"><span class="ShortCut">F1</span></td>
+        	<td class="TblTopLeftSep">Starts a web browser with the simulator online help.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Show back side</td>
+          <td class="TblshCut">-</td>
+        	<td class="TblTopLeft">Shows the back side of the HP-15C Simulator.</td>
+        <tr>
+          <td class="TblTopLeft">About HP-15C&#8230;</td>
+          <td class="TblshCut">-</td>
+        	<td class="TblTopLeft">Opens a dialogue box with the Simulators copyright, disclaimer, serial number and other information.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeftSep">Exit</td>
+          <td class="TblshCutSep"><span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">F4</span></td>
+          <td class="TblTopLeftSep">Turns the Simulator off.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3><a id="recent_programs">Recent programs submenu</a></h3>
+    <table class="TblLayout">
+      <colgroup>
+        <col style="width: 22%">
+        <col style="width: 8%">
+        <col style="">
+      </colgroup>
+      <thead class="TblHead">
+      <tr>
+        <th class="TblHead">Menu item</th>
+        <th class="TblHead">Shortcut</th>
+        <th class="TblHead">Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblTopLeft"><em>program-0</em> &#8230; <em>program-n</em></td>
+          <td class="TblshCut"><span class="ShortCut">0</span>&ndash;<span class="ShortCut">9</span></td>
+        	<td class="TblTopLeft">A list of programs that were previously opened or saved. You can set the number of entries displayed,
+          with options ranging from 0 and 30, in the <a class="internal" href="preferences.htm#menus">Preferences</a>. The first ten
+          entries in the list can be accessed quickly using the shortcuts <span class="ShortCut">0</span>&ndash;<span class="ShortCut">9</span>.
+          <p>
+          A program name is greyed out, if it is not found when the menu is opened. The program is not automatically removed
+          from the list, as the file may only be unavailable temporarily, such as on a network drive that is not currently mounted.
+          </td>
+        </tr>
+        <tr>
+          <td class="TblTopLeftSep">Remove programs not found</td>
+          <td class="TblshCutSep">-</td>
+        	<td class="TblTopLeftSep">Remove all programs from the list that cannot be found, meaning the menu item is greyed out.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Clear list</td>
+          <td class="TblshCut">-</td>
+        	<td class="TblTopLeft">Remove all entries from the list. A message box will appear to confirm the action.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3><a id="onmenu_memory">Memory submenu</a></h3>
+    <table class="TblLayout">
+      <colgroup>
+        <col style="width: 22%">
+        <col style="width: 8%">
+        <col style="">
+      </colgroup>
+      <thead class="TblHead">
+      <tr>
+        <th class="TblHead">Menu item</th>
+        <th class="TblHead">Shortcut</th>
+        <th class="TblHead">Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblTopLeft">Save memory</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">M</span></td>
+        	<td class="TblTopLeft">Saves the simulator memory to the hard disk. The location and the name of the file depend on the
+            operating system and can not be changed by the user.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Load memory</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">L</span></td>
+        	<td class="TblTopLeft">Reload the simulator memory.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Reset memory</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">R</span></td>
+        	<td class="TblTopLeft">Reset the memory to the default value.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="text-align:right"><a href="#onmenu" class="internal">&#9664; ON Menu</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="stackmenu">Stack Menu</a></h2>
+    <p>
+    The stack menu shows the contents of the four stack registers and the LAST X (<span class="register">LSTx</span>) register.
+    The stack menu is only available in Run mode, not in PRGM mode.
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<img src="images/display_small.gif" style="vertical-align: text-bottom;" width="71" height="16" alt="Display"></li>
+        <li>Keyboard: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">S</span><br></li>
+      </ul>
+    </div>
+    <p>
+    Selecting one of the menu entries <span class="register">X</span> through <span class="register">T</span>
+    performs a roll-down of the stack. The chosen register becomes the <span class="register">X</span>-register.
+    Selecting the menu item <span class="register">LSTx</span> performs a push on the stack and copies the
+    contents of the <span class="register">LSTx</span>-register to the <span class="register">X</span>
+    register.  
+    <p>
+    The numbers in the popup menu are formatted in the same way as on the display.
+    Suppose you have typed the following:
+    <div style="margin-left:20px">
+    <p>
+    <span class="KeyLabel">1</span> <span class="KeyLabel">2</span> <span class="KeyLabel">e<sup>x</sup></span>
+    <span class="gKey">g</span> <span class="KeyLabel">&#8730;x&#773;</span> (or <span class="gKeyLabel">x&sup2;</span>)
+    <p>
+    <span class="KeyLabel">1</span> <span class="KeyLabel">2</span> <span class="KeyLabel">ENTER</span>
+    <p>
+    <span class="KeyLabel">7</span> <span class="KeyLabel">7</span> <span class="KeyLabel">7</span>
+    <span class="KeyLabel">7</span> <span class="KeyLabel">7</span> <span class="KeyLabel">7</span>
+    <span class="KeyLabel">&#8543;x</span>
+    <p>
+    <span class="KeyLabel">4</span> <span class="KeyLabel">2</span>
+    <p>
+    <span class="fKey">f</span> <span class="KeyLabel">7</span> <span class="KeyLabel">2</span>
+    (or simply <span class="fKeyLabel">FIX</span> <span class="KeyLabel">2</span>)
+    </div>
+    <p>
+    If you now right-click on the display, you will see the popup menu shown in the first image:
+
+    <figure>
+      <figure class="FigAside">
+        <figcaption><strong>FIX 2</strong></figcaption>
+        <img src="images/stack_fix2.gif" alt="Stack in FIX 2 format">
+      </figure>
+      <figure class="FigAside">
+        <figcaption><strong>FIX 4</strong></figcaption>
+        <img src="images/stack_fix4.gif" alt="Stack in FIX 4 format">
+      </figure>
+      <figure class="FigAside">
+        <figcaption><strong>SCI 3</strong></figcaption>
+        <img src="images/stack_sci3.gif" alt="Stack in SCI 3 format">
+      </figure>
+    </figure>
+
+    <p>
+    The key sequence <span class="fKey">f</span>&nbsp;<span class="KeyLabel">7</span>&nbsp;<span class="KeyLabel">4</span>
+    produces the format shown in the second image and
+    <span class="fKey">f</span>&nbsp;<span class="KeyLabel">8</span>&nbsp;<span class="KeyLabel">3</span> produces the format
+    shown in the third image.
+    <p>
+    In Complex mode, the stack popup menu shows both the real and the imaginary stack:
+    <figure>
+      <figure class="FigAside">
+        <figcaption><strong>Real and Complex Stack</strong></figcaption>
+        <img src="images/stack_complex.gif" alt="Real and Complex Stack">
+      </figure>
+    </figure>
+    <p>
+    If a stack register contains a matrix descriptor, e.g. <span class="DisplayInline">&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;2</span>,
+    the menu item for this register can be of two different types. Either it can either be a submenu button with a cascading submenu
+    showing the contents of the matrix. Or the menu item shows the matrix descriptor without a cascading submenu.
+    <figure>
+      <figure style="display: inline-block; text-align: center; vertical-align: top; margin: 10px;">
+        <figcaption><strong>Cascading submenu</strong></figcaption>
+        <img src="images/matrix_stack_submenu.png" alt="Matrix functions menu">
+      </figure>
+      <figure style="display: inline-block; text-align: center; vertical-align: top; margin: 10px;">
+        <figcaption><strong>Descriptor only</strong></figcaption>
+        <img src="images/matrix_stack_descriptor.png" alt="Matrix functions menu">
+      </figure>
+    </figure>
+    By default, the menu item for a matrix descriptor is a submenu button. This can be changed in the <a class="internal" href="preferences.htm#menus">Menus</a>
+    section of the Preferences.
+
+    <p style="text-align:right"><a href="#stackmenu" class="internal">&#9664; Stack Menu</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="stomenu">Storage Menus</a></h2>
+    <p>
+    This menu displays the status of the storage registers.<br>
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<span class="KeyLabel">STO</span>,&ensp;<span class="ShortCut">B3</span>&ndash;<span class="KeyLabel">RCL</span><br></li>
+        <li>Keyboard: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">M</span>,
+        <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">R</span><br></li>
+      </ul>
+    </div>
+    <p>
+    The storage menu is in either store or recall mode, depending on whether you access the menu with the <span class="KeyLabel">STO</span>
+    key or the <span class="KeyLabel">RCL</span> key. Selecting a register in recall mode copies the contents of that register to the
+    <span class="register">X</span>-register. In store mode, the content of the <span class="register">X</span>-register is copied to
+    the selected register.
+    <p>
+    By default, the storage registers are displayed in two columns. This can be changed to one column in the "Menus" section of the Preferences.
+
+    <figure>
+      <figure class="FigAside">
+        <figcaption><strong>Two-column mode</strong></figcaption>
+        <img src="images/storage_2cols.gif" alt="Two-column storage menu">
+      </figure>
+      <figure class="FigAside">
+        <figcaption><strong>One-column mode</strong></figcaption>
+        <img src="images/storage_1cols.gif" alt="One-column storage menu">
+      </figure>
+    </figure>
+
+    <p>
+    As with the real HP-15C, the user can change the number of available storage registers with
+    <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">DIM</span>&nbsp;<span class="fKeyLabel">(i)</span>.
+    The popup menu shows only the storage registers currently defined, up to a maximum of 20 registers. The
+    registers <span class="register">0</span>, <span class="register">1</span> and <span class="register">I</span> are always
+    available.
+    <p>
+    If you dimensioned the number of storage registers to 7, the popup menu will look like this:<br>
+
+    <figure>
+      <figure class="FigAside">
+        <figcaption><strong>One-column mode</strong></figcaption>
+        <img src="images/storage_7regs1col.gif" alt="storage_3regs.gif 193x185">
+      </figure>
+      <figure class="FigAside">
+        <figcaption><strong>Two-column mode</strong></figcaption>
+        <img src="images/storage_7regs2col.gif" alt="storage_3regs.gif 386x105">
+      </figure>
+    </figure>
+
+    <p style="text-align:right"><a href="#stomenu" class="internal">&#9664; Storage Menus</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="matmenu">Matrix Menus</a></h2>
+    The matrix functions, together with the complex number functions, are the functions that have the greatest impact on the operation
+    of the HP-15C. Matrix functions affect the memory usage. They use key sequences where the <span class="gKey">g</span> key precedes
+    a gold functions, they make use of the USER mode when entering the data of a matrix and in PRGM mode stores the USER
+    status that was active during the programming.
+    <p>
+    I therefore strongly recommend that you read the <a href="http://www.hp.com/ctg/Manual/c03308725.pdf" title="Right click with the
+    mouse and select 'Save Target As'" target="_blank" class="internal">HP-15C Owner's Handbook</a> for a complete list of all matrix functions.
+    <h3><a id="matcontent">Matrix Content</a></h3>
+    A matrix contents menu shows the elements of a matrix in a popup window.<br>
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<span class="fKeyLabel">A</span>&#8230;<span class="fKeyLabel">E</span></li>
+        <li>Mouse over: Matrix descriptor in the stack menu</li>
+      </ul>
+    </div>
+
+    Two styles are available for the matrix content menus: One with row and column headings like in a spreadsheet and one with
+    "row,column" information before each matrix element:
+
+    <figure>
+      <figure class="FigAside">
+        <figcaption><strong>Row and column headers</strong></figcaption>
+        <img src="images/matrix_4x3_rowcolumn.png" alt="Row and column headers">
+      </figure>
+      <figure class="FigAside">
+        <figcaption><strong>Row and column per element</strong></figcaption>
+        <img src="images/matrix_4x3_elements.png" alt="Row and column per element">
+      </figure>
+    </figure>
+
+
+    <h3><a id="matfunction">Matrix Functions</a></h3>
+    The matrix functions menu provides ten matrix specific functions and calculations.<br>
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<span class="fKeyLabel">MATRIX</span></li>
+        <li>Keyboard: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">Z</span></li>
+      </ul>
+    </div>
+
+    <figure>
+      <figure style="display: inline-block; text-align: center; vertical-align: top; margin: 10px;">
+        <figcaption><strong>Matrix functions menu</strong></figcaption>
+        <img src="images/matrix_functions.png" alt="Matrix functions menu">
+      </figure>
+    </figure>
+
+    <table class="TblLayout">
+      <colgroup>
+        <col style="width: 7%">
+        <col style="width: 12%">
+        <col style="">
+      </colgroup>
+      <thead class="TblHead">
+      <tr>
+        <th class="TblHead">Number</th>
+        <th class="TblHead">Function</th>
+        <th class="TblHead">Description</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblCentered">0</td>
+          <td class="TblTopLeft">0 DIM</td>
+        	<td class="TblTopLeft">Dimensions all matrices to 0×0.</td>
+        </tr>
+        <tr>
+          <td class="TblCentered">1</td>
+          <td class="TblTopLeft">1&#8594;R<sub>0</sub>, 1&#8594;R<sub>1</sub></td>
+        	<td class="TblTopLeft">Sets row and column numbers in R<sub>0</sub> and R<sub>1</sub> to 1.</td>
+        </tr>
+        <tr>
+          <td class="TblCentered">2</td>
+          <td class="TblTopLeft">A<sup>P</sup>&nbsp;&#8594;&nbsp;&Atilde;</td>
+        	<td class="TblTopLeft">Transform <strong>Z<sup>P</sup></strong> into <strong>Z&#0771;</strong>.</td>
+        </tr>
+        <tr>
+          <td class="TblCentered">3</td>
+          <td class="TblTopLeft">&Atilde;&nbsp;&#8594;&nbsp;A<sup>P</sup></td>
+        	<td class="TblTopLeft">Transform <strong>Z&#0771;</strong> into <strong>Z<sup>P</sup></strong>.</td>
+        </tr>
+        <tr>
+          <td class="TblCentered">4</td>
+          <td class="TblTopLeft">A<sup>T</sup></td>
+        	<td class="TblTopLeft">Calculate transpose of matrix specified in <span class="register">X</span>-register. </td>
+        </tr>
+        <tr>
+          <td class="TblCentered">5</td>
+          <td class="TblTopLeft">A<sup>T</sup>B</td>
+        	<td class="TblTopLeft">Multiplies transpose of matrix specified in <span class="register">Y</span>-register with matrix specified in <span class="register">X</span>-register. Stores in result matrix.</td>
+        </tr>
+        <tr>
+          <td class="TblCentered">6</td>
+          <td class="TblTopLeft">B=B-AC</td>
+        	<td class="TblTopLeft">Calculates residual in result matrix.</td>
+        </tr>
+        <tr>
+          <td class="TblCentered">7</td>
+          <td class="TblTopLeft">MAX &#931;|a<sub>ij</sub>|</td>
+        	<td class="TblTopLeft">Calculates row norm of matrix specified in <span class="register">X</span>-register.</td>
+        </tr>
+        <tr>
+          <td class="TblCentered">8</td>
+          <td class="TblTopLeft">(&#931;|a<sub>ij</sub>|&sup2;)<sup>&frac12;</sup></td>
+        	<td class="TblTopLeft">Calculates Frobenius or Euclidean norm of matrix specified in <span class="register">X</span>-register.</td>
+        </tr>
+        <tr>
+          <td class="TblCentered">9</td>
+          <td class="TblTopLeft">|A|</td>
+        	<td class="TblTopLeft">Calculates determinant of matrix specified in <span class="register">X</span>-register. Places <em>LU</em> in result matrix. </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="text-align:right"><a href="#matmenu" class="internal">&#9664; Matrix Menus</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="prgmenu">Program Menu</a></h2>
+    <p>
+    This menu shows the current program steps in a multi-column list. It is the equivalent of the real HP-15C function
+    <span class="KeyLabel">GTO</span>&nbsp;<span class="KeyLabel">CHS</span>&nbsp;<span class="KeyLabel">#</span>&nbsp;<span class="KeyLabel">#</span>&nbsp;<span class="KeyLabel">#</span>
+    (where <span class="KeyLabel">#</span> is in [<span class="KeyLabel">0</span>&#8230;<span class="KeyLabel">9</span>]), which moves the program
+    pointer to the step with the given number.
+    <p>
+    In <strong>PRGM mode</strong> the menu is invoked by:
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<img src="images/prgm_step_small.gif" width="71" height="16" alt="Display">,&ensp;<span class="ShortCut">B3</span>&ndash;<span class="KeyLabel">GTO</span></li>
+        <li>Keyboard: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">S</span><br></li>
+      </ul>
+    </div>
+    <p>
+    In <strong>Run mode</strong> the menu can only be invoked by:
+    <ul>
+      <li>Mouse: <span class="ShortCut">B3</span>&ndash;<span class="KeyLabel">GTO</span><br></li>
+    </ul>
+    <p>
+    When you select a program step from the menu, the program pointer is positioned on that step. In PRGM mode, the selected program
+    step is also shown in the display.
+    <p>
+    Three settings affect the layout of the menu (see <a class="internal" href="preferences.htm#menus">Menus</a>).
+    <ul>
+      <li>Program steps can be displayed either in the standard row-column notation or as mnemonics</li>
+      <li>Labels, subroutine calls (GSB and GTO) and return commands can be displayed in colour</li>
+      <li>The number of program steps per menu column</li>
+    </ul>
+    <p>
+    The following figure shows some examples of popup menus:
+    <figure>
+      <figure class="FigAside">
+        <figcaption><strong>Code</strong></figcaption>
+        <img src="images/prgm_code.gif" alt="Code">
+      </figure>
+      <figure class="FigAside">
+        <figcaption><strong>Code and colour</strong></figcaption>
+        <img src="images/prgm_code_col.gif" alt="Code and colour">
+      </figure>
+      <figure class="FigAside">
+        <figcaption><strong>Mnemonics</strong></figcaption>
+        <img src="images/prgm_mnemonics.gif" alt="Mnemonics">
+      </figure>
+      <figure class="FigAside">
+        <figcaption><strong>Mnemonics and colour</strong></figcaption>
+        <img src="images/prgm_mnemonics_col.gif" alt="Mnemonics and colour">
+      </figure>
+    </figure>
+    <p>
+    By default, the menu displays coloured mnemonics.
+
+    <p style="text-align:right"><a href="#prgmenu" class="internal">&#9664; PRGM Menu</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="gsbmenu">GSB Menu</a></h2>
+    <p>
+    This menu shows all defined program labels. If no labels are defined, the menu is not shown.
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<span class="KeyLabel">GSB</span><br></li>
+        <li>Keyboard: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">F3</span><br></li>
+      </ul>
+    </div>
+    <p>
+    You can choose whether the labels are sorted or listed in the order they appear in the program (the default). If the labels are
+    sorted, letter labels are sorted before number labels.
+    <p>
+    If a label is used more than once, it will only appear once in the <em>sorted</em> list. The <em>unsorted</em> list shows <strong>all</strong>
+    occurrences. Note that in this case, the current program position determines, which occurrence of the label is actually
+    accessed.
+    <p>
+    If a label description is available in the Program Documentation, this description is shown next to the label.<br>
+    If the label description starts with a "<strong>#</strong>", the description is <em>not</em> shown.
+    This can be used to hide subroutines that should not be called directly, but only from within the program.
+    <p>
+    The following examples are from the "Time Value of Money" program:
+    <figure>
+      <figure class="FigAside">
+        <figcaption><strong>Unsorted</strong></figcaption>
+        <img src="images/gsb_menu_unsorted.png" alt="Unsorted GSB menu">
+      </figure>
+      <figure class="FigAside">
+        <figcaption><strong>Sorted</strong></figcaption>
+        <img src="images/gsb_menu_sorted.png" alt="Sorted GSB menu">
+      </figure>
+    </figure>
+
+    <p style="text-align:right"><a href="#gsbmenu" class="internal">&#9664; GSB Menu</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="flagmenu">Flag Menu</a></h2>
+    <p>
+    This menu shows the status of the 10 flags.
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<span class="gKeyLabel">F?</span><br></li>
+        <li>Keyboard: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">F</span><br></li>
+      </ul>
+    </div>
+    <p>
+    A value of "1" indicates that a flag is set ("on"), a value of "0" indicates that it is not set ("off"). The Flags 1 to 7 are
+    user defined flags. Flag 8 indicates whether the Simulator is in Complex mode or not. Flag 9 indicates whether the display is
+    blinking.
+    <p>
+    When you select a menu item in PRGM mode, the sequence "<code>43.&nbsp;6.&nbsp;n</code>" is inserted into the program, to query
+    the status of Flag <em>n</em>. Selecting a menu item in Run mode has no effect.
+
+    <p style="text-align:right"><a href="#flagmenu" class="internal">&#9664; Flag Menu</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="testmenu">Test Menu</a></h2>
+    <p>
+    The test menu provides access to ten comparison operations that cannot be accessed directly from the keypad. The test menu is
+    only available in PRGM mode, not in Run mode.
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<span class="gKeyLabel">TEST</span><br></li>
+        <li>Keyboard: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">T</span><br></li>
+      </ul>
+    </div>
+    <p>
+    The HP-15C has 12 different comparison operations. Two of them, <span class="gKeyLabel">x&#8804;y</span> and,
+    <span class="gKeyLabel">x=0</span>, are directly accessible from the keypad. The remaining ten can be accessed via
+    <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">TEST</span>&nbsp;<em>n</em>, where <em>n</em> is the code of the operation:
+
+    <figure>
+      <figure class="FigAside">
+        <figcaption><strong>Test menu</strong></figcaption>
+        <img src="images/test_menu.gif" alt="Test menu">
+      </figure>
+    </figure>
+
+    <p>
+    When you select a menu item in PRGM mode, the sequence "<code>43.30.&nbsp;n</code> to perform test <em>n</em> is inserted in the program.
+
+    <p style="text-align:right"><a href="#testmenu" class="internal">&#9664; Test Menu</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="errormenu">Error Menu</a></h2>
+    <p>
+    If an error occurs, the HP-15C will display the word "Error" followed by the error code <em>n</em>: <span class="DisplayInline">&nbsp;&nbsp;ERROR&nbsp;&nbsp;N&nbsp;</span>.
+    The error popup menu provides a decoding for the error numbers.
+    <div style="line-height: 1.5em;">
+      <ul>
+        <li>Mouse: <span class="ShortCut">B3</span>&ndash;<img src="images/display_error_small.gif" width="71" height="16" alt="Display"></li>
+        <li>Keyboard: <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">S</span><br></li>
+      </ul>
+    </div>
+    <table class="TblLayout">
+      <colgroup>
+        <col style="width: 8%;">
+        <col style="width: 15%;">
+        <col style="">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="TblHead">No.</th><th class="TblHead">Short desc.</th><th class="TblHead">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        	<td class="TblTopLeft">0<td class="TblTopLeft">y &#247; 0, LN 0, &#8230;</td>
+        	<td class="TblTopLeft"><strong>Invalid mathematical operation</strong><p>
+            Invalid argument in one of the following routines:<p>
+            <span class="KeyLabel">&#215;</span>, where <code>x = 0.</code><br>
+            <span class="KeyLabel">y<sup>x</sup></span>, where
+            <ul>
+              <li>in Real mode <code>y &lt; 0</code> and <code>x</code> is not an integer.</li>
+              <li>in Real mode <code>y = 0</code> and <code>x &le; 0</code>.</li>
+              <li>in Complex mode <code>y = 0</code> and <code>Re(x) &#8804; 0</code>.</li>
+            </ul>
+            <span class="KeyLabel">&#8730;x&#773;</span>, in Real mode where <code>x &lt; 0</code>.<br>
+            <span class="KeyLabel">&#8543;x</span>, where <code>x = 0</code>.<p>
+            <span class="gKeyLabel">LOG</span>, where
+            <ul>
+              <li>in Real mode <code>x &lt; 0</code> or</li>
+              <li>in Complex mode <code>x = 0</code>.</li>
+            </ul>
+            <span class="gKeyLabel">LN</span>, where
+            <ul>
+              <li>in Real mode <code>x&lt;0</code> or</li>
+              <li>in Complex mode <code>x=0</code>.</li>
+            </ul>
+            <span class="gKeyLabel">SIN<sup>-1</sup></span>, where in Real mode <code>|x|&gt;1</code>.<br>
+            <span class="gKeyLabel">COS<sup>-1</sup></span>, where in Real mode <code>|x|&gt;1</code>.<p>
+            <span class="KeyLabel">STO</span> <span class="KeyLabel">&#247;</span>, where <code>x = 0</code>.<br>
+            <span class="KeyLabel">RCL</span> <span class="KeyLabel">&#247;</span>, where the content of the addressed
+            register is 0.<p>
+            <span class="gKeyLabel">&#916;%</span>, where the value in the <span class="register">Y</span>-registers is 0.<p>
+            <span class="gKeyLabel">HYP<sup>-1</sup></span> <span class="KeyLabel">COS</span>, where in Real mode <code>x&lt;1</code>.<br>
+            <span class="gKeyLabel">HYP<sup>-1</sup></span> <span class="KeyLabel">TAN</span>, where in Real mode <code>|x|&gt;1</code>.<p>
+            <span class="gKeyLabel">Cy,x</span> or <span class="fKeyLabel">Py,x</span>, where
+            <ul>
+              <li><code>x</code> or <code>y</code> are not integers;</li>
+              <li><code>x&lt;0</code> or <code>y&lt;0</code>;</li>
+              <li><code>x&gt;y</code>;</li>
+              <li><code>x</code> or <code>y&#8805;10<sup>10</sup></code>.</li>
+            </ul>
+           </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">1</td><td class="TblTopLeft">LN A, SIN A, &#8230;</td>
+        	<td class="TblTopLeft"><strong>Invalid Matrix operation</strong><p>
+          Applying an operation other than a matrix operation to a matrix, that is, attempting a
+          nonmatrix operation while a matrix is in the relevant register (whether the X- or Y-register or a storage register).
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">2</td><td class="TblTopLeft">&#931; Error</td>
+        	<td class="TblTopLeft"><strong>Invalid statistic operation</strong><p>
+            <span class="gKeyLabel">x&#773;</span>, <code>n = 0</code>.<br>
+            <span class="gKeyLabel">s</span>, <code>n &#8804; 1</code>.<br>
+            <span class="fKeyLabel">&#0375;,r</span>, <code>n &#8804; 1</code>.<br>
+            <span class="fKeyLabel">L.R.</span>, <code>n &#8804; 1</code>.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">3</td><td class="TblTopLeft">R?, A<sub>ij</sub>?</td>
+        	<td class="TblTopLeft"><strong>Invalid address for register or matrix element</strong><p>
+            The addressed storage register or the indexed matrix element does not exist.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">4</td><td class="TblTopLeft">LBL?, GTO &gt; MEM,<br>PRGM &gt; MEM</td>
+        	<td class="TblTopLeft"><strong>Invalid line number or label name</strong><p>
+            Program step addressed by line number is not in use or does not exist (line number &gt; 448).
+            Attempt to enter more than 448 program steps. Addressed label does not exist.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">5</td><td class="TblTopLeft">&gt; 7 RTN</td>
+        	<td class="TblTopLeft"><strong>To many nested subprograms</strong><p>
+            More than 7 nested subprogram levels.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">6</td><td class="TblTopLeft">SF &gt; 9, CF &gt; 9, F? &gt; 9</td>
+        	<td class="TblTopLeft"><strong>Invalid flag</strong><p>
+            Attempt to call a flag greater than 9.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">7</td><td class="TblTopLeft">SOLVE(SOLVE), &#8747;<sup>x</sup><sub>y</sub>(&#8747;<sup>x</sup><sub>y</sub>)</td>
+        	<td class="TblTopLeft"><strong>Recursive call to <span class="fKeyLabel">SOLVE</span> or
+            <span class="fKeyLabel">&#8747;<sup>x</sup><sub>y</sub></span></strong><p>
+            A program called by <span class="fKeyLabel">SOLVE</span> calls <span class="fKeyLabel">SOLVE</span>;
+            a program called by <span class="fKeyLabel">&#8747;<sup>x</sup><sub>y</sub></span> calls
+            <span class="fKeyLabel">&#8747;<sup>x</sup><sub>y</sub></span>.
+          </td>
+        </tr>
+        <tr>
+      	  <td class="TblTopLeft">8</td><td class="TblTopLeft">SOLVE ?</td>
+      	  <td class="TblTopLeft"><strong>No root found</strong><p>
+            <span class="fKeyLabel">SOLVE</span> can not find a root in the given interval.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">9</td><td class="TblTopLeft"><span class="KeyLabel">ON</span> / <span class="KeyLabel">&#215;</span></td>
+        	<td class="TblTopLeft"><strong>Service</strong><p>
+            This error cannot occur with the Simulator.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">10</td><td class="TblTopLeft">DIM &gt; MEM</td>
+        	<td class="TblTopLeft"><strong>Insufficient memory</strong><p>
+            Not enough memory to perform the requested operation.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">11</td><td class="TblTopLeft">DIM A &#8800; DIM B</td>
+        	<td class="TblTopLeft"><strong>Invalid matrix element</strong><p>
+            Inconsistent or improper matrix arguments for a given matrix operation:
+            <p>
+            <span class="KeyLabel">+</span> or <span class="KeyLabel">+</span>, where the dimensions are incompatible.<br>
+            <span class="KeyLabel">&#215;</span>, where:
+            <ul>
+             <li>the dimensions are incompatible; or</li>
+             <li>the result is one of the arguments.</li>
+            </ul>
+            <span class="KeyLabel">1/x</span>, where the matrix is not square.<br>
+            scalar/matrix <span class="KeyLabel">&div;</span>, where the matrix is not square.<br>
+            <span class="KeyLabel">&div;</span>, where:
+            <ul>
+              <li>the matrix in the X-register is not square;</li>
+              <li>the dimensions are incompatible; or</li>
+              <li>the result is the matrix in the X-register.</li>
+            </ul>
+            <span class="fKeyLabel">MATRIX</span>&thinsp;<span class="KeyLabel">2</span>, where the input is a scalar; or the number of rows is odd.<br>
+            <span class="fKeyLabel">MATRIX</span>&thinsp;<span class="KeyLabel">3</span>, where the input is a scalar; or the number of columns is odd.<br>
+            <span class="fKeyLabel">MATRIX</span>&thinsp;<span class="KeyLabel">4</span>, where the input is scalar.<br>
+            <span class="fKeyLabel">MATRIX</span>&thinsp;<span class="KeyLabel">5</span>, where:
+            <ul>
+              <li>the input is a scalar;</li>
+              <li>the dimensions are incompatible; or</li>
+              <li>the result is one of the arguments.</li>
+            </ul>
+            <span class="fKeyLabel">MATRIX</span>&thinsp;<span class="KeyLabel">6</span>, where:
+            <ul>
+              <li>the input is scalar;</li>
+              <li>the dimensions are incompatible (including the result); or</li>
+              <li>the result is one of the arguments.</li>
+            </ul>
+            <span class="fKeyLabel">MATRIX</span>&thinsp;<span class="KeyLabel">9</span>, where the matrix is not square.<br>
+            <span class="KeyLabel">RCL</span>&thinsp;<span class="fKeyLabel">DIM</span>&thinsp;<span class="fKeyLabel">I</span>, where contents of R<sub>I</sub> are scalar.<br>
+            <span class="fKeyLabel">DIM</span>&thinsp;<span class="fKeyLabel">I</span>, where contents of R<sub>I</sub> are scalar.<br>
+            <span class="KeyLabel">STO</span>&thinsp;<span class="fKeyLabel">RESULT</span>, where the input is scalar.<br>
+            <span class="fKeyLabel">Py,x</span>, where the number of columns is odd.<br>
+            <span class="gKeyLabel">Cy,x</span>, where the number of rows is odd.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">98</td><td class="TblTopLeft">File I/O Error</td>
+        	<td class="TblTopLeft"><strong>Error while opening or saving a program file</strong><p>
+          This is, of course, not an error code of the real HP-15C.<br></td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">99</td><td class="TblTopLeft">Tcl/Tk Error</td>
+        	<td class="TblTopLeft"><strong>Tcl/Tk interpreter error</strong><p>
+            This is of course not an error code of the real HP-15C. Although the Simulator has been extensively tested, there may be
+            some undetected errors in the code.
+            <p>
+            If you encounter such an error, you may find that restarting the Simulator does not solve the problem. In this case the
+            HP-15C memory file must be deleted manually.
+          </td>
+        </tr>
+        <tr>
+        	<td class="TblTopLeft">Pr Error</td><td class="TblTopLeft">Memory error</td>
+        	<td class="TblTopLeft"><strong>Continuous memory was reset</strong><p>
+          The memory of the Simulator has been reset to the default values.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="text-align:right"><a href="#errormenu" class="internal">&#9664; Error Menu</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+    <p style="text-align:right"><a href="keyboard.html#top" class="internal">Keyboard &#9654;</a>
+  </div>
+
+</div>
+</body>
+</html>

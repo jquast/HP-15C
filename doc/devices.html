@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="formats/layout.css">
+  <link rel="stylesheet" type="text/css" href="formats/formats.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HP-15C: Devices</title>
+</head>
+<body>
+
+<div class="sidenav">
+
+  <div id="logo_frame">
+    <div id="logo" style="text-align:center;">
+      <a href="index.html"><img src="images/HP-15C_small.png" title="Home" width="116" height="81" alt="HP-15C_small.png 116x81" style="padding-top: 10px; border-width:0"></a><br>
+      <span style="font-size:75%; color:#6CB7BD;">Version 5.0.01, Build 6512</span>
+    </div>
+  </div>
+  <div id="navigation_frame">
+  <div id="navigation">
+    <a href="introduction.html" class="Content1">Introduction</a><br>
+    <br>
+    <a href="usage.html" class="Content1">Usage</a><br>
+    <br>
+    <a href="programs.html" class="Content1">Programs</a><br>
+    <br>
+    <a href="menus.html" class="Content1">Menus</a><br>
+    <br>
+    <a href="keyboard.html" class="Content1">Keyboard</a><br>
+    <br>
+    <a href="devices.html" class="Content1">Devices</a><br>
+      <div class="Content2">
+        <a href="devices.html#overview">Overview</a><br>
+        <a href="devices.html#dm15">DM15</a><br>
+        <a href="devices.html#hp15ce">HP&thinsp;15C&thinsp;CE</a><br>
+        <a href="devices.html#hp15csim">HP-15C Simulator</a><br>
+        <a href="devices.html#messages">Messages</a><br>
+      </div>
+    <br>
+    <a href="preferences.html" class="Content1">Preferences</a><br>
+    <br>
+    <a href="FAQ.html" class="Content1">FAQ</a><br>
+    <br>
+    <a href="links.html" class="Content1">Links</a><br>
+    </div>
+  </div>
+  <div id="contact_frame_1">
+    <div class="contact">
+    &copy; 2025 Torsten Manz
+    <a href="mailto:info@HP-15C-Simulator.de" title="Write an email to the author.">
+      <img src="images/mail_logo.gif" width="20" height="14" alt="mail_logo.gif 20x14" style="border-width:0; vertical-align: top;">
+    </a>
+    </div>
+  </div>
+
+</div>
+<div class="contnav">
+
+  <div id="header_border">
+    <div id="header_frame">
+      <div id="header" style="text-align:center;">
+        <span style="font-size:200%;font-weight:bold;color:#545454;">HP-15C Simulator</span>
+        <br><br>
+        <span style="font-size:150%;font-weight:bold;">For Windows, Linux and macOS</span>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <h1><a id="devices">Devices</a></h1>
+    <h2><a id="overview">Overview</a></h2>
+
+    <h3>DM15</h3>
+    The original size DM15L and the credit card sized DM-15CC/DM-15 are HP-15C clones offered by
+    <a href="https://www.swissmicros.com" target="_blank" class="internal">SwissMicros</a>. They have a miniUSB/RS232 or,
+    on newer models, a USB-C/RS232 command line interface for reading and writing data. This interface allows the HP-15C
+    Simulator to exchange data with these devices.
+    <p>
+    This documentation does not distinguish between the DM-15CC, the DM-15 and the DM15L. They are collectively referred to as the DM15.
+    <p>
+
+    <h3>HP 15C Collector's Edition</h3>
+    The <a href="https://hpcalcs.com/product/hp-15c-collectors-edition/" target="_blank" class="internal">HP 15C Collector's Edition</a>
+    ('HP&thinsp;15C&thinsp;CE' for short) is the second reincarnation of the original HP-15C from HEWLETT-PACKARD, now HP Inc.
+    after the HP 15C <span style="font: "Pristina Std">Limited Edition</span> released in 2011.
+    <p>
+    The HP&thinsp;15C&thinsp;CE has a POGO pin connector on the back that can be used with the optional
+    <a href="https://hpcalcs.com/product/hp-programming-cable/" target="_blank" class="internal">HP Programming Cable</a>.
+    This allows it to update the firmware and back up and restore memory dumps with your computer.
+    <p>
+    Backup and restore operations are performed using the <a href="https://hpcalcs.com/download/" target="_blank" class="internal">VoyagerSave</a> application,
+    which saves the HP&thinsp;15C&thinsp;CE's memory to a file or reads a file and sends it back to the device.
+    <p>
+
+    <h3>HP-15C Simulator</h3>
+    To enable the support for the calculators in the Simulator, open the Preferences dialogue box. On the "Devices" tab enable
+    the "DM15 Support" or the "HP&thinsp;15C&thinsp;CE Support". You can also enable both. When the DM15 or HP15CE support is enabled,
+    additional menu items are available:
+    <ul>
+      <li>the <span class="KeyLabel">ON</span> popup menu has additional submenus for the "DM15" and the "HP15CE</li>
+      <li>the main menu bar has an additional menu item "Devices"</li>
+    </ul>
+    The additional menus have the following entries for the "DM15" and the "HP15CE:
+    <table class="TblLayout">
+      <colgroup>
+        <col style="width: 16%">
+        <col style="width: 12%">
+        <col style="width: 67%">
+      </colgroup>
+      <thead class="TblHead">
+      <tr>
+        <th class="TblHead">Menu item</th>
+        <th class="TblHead">Shortcut</th>
+        <th class="TblHead">Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="TblTopLeft">Read DM15</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">&uarr;</span></td>
+        	<td class="TblTopLeft">Read data from the DM15 to the Simulator.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Write DM15</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">&darr;</span></td>
+        	<td class="TblTopLeft">Write data from the Simulator to the DM15.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">System Info DM15</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">I</span></td>
+        	<td class="TblTopLeft">Read the system information from the DM15.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Read HP&thinsp;15C&thinsp;CE</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">&uarr;</span></td>
+        	<td class="TblTopLeft">Read data from the HP15CE to the Simulator.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">Write HP&thinsp;15C&thinsp;CE</td>
+          <td class="TblshCut"><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">&darr;</span></td>
+        	<td class="TblTopLeft">Write data from the Simulator to the HP15CE.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft">HP&thinsp;15C&thinsp;CE Output Mode</td>
+          <td class="TblshCut">-</td>
+        	<td class="TblTopLeft">This submenu allows it to choose between the two memory modes, 96 or 192 registers,
+          of the HP&thinsp;15C&thinsp;CE.</td>
+        </tr>
+      </tbody>
+    </table>
+    When the DM15 support or the HP&thinsp;15C&thinsp;CE support is disabled, the respective submenus and the menu items are hidden.
+    <p>
+    <p style="text-align:right"><a href="#calcs" class="internal">&#9664; Calculators</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="dm15">DM15</a></h2>
+    The full description of the DM15 USB connection, the serial console and the driver installation can be found in the SwissMicros
+    <a href="https://technical.swissmicros.com/voyager/doc/voyager_user_manual/#serial_console" target="_blank" class="internal">Voyager Series User Manual</a>.
+    <p>
+    <h3>USB To Serial Driver Installation</h3>
+    To support the DM15 interface, a "CP2102 USB to UART bridge driver" must be available on your computer.
+
+    <ul>
+     <li><strong>Windows:</strong><br>
+       Download and install the Windows driver from the <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers" target="_blank" class="internal">Silicon Labs drivers page</a>.
+       <p>
+       </li>
+       <li><strong>Linux</strong><br>
+         Current Linux systems should come with the necessary <span class="Command">cp210x</span> kernel modules.
+         The module may not be enabled or loaded by default. See the <span class="Command">modprobe</span> and
+         <span class="Command">lsusb</span> man pages for more details.
+       <p>
+     </li>
+     <li><strong>macOS</strong><br>
+       For macOS Catalina and earlier versions, download and install the driver from the
+       <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers" target="_blank" class="internal">Silicon Labs drivers page</a>.
+       <p>
+       Since macOS Big Sur a suitable driver is already built into the system. If you experience timeout problems with
+       this driver, use the Silicon Labs driver.
+       <p>
+     </li>
+    </ul>
+    <p>
+    <h3>Serial Port Configuration</h3>
+    Start the DM15 with <span class="fKeyLabel">C</span>&ndash;<span class="KeyLabel">ON</span> (press and hold <span class="fKeyLabel">C</span>,
+    then press and release <span class="KeyLabel">ON</span>). The display will show "<code>SERIAL CONSOLE</code>". Connect the DM15
+    to your computer and determine the number of the "Serial Interface Port" to which the USB connection is mapped:
+    <ul>
+     <li><strong>Windows:</strong><br>
+       Open the Windows Device Manager. Under "Ports (COM & LPT)" find the entry
+       "Silicon Labs CP210x USB to UART Bridge (COM<code>##</code>)" and note the COM port number.
+       <p>
+       </li>
+       <li><strong>Linux</strong><br>
+       Look for a device <span class="Command">/dev/ttyUSB*</span>. By default, and if no other serial port is connected,
+       the port number should be <span class="Command">0</span>.
+       <p>
+       Make sure that you are a member of the same UNIX group, usually <span class="Command">dialout</span>, as the tty
+       device. Otherwise you may not be able to read from or write to the device.
+       <p>
+     </li>
+     <li><strong>macOS</strong><br>
+       The Silicon Labs driver creates a device <span class="Command">/dev/cu.SLAB_USBtoUART</span> which does not take a port number.
+       <p>
+       The devices of the built-in driver have the form "<span class="Command">/dev/tty.usbserial-<em>####</em>"</span>.
+       <p>
+     </li>
+    </ul>
+    Open the Preferences dialogue box on the Simulator. On the "DM15" tab select the port number
+    from the "Serial Interface Port" pull-down menu. This is not necessary for the macOS Silicon Labs driver.
+    <p>
+    <h3>Verifying The Setup</h3>
+    To check the connection start the DM15 into the serial console and connect it to your computer. On the Simulator
+    open the <span class="KeyLabel">ON</span> popup menu and select "DM15&nbsp;&#9654;&nbsp;Read" or use the shortcut
+    <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">&uarr;</span>. A dialogue box entitled
+    "DM15&nbsp;read" will open. Ensure that at least one of the options is ticked and click "OK". You should see the
+    message "Data read successfully". If you see a different message, refer to the
+    <a href="#errormsgs" class="internal">Messages</a> section below.
+
+    <h3>Firmwares</h3>
+    There are three types of the DM15 firmware available. Each provides a different number of registers:
+    <ul>
+      <li>DM15: 64 registers; like the original HP-15C</li>
+      <li>DM15_M80: 128 registers</li>
+      <li>DM15_M1B: 229 registers</li>
+    </ul>
+    <p>
+    Start the DM15 by holding down <span class="fKeyLabel">E</span> and then pressing <span class="KeyLabel">ON</span>.
+    The firmware information will be displayed as long as the <span class="KeyLabel">ON</span> key is held down. On the
+    Simulator set the "Number of registers" to the number provided by the firmware of your DM15.
+    <p>
+    It is recommended that the HP-15C Simulator and the DM15 have the same number of registers. If the number of registers
+    is different, it is likely that not all data can be exchanged between the two devices. Data transfer also depends on
+    the memory allocation. For more details on memory allocation see "Appendix C Memory Allocation" in the
+    <a href="http://www.hp.com/ctg/Manual/c03030589.pdf" target="_blank" class="internal">HP-15C LE Owner's Handbook</a>.
+    <p>
+    <strong>Note:</strong> You must install firmware version 9 or higher on your DM15. Earlier versions have problems
+    with the command line interface and will not work.
+
+    <p>
+
+    <h3>System Information</h3>
+    The menu item "<strong>System Info DM15</strong>" opens a new window with the following information about the DM15:
+    <ul>
+      <li><strong>Firmware and version</strong>
+        <p>
+        The firmware type, with the total number of registers and the firmware version.
+        <p>
+      </li>
+      <li><strong>Date and time</strong>
+        <p>
+        The date and time on the DM15 in the format "YYYY-MM-DD HH:MM:SS" and the time difference, in seconds, to your computer.
+        <p>
+        The "<strong>Synchronise</strong>" button synchronises the DM15's clock with the computer's clock. Computer clocks
+        are (usually) synchronised with an NTP server on the Internet and are more accurate than the DM15's internal clock.
+        <p>
+        The computer's date and time are written to the DM15 and then read back from the DM15 for validation.
+        This <em>can</em> result in a time difference of 1 second, which can be ignored.
+      </li>
+      <li><strong>Battery voltage and remaining power</strong>
+        <p>
+        The current battery voltage and the estimated remaining power.
+        <p>
+        Measuring of the voltage affects the measurement itself. Immediately consecutive measurements may give different
+        voltages. Batteries from different manufacturers have different discharge characteristics. The remaining power
+        is therefore only an estimate.
+        <p>
+        This information is not available on the first batch of the credit card sized DM-15CCs.
+      </li>
+    </ul>
+
+    <h3><a id="dataexchg">Data Exchange</a></h3>
+    <p>
+    The following section assumes that you have successfully set up DM15 support in the HP-15C Simulator.
+    The "Ask for each operation" option should be enabled.
+    <p>
+    First load a program into the Simulator, e.g. one of the examples available for download from the Simulator homepage.
+    Connect the DM15 to your computer and start the DM15 into the serial port console. Select "DM15&nbsp;&#9654;&nbsp;Write"
+    from the <span class="KeyLabel">ON</span> popup menu or use the shortcut
+    <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">&darr;</span>.
+    The "DM15&nbsp;write</span>" dialogue box appears. Check "Program", uncheck the
+    other options and click "OK". You should see the message "Data successfully written.".
+    <p>
+    Disconnect the DM15 from the computer and restart it or wait until the serial port console times out. Switch the
+    DM15 to PRGM mode and press <span class="KeyLabel">SST</span> several times to check that the program has been
+    successfully transferred to the DM15.
+    <p>
+    To read a program from the DM15 into the HP-15C Simulator, start the DM15 into the serial port console and connect
+    it to your computer. Select "DM15&nbsp;&#9654;&nbsp;Read" from the <span class="KeyLabel">ON</span> popup menu.
+    In the "DM15&nbsp;read</span>" dialogue box check "Program", uncheck the
+    other options and click "OK". You should see the message "Data read successfully.".
+
+
+    <p style="text-align:right"><a href="#dm15" class="internal">&#9664; DM15</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="hp15ce">HP&thinsp;15C&thinsp;CE</a></h2>
+    <h3>Modes</h3>
+    The HP&thinsp;15C&thinsp;CE firmware supports a standard mode with 96 registers and an (unofficial) mode with 192 registers.
+    To switch between the two modes, follow these steps:
+    <ol>
+      <li>Turn off the calculator</li>
+      <li>Press and hold the <span class="gKeyLabel">g</span> key and the <span class="KeyLabel">ENTER</span> key</li>
+      <li>Turn on the calculator</li>
+      <li>The display sbows <span class="DisplayInline">&ensp;1.L 2.C 3.H&ensp;</span>.
+      Press <span class="KeyLabel">4</span> [sic]</li>
+      <li>The display shows <span class="DisplayInline">&ensp;15&nbsp;15.2&ensp;&thinsp;16</span>.
+      Press <span class="KeyLabel">e<sup>x</sup></span> for mode 15 with 92 registers and <span class="KeyLabel">y<sup>x</sup></span>
+      for mode 15.2 with 196 registers</li>
+    </ol>
+    <p>
+    <h3>Memory Files</h3>
+    The Simulator cannot communicate directly with the HP&thinsp;15C&thinsp;CE, but it can read and write files in the VoyagerSave format.
+    Files updated or created with the Simulator, can then be loaded into the HP&thinsp;15C&thinsp;CE using the VoyagerSave program.
+    VoyagerSave files should have the file extension "<code>.15CE</code>" or "<code>.HP15CE</code>".
+    <p>
+    When reading a file, the simulator automatically detects the mode in which it was written.
+    <p>
+    So that the Simulator can write a file without first reading a memory dump from the HP&thinsp;15C&thinsp;CE, it has two built-in memory dumps.
+    One for the 96 register mode and one for the 192 register mode. Both reflect the memory state in
+    the respective mode after a reset, i.e. when the display shows <span class="DisplayInline">&nbsp;&nbsp;PR&nbsp;ERROR&nbsp;</span>.
+    <p>
+    When writing a file, the output mode, i.e. the total number of registers, must be specified. The output mode is selected from the
+    'HP&thinsp;15C&thinsp;CE Output Mode' menu item in the <span class="KeyLabel">ON</span> popup menu and the 'Device' submenu in the main
+    menu bar.
+    <p>
+    The following output file settings are made automatically:
+    <ul>
+      <li>The digit separators are set as in the Simulator</li>
+      <li>The number of storage registers is set as in the Simulator</li>
+      <li>If the number of storage registers on the Simulator exceeds 97, the output file will be set to 97 storage registers</li>
+      <li>Complex mode is switched on in the output file, if the Simulator is in Complex mode</li>
+    </ul>
+    <h3>VoyagerSave</h3>
+    You can downlaod the complete <a href="https://hpcalcs.com/downloads/apps/VoyagerSave_Instructions.pdf" target="_blank" class="internal">VoyagerSave Instructions</a> from the hpcalcs home page.
+    The most important commands are:<br>
+    <ul>
+      <li>Put the HP&thinsp;15C&thinsp;CE in the mode for data exchange: Press and hold <span class="fKey">f</span> and
+      <span class="KeyLabel">ENTER</span> simultaneously. Now press <span class="KeyLabel">ON</span>.</li>
+      <li>Save HP&thinsp;15C&thinsp;CE memory to a file: <code>VoyagerSave.exe -s <em>filename</em>.15CE</code></li>
+      <li>Load memory to HP&thinsp;15C&thinsp;CE: <code>VoyagerSave.exe -r <em>filename</em>.15CE</code></li></li>
+    </ul>
+
+
+    <p>
+    <p style="text-align:right"><a href="#hp15ce" class="internal">&#9664; HP&thinsp;15C&thinsp;CE</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="hp15csim">HP-15C Simulator</a></h2>
+    <h3>Memory Configuration</h3>
+    <p>
+    The HP-15C Simulator and the calculators are all configured completely independently of each other. This applies to the
+    total number of registers, the memory allocation and all states such as complex mode, trigonometric modes etc.
+    <p>
+    The total number of registers of the simulator can only ever be set according to one DM15 firmware <em>or</em> one
+    HP&thinsp;15C&thinsp;CE mode. In other words, only one of the five possible values, i.e. 64, 96, 128, 192 and 229,
+    is active at any one time.
+    <p>
+    The memory allocation on the target device is not changed automatically, even if not all data can be transferred.
+    <br>
+    There are exceptions to this rule when writing the memory dumps for the HP 15C CE. On the one hand, the total number of
+    registers is determined by the selection of the memory dump with 96 or 192 registers. Secondly, the number of storage
+    registers is set to the same value as in the simulator.
+
+
+    <h3>Differing Configurations</h3>
+    This section describes the results of different memory configurations on the source and target devices in detail.
+    <p>
+    <ul>
+      <li><strong>Program</strong>
+      <p>
+      A program is transferred if the target device configuration provides at least as many registers in the common pool
+      as the program allocates. For example, let's take the following combination: An HP-15C Simulator with 46 program
+      registers and a DM15 with the 128 register firmware and the standard layout with 110 program registers. All programs
+      from the Simulator can be written to the DM15, but not vice versa.
+      <p>
+      Increasing the number of data storage registers on the DM15 to 100, key sequence
+      <span class="KeyLabel">1</span>&nbsp;<span class="KeyLabel">0</span>&nbsp;<span class="KeyLabel">0</span>&nbsp;<span class="fKey">f</span>&nbsp;
+      <span class="fKeyLabel">DIM</span>&nbsp;<span class="fKeyLabel">(i)</span>, reduces the number of registers in the
+      common pool to 29. Now only simulator programs that allocate up to 29 registers can be written to the DM15. Even though
+      the total number of registers on the DM15 (128) is higher
+      than that on the Simulator (64).
+      </li>
+      <li><strong>Data Storage Registers</strong>
+      <p>
+      The data storage registers are only transferred if the target device has at least as many data storage registers
+      as the source device. Otherwise, the error "Too many storage registers for current memory configuration. <em>X</em>
+      registers available, <em>Y</em> required" will occur. If you get this message, check the memory configuration
+      on both devices with <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span> and adapt them accordingly.
+      <p>
+      Example 1: The Simulator shows <span class="DisplayInline">&nbsp;19.110&nbsp;&nbsp;0-0</span> and the DM15 shows
+      <span class="DisplayInline">&nbsp;30.&nbsp;99&nbsp;&nbsp;0-0</span>. The 19 storage registers on the Simulator can
+      be transferred to the first 19 of the 30 registers on the DM15 without any problem. If you try to transfer data in
+      the opposite direction, not all 30 registers can be transferred and the message is shown.
+      <p>
+      Example 2: The Simulator shows <span class="DisplayInline">&nbsp;19.211&nbsp;&nbsp;0-0</span> and the HP&thinsp;15C&thinsp;CE
+      shows <span class="DisplayInline">&nbsp;94.&nbsp;99&nbsp;00-0</span>. Although the total number of registers on the Simulator
+      is 229, there are not enough storage registers to read them all into the HP&thinsp;15C&thinsp;CE. On the other hand, all
+      program steps on the HP&thinsp;15C&thinsp;CE can be read into the Simulator.
+      <p>
+      Additional data storage registers on the target device remain unchanged.
+      </li>
+      <li><strong>Stack</strong>
+      <p>
+      The real stack can always be transferred. The complex stack will only be transferred if both the source and the
+      target device are in Complex mode. No warning or error message is shown, if the complex stack is not transferred.
+      <p>
+      When the Simulator is in Complex mode, the memory dumps for the HP&thinsp;15C&thinsp;CE are written with Complex
+      mode on. The complex stack is transferred in that case.
+      </li>
+      <li><strong>Flags</strong>
+      <p>
+      The flags 0 to 7 are always transferred. Flag 9, display blinking, is never transferred.
+      <p>
+      Flag 8, Complex mode, is not transferred between the Simulator and the DM15 in both direction.
+      Flag 8 is transferred from the Simulator to the HP&thinsp;15C&thinsp;CE, but not in the other direction.
+      <p>
+      </li>
+    </ul>
+
+    <h3>Reading and Writing Data</h3>
+    <p>
+    In the dialogue box that opens when you select Read or Write, you can select what data is to be exchanged between
+    a calculator and the Simulator. Any combination of program memory, data storage registers, matrices, stack or flags can
+    be selected. An area not selected for exchange will remain unchanged on the target device.
+    <p>
+    The settings are saved as defaults. If you do not want to be prompted for each and every read or write operation,
+    uncheck the "Ask for each operation" option in the preferences.
+
+    <p style="text-align:right"><a href="#hp15csim" class="internal">&#9664; HP-15C Simulator</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+
+    <h2><a id="messages">Messages</a></h2>
+    <h3><a>All devices</a></h3>
+    <ul>
+      <li><strong>Firmware not identified.</strong>
+      <p>
+      When reading from the DM15 or from an HP&thinsp;15C&thinsp;CE memory file, the Simulator could not retrieve the firmware
+      from the data.<br>
+      A correct firmware identification is needed to detect conflicting memory configurations between the Simulator and the device.
+      </li>
+      <li><strong>Unknown code '<em>##</em>'.</strong>
+      <p>
+      The program to be loaded contains an unknown key code.
+      </li>
+      <li><strong>Memory not initialised</strong>
+      <p>
+      The memory from the device, DM15 or HP&thinsp;15C&thinsp;CE, has not been fully loaded.
+      <li><strong>Too many data storage registers for current memory configuration. <em>n</em> registers available, <em>m</em> required.</strong>
+      <p>
+      On the source device are more registers assigned as data storage than on the target device.
+      </li>
+      <li><strong>Too many matrix elements for current memory configuration. <em>n</em> registers available, <em>m</em> required.</strong>
+      <p>
+      There are not enough free registers in the pool to transfer all matrix elements.
+      </li>
+      <li><strong>Program too large for current memory configuration. <em>n</em> registers available, <em>m</em> required.</strong>
+      <p>
+      The programs allocate more registers than are available on the target device.
+      </li>
+    </ul>
+    <h3><a>DM15L</a></h3>
+    <ul>
+      <li><strong>Error while reading / writing</strong>
+      <p>
+      An error has occurred when writing [reading] the DM15 memory.<br>
+      Please ensure that you have firmware version 9 or higher installed on your DM15. If the problem persists, please contact me.
+      </li>
+      <li><strong>Error when connecting via serial port <em>#</em></strong>
+      <p>
+      This error occurs when there is no device connected to the serial port that is configured in the "Preferences".
+      </li>
+      <li><strong>Connection timed out</strong>
+      <p>
+      After a period of inactivity (~ 60 seconds) the DM15's command line interface will time-out and switch to Run mode.<br>
+      Restart the DM15 with <span class="fKeyLabel">C</span>&ndash;<span class="KeyLabel">ON</span> to reactivate the command line interface.
+      </li>
+      <li><strong>'/dev/ttyUSB<em>#</em>' was not recognised as a serial device</strong>
+      <p>
+      On some Linux systems "<code>/dev/ttyUSB#</code>" may not be recognised as a serial device.
+      </li>
+      <li><strong>Serial Port not configured. See Preferences dialogue.</strong>
+      <p>
+      The port number for the serial port is not set in the preferences.
+      </li>
+    </ul>
+    <h3><a>HP&thinsp;15C&thinsp;CE</a></h3>
+    <ul>
+    <li><strong>Invalid file size</strong>
+    <p>
+    An HP&thinsp;15C&thinsp;CE memory file has not the correct length of 2048 bytes.
+    </li>
+    <li><strong>Error while reading / writing the memory file</strong>
+    <p>
+    The correct number of 2048 bytes could not be written to a memory file or read from a memory file.
+    </li>
+    </ul>
+
+    <p style="text-align:right"><a href="#messages" class="internal">&#9664; Messages</a>&nbsp;<a href="#top" class="internal">&#9650; Top</a>
+    <p style="text-align:right"><a href="preferences.html#top" class="internal">Preferences &#9654;</a>
+  </div>
+</div>
+</body>
+</html>

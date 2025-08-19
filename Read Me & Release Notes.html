@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="doc/formats/formats.css">
+  <link rel="stylesheet" type="text/css" href="formats/formats.css">
+  <link rel="stylesheet" type="text/css" href="HP-15C.app/Contents/MacOS/doc/formats/formats.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <title>HP-15C: Read Me &amp; Release Notes</title>
+</head>
+<body style="margin: 10px">
+<div style="text-align: center; padding-top: 0.5em;">
+  <p>
+  <div style="font-size:3em;font-weight: bold;">H E W L E T T · P A C K A R D 15C</div>
+  <p>
+  A Simulator for Windows, Linux and macOS<br>
+  Version 5.0.01, Build 6512<br>
+  <p>&copy; 1997-2025 Torsten Manz<br>
+</div>
+<div style="font-size:2.5em; font-weight: bold; text-align: center;"><a href="#readme">Read Me</a> and <a href="#releasenotes">Release Notes</a></div>
+
+<hr style="display: block; border-style: solid; width:96%; border-width: 2px; margin-top:30px; margin-bottom:20px; border-color: #F0F2DA;">
+
+<h1><a id="readme">Read Me</a></h1>
+<p>
+Before starting the installation please check the <a href="https://HP-15C-Simulator.de" target="_blank">HP-15C Simulator Home Page</a> for the latest version.
+
+<h2>Requirements</h2>
+<p>
+The Simulator is written in the Tcl/Tk script language. It should run on all operating systems supported
+by Tcl/Tk. It has been tested on several UNIX/Linux flavours, Windows 64bit versions and macOS.
+<p>
+Each distribution contains an executable for the particular platform or, in case of the source code distribution,
+the simulator Tcl/Tk source code file. To run the executables no further software is required. To run the Simulator
+from the source code file you need to install Tcl/Tk version 8.6.6 or higher.
+<p>
+<h2>Installation</h2>
+<ol>
+<li><p>Create a new directory, e.g. <code>"HP-15C"</code>, and extract all files. The directory tree
+must be preserved when extracting the files. If you have already installed a
+previous version of the Simulator you can just copy the new version over the
+previous one.
+</li>
+<li><p>Under Linux/Unix you must mark the file "<code>HP-15C</code>" as executable.</li>
+<li><p>From the new directory, install the font "<code>HP-15C_Simulator_Font.ttf</code>". If you are not familiar with installing fonts, information for your operating system can be found here:
+  <ul>
+    <li><em>Windows</em><br>
+    <p>
+    Go to the <a href="https://www.microsoft.com" target="_blank">Microsoft home page</a> and search for "install fonts windows".
+    </li>
+    <li><em>Linux</em><br>
+    <p>
+    Go to your user directory (e.g. "<code>cd $HOME</code>") and create a directory "<code>~/.local/share/fonts/truetype</code>"
+    (older linux versions use(d) "<code>~/.fonts</code>") if it doesn't exist. Copy the file "<code>HP-15C_Simulator_Font.ttf</code>"
+    to that directory. Then update the font cache "<code>sudo fc-cache -fv</code>".
+    <p>
+    This should work on all current Linux distributions, e.g. Debian based distributions like Ubuntu or professional distributions like
+    SuSE and RedHat. It should work also with all popular Window Managers, like KDE, Gnome or XFCE.
+    </li>
+    <li><em>macOS</em><br>
+    <p>
+    Using the "Finder" file manager, navigate to the directory where you installed the HP-15C Simulator software.<br>
+    Then Double Click the mouse on the file named "<code>HP-15C_Simulator_Font.ttf</code>".<br>
+    In the "Font Book" window that opens click on the button labeled "Install Font".
+    </li>
+  </ul>
+  </li>
+  <li><p>Read the documentation "<code>&lt;new-directory&gt;/doc/index.html".</code>
+  </li>
+  <li><p>Start the platform specific executable (see below), or run the Simulator
+  source file "<code>HP-15C.tcl</code>" with the Tcl/Tk "<code>wish</code>" application.</li>
+</ol>
+
+<h2>Uninstall</h2>
+To uninstall the HP-15C Simulator, delete the directory to which you extracted the files during installation. To remove the memory and the recent
+program history, delete the following directories:
+  <table class="TblLayout">
+   <thead>
+      <tr>
+        <th class="TblHead">OS</th>
+        <th class="TblHead">Path</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="TblTopLeft">UNIX/Linux/macOS</td>
+        <td class="TblMenuItem">$HOME/.HP-15C</td>
+      </tr>
+      <tr>
+        <td class="TblTopLeft">Windows 7/8/10</td>
+        <td class="TblMenuItem">%APPDATA%/HP-15C</td>
+      </tr>
+    </tbody>
+  </table>
+
+<h2>Files and Directories</h2>
+  <h3>Base directory</h3>
+  <div style="padding-left:10px">
+  <p>
+  An executable for each operating system:
+  </div>
+  <table style="margin-left:20px; padding-right:10px">
+    <tr><td style="padding-right:20px">HP-15C.exe</td><td>Windows executable</td></tr>
+    <tr><td style="padding-right:20px">HP-15C</td><td>Linux and macOS executable</td></tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td style="padding-right:20px">HP-15C_Simulator_Font.ttf</td><td>Simulator font</td></tr>
+    <tr><td style="padding-right:20px">Read Me &amp; Release Notes.html</td><td>This file</td></tr>
+  </table>
+  <p>
+  <div style="padding-left:10px">
+  <p>
+  The source code distribution contains the following, additional directories and files:
+  </div>
+  <table style="margin-left:20px; padding-right:10px">
+    <tr><td style="padding-right:20px">HP-15C.tcl</td><td>Simulator Tcl/Tk source code</td></tr>
+    <tr><td style="padding-right:20px">HP-15C.ico</td><td>Simulator icon for Windows</td></tr>
+  </table>
+
+  <h3>doc directory</h3>
+  <table style="margin-left:20px; padding-right:10px">
+    <tr><td style="padding-right:20px">index.htm</td><td>Entry point for the Simulator online help</td></tr>
+  </table>
+
+  <h3>css directory</h3>
+  <table style="margin-left:20px; padding-right:10px">
+    <tr><td style="padding-right:20px">HP-15C_css.txt</td><td>CSS format definition for HTML export.</td></tr>
+  </table>
+
+  <h3>icons directory</h3>
+  <div style="padding-left:10px">Calculator screenshot icons<p></div>
+  <table style="margin-left:20px; padding-right:10px">
+    <tr><td style="padding-right:20px">HP-15C-picture.icns</td><td>Mac&thinsp;OS&ensp;X</td></tr>
+    <tr><td style="padding-right:20px">HP-15C-picture.ico</td><td>MS-Windows</td></tr>
+    <tr><td style="padding-right:20px">HP-15C-picture.zip</td><td>PNG files</td></tr>
+  </table>
+  <p>
+  <div style="padding-left:10px">HP-15C logo icons<p></div>
+  <table style="margin-left:20px; padding-right:10px">
+    <tr><td style="padding-right:20px">HP-15C-logo.icns</td><td>Mac&thinsp;OS&ensp;X</td></tr>
+    <tr><td style="padding-right:20px">HP-15C-logo.ico</td><td>MS-Windows</td></tr>
+    <tr><td style="padding-right:20px">HP-15C-logo.zip</td><td>PNG files</td></tr>
+  </table>
+
+  <h3>lib directory</h3>
+  <table style="margin-left:20px; padding-right:10px">
+    <tr><td style="padding-right:20px">dm15cc</td><td>DM15 package</td></tr>
+    <tr><td style="padding-right:20px">history</td><td>History package for the recent programs menu</td></tr>
+    <tr><td style="padding-right:20px">hplcd</td><td>LCD digits for the graphical display</td></tr>
+    <tr><td style="padding-right:20px">html</td><td>HTML package</td></tr>
+    <tr><td style="padding-right:20px">math</td><td>Math packages</td></tr>
+    <tr><td style="padding-right:20px">matrix</td><td>The matrix library</td></tr>
+    <tr><td style="padding-right:20px">ncgi</td><td>ncgi package</td></tr>
+    <tr><td style="padding-right:20px">prdoc</td><td>Program documentation module</td></tr>
+    <tr><td style="padding-right:20px">saturn</td><td>HP-15C Saturn CPU register</td></tr>
+  </table>
+
+  <h3>logo directory</h3>
+  <table style="margin-left:20px; padding-right:10px">
+    <tr><td style="padding-right:20px">HP-15C_logo_22x22.png</td><td>22 x 22 pixel PNG logo</td></tr>
+    <tr><td style="padding-right:20px">HP-15C_logo_32x32.png</td><td>32 x 32 pixel PNG logo</td></tr>
+    <tr><td style="padding-right:20px">HP-15C_logo_48x48.png</td><td>48 x 48 pixel PNG logo</td></tr>
+  </table>
+
+  <h3>msgs directory</h3>
+  <table style="margin-left:20px; padding-right:10px">
+    <tr><td style="padding-right:20px">de.msg</td><td>German language file</td></tr>
+    <tr><td style="padding-right:20px">en_gb.msg</td><td>Britisch English language file</td></tr>
+    <tr><td style="padding-right:20px">en_us.msg</td><td>American English language file</td></tr>
+    <tr><td style="padding-right:20px">es.msg</td><td>Spanish language file</td></tr>
+    <tr><td style="padding-right:20px">fr.msg</td><td>French language file</td></tr>
+    <tr><td style="padding-right:20px">it.msg</td><td>Italian language file</td></tr>
+    <tr><td style="padding-right:20px">nl.msg</td><td>Dutch language file</td></tr>
+    <tr><td style="padding-right:20px">pt_br.msg</td><td>Portuguese (brazilian) language file</td></tr>
+    <tr><td style="padding-right:20px">ROOT.msg</td><td>Default language file, equal to en_gb.msg</td></tr>
+  </table>
+
+<hr style="display: block; border-style: solid; width:96%; border-width: 2px; margin-top:30px; margin-bottom:20px; border-color: #F0F2DA;">
+
+<h1><a id="releasenotes">Release Notes</a></h1>
+
+<h2>Version 5.0.01, Build 6512</h2>
+<ul>
+  Version 5.0.01 is a bugfix release only. For a complete list of new features and the latest changes, see the notes for version 5.0.00 below.
+  <p>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Writing data storage registers to a device resulted in an <em>internal</em> error if the device had fewer storage
+        registers than configured in the simulator. This is now properly reported as an error.</li>
+      <li>macOS: The short-cut <span class="ShortCut">&#8984;</span>-<span class="ShortCut">I</span>, to read DM15 system information, was broken.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 5.0.00, Build 6510</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>If the <span class="register">X</span> or <span class="register">Y</span> register contained a matrix descriptor,
+      the dimensioning of a matrix with <span class="fKey">f</span> <span class="fKeyLabel">DIM</span>
+      <span class="fKeyLabel">A</span>&#8230;<span class="fKeyLabel">E</span> always resulted in
+      <span class="DisplayInline">&nbsp;&nbsp;ERROR&nbsp;&nbsp;1&nbsp;</span>. However, if one register is zero (0.0),
+      the matrix must be redimensioned to 0x0.</li>
+      <li>Pressing <span class="KeyLabel">&#8592;</span> twice after a flashing overflow resulted in an internal error.</li>
+      <li>The internal array for the storage registers wasn't always properly resized, when the total number of registers
+      was changed. This resulted in false messages "Too many storage registers for current memory configuration.".</li>
+      <li>macOS: When closing the Simulator with the menu item "Quit HP-15C", the memory was not saved to disk since version 4.4.00
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li><em>NEW:</em> Support for the HP 15C Collector's Edition via the VoyagerSave application. This includes:
+        <ul>
+          <li>Option to enable/disable HP&thinsp;15C&thinsp;CE support</li>
+          <li>New sub-menu "Devices" in the menu bar with all DM15 and HP&thinsp;15C&thinsp;CE commands</li>
+          <li>Option to choose 92 or 192 register mode for HP&thinsp;15C&thinsp;CE memory dumps</li>
+          <li>Reading and writing VoyagerSave memory dumps</li>
+        </ul>
+        <br>
+      </li>
+      <li>The new section 'Devices' in the simulator help describes the support for the DM15 and the HP&thinsp;15C&thinsp;CE,
+      how they depend on each other and how the support settings affect the Simulator.</li>
+      <li>The error messages for conflicting memory configurations on the Simulator and an external device
+      have been enhanced to show the <em>available</em> and the <em>required</em> number of registers.</li>
+      <li>The number of registers that can be allocated as data storage register is now limited to 99. The same limit as on the
+      DM15 and the HP&thinsp;15C&thinsp;CE.</li>
+      <li>New preference setting to retain the digit separators configuration on reset.</li>
+      <li>The Program Description dialogue is no longer openened automatically after loading a program, if the program
+         has no documentation.</li>
+      </li>
+      <li>Executables are packed with tclkits based on Tcl/Tk 8.6.16 for all operating systems.</li>
+      <li>macOS specific changes:
+        <ul>
+          <li>The Simulator now comes as a universal build with native support for x86 and Mx hardware
+            (requires macOS 11 Big Sur or higher)</li>
+          <li>With the new Tcl/Tk version, the application is generally much more responsive</li>
+          <li>The UI is much sharper with the new Tcl version, not blurred anymore</li>
+          <li>Better support for dark mode</li>
+        </ul>
+        <br>
+      </li>
+    </ul>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>macOS<br>
+        <ul>
+          <li>Even with the new Tcl version, artifacts appear along the top and bottom edge of the simulator keys</li>
+          <li>Some users got errors when they installed the HP-15C Simulator Font. It is recommended to deinstall all versions
+          of the font before installing it again.</li>
+        </ul>
+        <p>
+      </li>
+      <li>Linux, macOS:
+      <p>
+        <ul>
+          <li>The behaviour described on page 144 of the Owner's Handbook when a letter key is <em>'held down for longer than about 3 seconds'</em>,
+          works on all systems when you use the mouse. When you use the keyboard, it works on Windows, but not on macOS and Linux.</li>
+        </ul>
+      <p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr style="display: block; border-style: solid; width:96%; border-width: 1px; margin-top:30px; margin-bottom:20px; border-color: #F0F2DA;">
+
+<h2>Version 4.6.00, Build 6414</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>When starting the simulator, the simulator window could be outside of the visible area when the monitor layout had changed
+        after saving the window position.</li>
+      <li>Program description dialogue: When the Search and Replace window was closed, the input focus was not set to the edit window.</li>
+      <li>The mnemonics in the program popup menu did not respect the current setting for the comma and the thousands separator.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li>Key sequences with a decimal point, e.g. <span class="KeyLabel">STO</span> <span class="KeyLabel">.</span>
+        <span class="KeyLabel">3</span>, are now formatted as <code>{&nbsp;45&nbsp;.3&nbsp;}</code> or <code>{&nbsp;45&nbsp;,3&nbsp;}</code>
+        in the program files. The actual format depends on the settings for comma and period. In previous versions the sequence was formatted
+        using the key code ('48') for the decimal point, e.g. <code>{&nbsp;45&nbsp;48&nbsp;3&nbsp;}</code>.
+      </li>
+      <li>The entire simulator documentation was checked using <a <a href="https://www.deepl.com/write">DeepL Write</a>.
+        The use of nouns, such as button vs. key, and verbs , such as show vs. display, is now more consistent.
+      </li>
+      <li>Program description dialogue:
+        <ul>
+         <li>The statistics registers <span class="register">R</span><sub>2</sub> to <span class="register">R</span><sub>7</sub> are now
+         automatically added to the program description, when the program uses the commands <span class="KeyLabel">&#931;+</span> or
+         <span class="KeyLabel">&#931;-</span>.
+         </li>
+         <li>Selected text in the Usage field now remains highlighted, when the field looses the focus. For example when you open the
+         Search and Replace window.
+         </li>
+         <li>The preview mode now supports text that is formatted in bold and italic at the same time.</li>
+         <li>The symbols menu can be opened at the cursor position with the shortcut <span class="ShortCut">Control</span>&ndash;<span class="ShortCut">B3</span> (not for macOS).</li>
+        </ul>
+        <p>
+      </li>
+    </ul>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>macOS<br>
+        <ul>
+          <li>When minimising the description dialogue, it becomes immediately maximised again</li>
+          <li>Artifacts along the top and bottom edge of the simulator keys for some font sets</li>
+          <li>Some users got errors when they installed the HP-15C Simulator Font. It is recommended to deinstall all versions
+          of the font before installing it again.</li>
+        </ul>
+        <p>
+      </li>
+      <li>Linux, macOS:
+      <p>
+        <ul>
+          <li>The behaviour described on page 144 of the Owner's Handbook when a letter key is <em>'held down for longer than about 3 seconds'</em>,
+          works on all systems when you use the mouse. When you use the keyboard, it works on Windows, but not on macOS and Linux.</li>
+        </ul>
+      <p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Version 4.5.00 Build 6308</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>When stepping into an error with <span class="gKeyLabel">SST</span> in Run mode, the display did not show "Error #" </li>
+      <li>DM15: Reading and writing worked only when option "Ask for each operation" was activated.</li>
+      <li>When writing the stack to the DM15, an application error could occur under certain conditions.</li>
+      <li>When writing to the DM15, Complex mode was deactivated for devices with firmware version V.23 and higher.</li>
+      <li>macOS: The program menu did not open at the mouse position, when clicking <span class="KeyLabel">GTO</span> with the right mouse button.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li><em>NEW:</em> Preferences setting to save the last screen position</li>
+      <li>More Preferences settings are accessible directly from the main menu bar.</li>
+      <li>Program description dialogue:
+        <ul>
+         <li>A Search and Replace window is available for the program description.</li>
+         <li>The preference setting "Show resources in tabs" was moved to the "Preferences" dialogue.</li>
+         <li>The "Search/Replace" and the "Resource" window can be switched on and off.</li>
+         <li>The toolbar buttons in edit mode can now show icons as an alternative to the tag text.</li>
+         <li>A context menu (right mouse click) for HTML tagging was added.</li>
+         <li>New submenu for Superscript/subscript Unicode characters in the "Symbols" menu.</li>
+         <li>The "Symbols" menu is now available as context menu in the entry fields for labels, storage registers and flags.</li>
+         <li>Improved rendering of lists in preview mode</li>
+         <li>The renderer now uses the parameter "start" of an &lt;ol&gt; tag. This is needed in lists with labels, storage
+           registers or flags that do not start at 1.</li>
+         <li>When reloading a description, the user is asked whether to discard any changes</li>
+        </ul>
+        <p>
+      </li>
+      <li>macOS: The native macOS "USB to UART" driver, introduces with Big Sur, is now supported.</li>
+      <li>Improved layout and behaviour of the Mnemonic Converter.</li>
+      <li>In PRGM mode programs can now be pasted directly from the clipboard into the Simulator.</li>
+      <li>New short-cuts<br>
+        <div style="margin-left:1em; line-height: 1.5em;">
+          <span class="ShortCut">?</span>&nbsp;: <span class="gKey">g</span>&thinsp;<span class="gKeyLabel">F?</span>, query the status of a flag.<br>
+          <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">F2</span>&nbsp;: Menu bar on/off on Windows and Linux. On macOS the menu bar is always on.<br>
+        </div>
+        <p>
+      </li>
+      <li>Executables are packed with tclkits based on Tcl/Tk 8.6.12 for all operating systems.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>macOS<br>
+        <ul>
+          <li>When minimising the description dialogue, it becomes immediately maximised again</li>
+          <li>Artifacts along the top and bottom edge of the simulator keys for some font sets</li>
+          <li>Some users got errors when they installed the HP-15C Simulator Font. It is recommended to deinstall all versions
+          of the font before installing it again.</li>
+        </ul>
+        <p>
+      </li>
+      <li>Linux, macOS:
+      <p>
+        <ul>
+          <li>The behaviour described on page 144 of the Owner's Handbook when a letter key is <em>'held down for longer than about 3 seconds'</em>,
+          works on all systems when you use the mouse. When you use the keyboard, it works on Windows, but not on macOS and Linux.</li>
+        </ul>
+      <p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Version 4.4.00, Build 6210</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li><span class="fKeyLabel">SOLVE</span> failed in some cases, when "Strict HP-15 behaviour" was enabled.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li>Memory and history file:
+        <ul>
+          <li>Starting with this version, only "<code>.mme</code>" (<em>m</em>atrix <em>me</em>mory) memory files are loaded. Older memory
+          files with the extension "<code>.mem</code>" are ignored, even if no "<code>.mme</code>" file is found.</li>
+          <li>Linux and macOS: The memory and the history file are now in a (hidden) subdirectory <code>~/.HP-15C</code>. Existing files
+          are moved to the new location.</li>
+          <li>The file names of the memory file, <code>HP-15C.mme</code> and the recent file history, <code>HP-15C.hst</code>, are now the
+          same on all systems. </li>
+          <p>
+        </ul>
+      </li>
+      <li>Program description dialogue:
+        <ul>
+          <li>The "Symbols" menu now inserts Unicode characters by default instead of HTML Entities (except for &amp;lt; and &amp;gt;).
+            This can be deactivated in the Preferences.</li>
+          <li>The &lt;img&gt; is now also rendered. Supported graphic formats are PNG and GIF.</li>
+          <li>New preferences setting to automatically open the dialogue after loading a program.</li>
+          <li>Improved preview for nested lists.</li>
+          <li>Additional keyboard short-cuts (see section "Programs | Program Documentation" in the HTML help).</li>
+        </ul>
+        <p>
+      </li>
+      <li>HTML export:
+        <ul>
+          <li>Preformatted text, i.e. &lt;pre&gt;&hellip;&lt;/pre&gt;, has a light grey background.</li>
+          <li>Most keys have the same width, except some with long labels such as <span class="fKeyLabel">MATRIX</span>. Previously the width was defined by the label.</li>
+          <li>Optimised layout for Labels and Storage Register descriptions</li>
+        </ul>
+        <p>
+      </li>
+      <li>Preferences: New option to show descriptions in the storage register menus.</li>
+      <li>DM15 support: New entry in the DM15 menu to read the system information, e.g. firmware type, version etc.</li>
+      <li>Program labels where the description starts with a "#" are not in the <span class="KeyLabel">GSB</span> menu. This allows it to hide subprograms.</li>
+      <li>Updated all URLs from "<code>http</code>" to "<code>https</code>" when supported by the web site.</li>
+      <li>Harmonised titles of all windows, message boxes and dialogue boxes.</li>
+      <li>Added a "Keyboard Usage" table to the "Keyboard" section in the documentation.</li>
+      <li>Windows 11 support added.</li>
+      <li>New short-cuts<br>
+        <div style="margin-left:1em; line-height: 1.5em;">
+          <span class="ShortCut">?</span>&nbsp;: <span class="gKey">g</span>&thinsp;<span class="gKeyLabel">F?</span>, query the status of a flag.<br>
+          <span class="ShortCut">A</span>&nbsp;: Computes the absolute value of the number
+          in the <span class="register">X</span>-register.<br>
+          <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">D</span>&nbsp;: Converts the number in the
+          <span class="register">X</span>-register from radians to degrees.<br>
+          <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">F</span>&nbsp;: Computes the decimal fraction of the number
+          in the <span class="register">X</span>-register.<br>
+          <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">M</span>&nbsp;: Converts the number in the <span class="register">X</span>-register
+           from a decimal hours into an hours-minutes-seconds-decimal seconds format.<br>
+          <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">H</span>&nbsp;: Converts the number in the <span class="register">X</span>-register
+          from hours-minutes-seconds-decimal seconds format into decimal hours.<br>
+          <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">R</span>&nbsp;: Converts the number in the <span class="register">X</span>-register
+          from degrees to radians.<br>
+        </div>
+        <p>
+      </li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>macOS<br>
+        <ul>
+          <li>When minimising the description dialogue, it becomes immediately maximised again</li>
+          <li>Artifacts along the top and bottom edge of the simulator keys for some font sets</li>
+          <li>Some users got errors when they installed the HP-15C Simulator Font. It is recommended to deinstall all versions
+          of the font before installing it again.</li>
+        </ul>
+        <p>
+      </li>
+      <li>Linux, macOS:
+      <p>
+        <ul>
+          <li>The behaviour described on page 144 of the Owner's Handbook when a letter key is <em>'held down for longer than about 3 seconds'</em>,
+          works on all systems when you use the mouse. When you use the keyboard, it works on Windows, but not on macOS and Linux.</li>
+        </ul>
+      <p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Version 4.3.00, Build 6111</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Improved interrupt handling while running a program
+        <ul>
+          <li>Only mouse clicks on a simulator key will interrupt a program. Previously <em>any</em> mouse click interrupted a program.</li>
+          <li>The program now stops immediately and more reliable. Previously, especially when the program uses
+          <span class="fKeyLabel">SOLVE</span> or <span class="fKeyLabel">&#8747;<sup>x</sup><sub>y</sub></span>, it could take a few
+          seconds, or you even had to press or click multiple times, to actually stop the program.</li>
+        </ul>
+        <br>
+      </li>
+      <li>When both <span class="fKeyLabel">SOLVE</span> and <span class="fKeyLabel">&#8747;<sup>x</sup><sub>y</sub></span> were used in a program,
+        <ul>
+          <li>the display did not flash "running" but showed it permanently</li>
+          <li>the return stack could overflow resulting in "Error 5"</li>
+          <li>interrupting the program could result in an invalid return stack. Resulting in "Error 5" with the next <span class="KeyLabel">GSB</span> command</li>
+        </ul>
+        <p>
+      </li>
+      <li>Program description dialogue:
+        <ul>
+          <li>When inserting a new tag or after undo, the new or restored text was not highlighted</li>
+          <li>When inserting a tag or a symbol into unchanged documentation, the change status was not set.</li>
+          <li>In specific multi display configurations, reloading the dialogue could result in an application error</li>
+        </ul>
+        <br>
+      </li>
+      <li>When opening a faulty program file, the error message was incorrect</li>
+      <li>Linux: On screens with high DPI values, the simulator display and the function labels were misaligned</li>
+      <li>Linux: On systems with extreme scaling, no valid font set was found</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+    <li>Program description dialogue:
+      <ul>
+        <li>Links in the description can now be clicked</li>
+        <li><code>&lt;pre&gt;</code> is now used instead of <code>&lt;code&gt;</code> for formatted code, e.g. formulas</li>
+        <li>Short-cuts for HTML tags <code>&lt;sup&gt;</code> and <code>&lt;sub&gt;</code> added</li>
+        <li>Enhanced and optimised "Symbols" menu</li>
+        <li>Switching between "Show resources in tabs" and list mode does not change the size of the dialogue (unless it is to small for list mode)</li>
+        <li>Dialogues to warn about unsaved changes are more consistent</li>
+      </ul>
+      <p>
+    </li>
+    <li>Depending on the functions used in an HP-15C program, execution time has been reduced by 30% to 70%</li>
+    <li>Windows: The font sets for normal and high DPI values have been merged.</li>
+    <li>Linux package support: The environment variable <code>HP15Cdocdir</code> can be used to install the simulator documentation separate from the program binary file.</li>
+    <li>Mnemonic Converter: The Unicode "Latin Letter Small Capital &#7431;"" is accepted as exponent character , e.g. 1&#7431;7, to support <a href="https://thomasokken.com/free42/" target="_blank">Free42</a> output conversion.</li>
+    <li>The oldest supported Tcl version is now 8.6.6 (was: 8.5.12)</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>macOS Big Sur:<br>
+      The following issues are incompatibilities between the Tcl/Tk runtime and macOS Big Sur. Earlier versions of macOS are not affected.
+        <ul>
+          <li>Active buttons on dialogues have white text on white background, the active button text turns black if you
+            change the focus back to the main window</li>
+          <li>When minimising the description dialogue, it becomes immediately maximised again</li>
+          <li>Fonts in the menus are a bit blurry on some systems</li>
+          <li>Artifacts along the top and bottom edge of the simulator keys on some displays (>24 inch?)</li>
+        </ul>
+        <p>
+      </li>
+      <li>Linux, macOS:<br>
+      The behaviour described on page 144 of the Owner's Handbook when a letter key is <em>'held down for longer than about 3 seconds'</em>,
+      works on all systems when you use the mouse. When you use the keyboard, it works on Windows, but not on Mac&thinsp;OS&ensp;X and Linux.
+      <p>
+      </li>
+      <li>macOS:
+      <ul>
+        <li>Some users got errors when they installed the new HP-15C Simulator Font version under macOS El Capitan and newer. The macOS Sierra
+        font validation program reports no warnings or errors. It is recommended to <em>deinstall</em> any older version of the font before
+        installing the new version. Despite the errors, the font can be installed and used.
+        </li>
+        <li>The "Emoji and Symbols" menu does not work. This is a known Tcl/Tk bug.
+        </li>
+      </ul>
+      </li>
+    </ul>
+  </li>
+  <br>
+</ul>
+
+<h2>Version 4.2.00, Build 6045</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+        <li><span class="fKeyLabel">SOLVE</span> could fail, when the two initial estimates were identical.</li>
+        <li><span class="KeyLabel">STO</span> or <span class="KeyLabel">RCL</span> followed by <span class="gKey">g</span>&nbsp;<span class="fKeyLabel">(i)</span>, to set or get the value of a matrix element, did not work.</li>
+        <li><span class="fKeyLabel">x&#8596;</span> failed when the <span class="register">X</span>-register contained a matrix descriptor.</li>
+        <li>In <span class="fKeyLabel">ENG</span> <span class="KeyLabel">0</span> display format, numbers with 3 digits in the mantissa were displayed with only 2 digits.</li>
+        <li>Writing the LU form of a matrix of dimension <em>n</em> to the DM15 failed, when the number of permutations was smaller then <em>n</em>-1.</li>
+        <li>When the display was blinking due to an overflow, the blinking was erroneously stopped by switching the PRGM mode on/off.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+    <li>Program description dialogue:
+      <ul>
+        <li>New preferences setting: "Automatic preview". <strong>Important note:</strong> The setting is "On" by default.<br>
+        If set to "On" <strong>and</strong> the "Usage" field of the program description contains HTML tags or entities,
+        the program description dialogue opens in preview mode.</li>
+        <li>The HTML tag buttons layout was optimised. The effect is most visible under macOS.</li>
+        <li>Short-cuts are now defined for the supported HTML tags and the HP-15C specific css classes</li>
+        <li>The labels for the tag buttons for bold and italic are now in the language of the UI.</li>
+        <li>New menu to add HTML Entities, i.e. Greek letters, mathematical symbols and arrows.</li>
+        <li>Improved rendering of the HP-15C specific css classes in preview mode.</li>
+        <li>HTML Entities, e.g. "&amp;pi;", are now rendered using the corresponding Unicode character, e.g. &pi;.</li>
+        <li>The initial width of the dialogue is now always appx. 40% of the screen.</li>
+        <li>The initial height on large screens has been increased.</li>
+        <li>When switching "Show resources in tabs" on or off, only this section is redrawn and not the whole window.</li>
+        <li>Resources are now always shown in at least two columns if more then one of each type is used in a program.</li>
+        <li>The "Author Information" is now inserted into an empty "Usage" field, when the program description dialogue is opened.</li>
+      </ul>
+      <p>
+    <li>Reading and writing files:
+      <ul>
+        <li>With the HTML export, "Keys in black and white" now also affect the program description and not only the program listing.</li>
+        <li>With the HTML export and "Structure in English" activated, the decimal point is now always a dot and the thousands separator a comma. Previously the current display settings where used.</li>
+        <li>When opening program files, key sequences with a decimal point, e.g. <span class="KeyLabel">STO</span> <span class="KeyLabel">.</span> <span class="KeyLabel">3</span>,
+        can now be formatted as <code>{&nbsp;45&nbsp;,3&nbsp;}</code> or <code>{&nbsp;45&nbsp;.3&nbsp;}</code> in addition to <code>{&nbsp;45&nbsp;48&nbsp;3&nbsp;}</code>. The additional format is more common in the Web.</li>
+      </ul>
+      <p>
+    </li>
+      <li>New short-cut<br>
+        <div style="margin-left:1em; line-height: 1.5em;">
+          <span class="ShortCut">N</span>&nbsp;: Computes the integer of the number in the <span class="register">X</span>-register, i.e. makes it a natural number.<br>
+          <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">F3</span>&nbsp;: Show <span class="KeyLabel">GSB</span> menu.<br>
+        </div>
+        <p>
+      </li>
+    <li>The documentation was reviewed and standardised with regard to spelling, grammar and presentation.</li>
+    <li>Only 64-bit executables are provided from now on. For 32-bit operating systems the source code version can be used,
+    if Tcl/Tk is available on that system.</li>
+    <li>Only macOS 10.15 and newer versions are supported from now on. The executables may run on older versions, but this has not been tested.</li>
+    <li>Executables are now packed with tclkits based on Tcl/Tk 8.6.10 for all operating systems.</li>
+    <li>In the "About" dialogue, the Tcl/Tk shell program and the Tcl/Tk version are now only shown in the source code version.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>Linux, macOS:<br>
+      The behaviour described on page 144 of the Owner's Handbook when a letter key is <em>'held down for longer than about 3 seconds'</em>,
+      works on all systems when you use the mouse. When you use the keyboard, it works on Windows, but not on Mac&thinsp;OS&ensp;X and Linux.
+      </li>
+      <li>macOS:
+      <ul>
+        <li>Some users got errors when they installed the new HP-15C Simulator Font version under macOS El Capitan and newer. The macOS Sierra
+        font validation program reports no warnings or errors. It is recommended to <em>deinstall</em> any older version of the font before
+        installing the new version. Despite the errors, the font can be installed and used.
+        </li>
+        <li>The "Emoji and Symbols" menu does not work. This is a known Tcl/Tk bug.
+        </li>
+      </ul>
+      </li>
+    </ul>
+  </li>
+  <br>
+</ul>
+
+<h2>Version 4.1.00, Build 5914</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+        <li>It was possible to close the simulator with an invalid number in the <span class="register">X</span>-register.
+        The memory file had to be deleted, before the Simulator would start again.</li>
+        <li>Source code version: The simulator could be started only from the directory with the source code.</li>
+        <li>The Mnemonic Converter created invalid Key Codes for <span class="KeyLabel">STO</span> and
+        <span class="fKeyLabel">RCL</span> in USER mode.</li>
+        <li>On some Linux systems with 4k displays the area around the display could be corrupted.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+    <li><em>NEW</em>: A "Recent programs" history is now available as a submenu to the context or <span class="KeyLabel">ON</span> popup
+    menu and in the "Files" menu of the main menu bar.</li>
+    <li>Like the real HP-15C, the Simulator now uses the Romberg method for numerical integration.
+    Previous versions used the Simpson method and the implementation - over 15 years old - failed for some integrals.
+    </li>
+    <li>Improved layout of the backside, especially for larger font sets.</li>
+
+    <li>Revised and improved program description dialogue:<br>
+      <ul>
+        <li>The "Highlight tags" check box has been moved from the Program Description dialogue to the Preferences dialogue.</li>
+        <li>The preview mode now supports the HTML tags "&lt;sup&gt;" and "&lt;sub&gt;".</li>
+        <li>When an HTML tag range is highlighted, e.g. "&lt;bold&gt;<em>some text</em>&lt;/bold&gt;", clicking
+        the corresponding tag-button now removes the tag.</li>
+        <li>The blank part of indented text did not have the correct background colour.</li>
+        <li>The last position on the screen is stored. The position is discarded when the program is closed.</li>
+      </ul>
+      <p>
+    </li>
+    <li>Executables are now packed with tclkits based on Tcl/Tk 8.6.9 for Windows and Linux, 8.6.8 for macOS HighSierra and 8.6.7 macOS prior to macOS HighSierra.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>Linux, macOS:<br>
+      The behaviour described on page 144 of the Owner's Handbook when a letter key is <em>'held down for longer than about 3 seconds'</em>,
+      works on all systems when you use the mouse. When you use the keyboard, it works on Windows, but not on Mac&thinsp;OS&ensp;X and Linux.
+      </li>
+      <li>macOS:
+      <ul>
+        <li>Some users got errors when they installed the new HP-15C Simulator Font version under macOS El Capitan and newer. The macOS Sierra
+        font validation program reports no warnings or errors. It is recommended to <em>deinstall</em> any older version of the font before
+        installing the new version. Despite the errors, the font can be installed and used.
+        </li>
+        <li>A user reported that the Simulator does not run on Mac&thinsp;OS&ensp;X 10.6 "Snow Leopard". It seems that at least Mac&thinsp;OS&ensp;X 10.7 "Lion" is needed.</li>
+        <li>The "Emoji and Symbols" menu does not work. This is a known Tcl/Tk bug.
+        </li>
+      </ul>
+      </li>
+    </ul>
+  </li>
+  <br>
+</ul>
+
+<h2>Version 4.0.00, Build 5811</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Linux & Mac&thinsp;OS&ensp;X: UTF-16 encoded programs were corrupted.</li>
+      <li><span class="fKeyLabel">FRAC</span> and <span class="gKeyLabel">INT</span> did not work for numbers larger then 2<sup>32</sup>.</li>
+      <li>Some commands could not be used in a program, when USER mode was on.</li>
+      <li><span class="fKeyLabel">SOLVE</span> now uses the Secant-Method as the real HP-15C, it is more reliable
+      and even faster.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li><em>NEW</em>: Matrix functions added. This includes:
+        <ul>
+          <li>Matrix entries in the stack popup menu; optionally with a submenu showing the values of the matrix.</li>
+          <li>A right click on <span class="fKeyLabel">A</span>&#8230;<span class="fKeyLabel">E</span> brings up a popup menu with the values of that matrix.</li>
+          <li>A right click on <span class="fKeyLabel">MATRIX</span> brings up a popup menu with matrix functions.</li>
+          <li>When exchanging data with the DM15, matrices can be selected separately.</li>
+          <li>When the <span class="register">X</span>-register contains a matrix descriptor, <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">C</span> and <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">C</span> copy the whole matrix to the clipboard.</li>
+        </ul>
+        <p>
+      </li>
+      <li><em>NEW (Windows)</em>: When the HP-15C Simulator Font is not installed, a graphical display is used.
+      Under Windows, administrator privileges are required to install a font. In many cases they are not available, e.g. on company computers.
+      This features allows it to use the Simulator even in these cases.</li>
+      <li><em>NEW</em>: <span class="KeyLabel">GSB</span> popup menu showing all defined labels. This is especially useful for larger programs with multiple sub-functions.</li>
+      <li><em>NEW</em>: Enhanced "Usage" field in the Program Documentation dialogue:
+        <ul>
+          <li>Toolbar for HTML tags.</li>
+          <li>Preview mode for HTML tags.</li>
+          <li>Stored as multiple lines in a "<code>.15c</code>"" files.<br>
+          This makes it easier to edit program files in an external editor. Existing programs are automatically converted into the new format when they are saved.</li>
+        </ul>
+        <p>
+      </li>
+      <li>The simulator now uses the same algorithm for <span class="fKeyLabel">RAN#</span> as the real HP-15C.</li>
+      <li>The HP-15C Simulator Font was updated. <strong>If you do not install the new version, the logo will be corrupted</strong>.</li>
+      <li>macOS: Native popup menus are used where possible. See the "Menus" section in the documentation for details.</li>
+      <li>Windows: The memory file is now in a subdirectory <code>"HP-15C"</code> in <code>"%APPDATA%"</code>.</li>
+      <li>The memory file extension was changed to <code>".mme"</code> (<em>M</em>atrix <em>ME</em>mory) to avoid conflicts with older Simulator versions without matrix support. The file is now encoded in Unicode.
+      At the first start, an existing <code>".mem"</code> file is automatically copied to a new version with extension <code>".mme"</code>. Thus all settings are preserved and old and new
+      Simulator versions can coexist on the same computer.</li>
+      <li>In Complex mode <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">C</span> and <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">C</span> now copy the whole number to the clipboard and not only the real part. The format is <code>a+bi</code>.</li>
+      <li>In User mode, the behaviour of the computer keyboard keys for the HP-15C keys <span class="fKeyLabel">A</span>
+      through <span class="fKeyLabel">E</span> has changed. The keyboard keys now always call the <em>current</em> main function
+      of the HP-15C keys. See the keyboard section in the online help for more details.</li>
+      <li>New keyboard mappings and short-cuts:<p>
+        <div style="margin-left:1em; line-height: 1.5em;">
+          <span class="ShortCut">B</span>&nbsp;: <span class="KeyLabel">GSB</span>, as alternative to <span class="ShortCut">F3</span>.<br>
+          <span class="ShortCut">O</span>&nbsp;: <span class="KeyLabel">GTO</span>, as alternative to <span class="ShortCut">F2</span>.<br>
+          <span class="ShortCut">V</span>&nbsp;: <span class="KeyLabel">R&thinsp;/&thinsp;S</span>, as alternative to <span class="ShortCut">F5</span>.<br>
+          <span class="ShortCut">Z</span>&nbsp;: <span class="KeyLabel">CHS</span>.<br>
+          <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">ENTER</span>&nbsp; (Mac&thinsp;OS&ensp;X: <span class="ShortCut">&#8997;</span>&ndash;<span class="ShortCut">ENTER</span>): <span class="KeyLabel">&#931;&#43;</span>. This was added because some Mac keyboards do not have an <span class="ShortCut">INS</span> key.
+          <p>
+        </div>
+      </li>
+      <li>"Extended Unicode chars for key faces" is now activated by default. Existing settings are not overwritten.</li>
+      <li>A "Key sequence indicator", like on the SwissMicros DM15 and DM15L, has been added.</li>
+      <li>"HP-15C" icons and logos have been revised and versions with 512x512 pixels were added.</li>
+      <li>Executables are now packed using a tclkit based on Tcl/Tk 8.6.8 for Windows and macOS HighSierra and 8.6.7 for Linux
+      and macOS prior to macOS HighSierra (was: 8.6.4 on all systems).</li>
+      <li>The oldest supported Tcl version is 8.5.12 (was: 8.5.9), but version 8.6.0 or higher is recommended.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>Linux, Mac&thinsp;OS&ensp;X:<br>
+      The behaviour described on page 144 of the Owner's Handbook when a letter key is <em>'held down for longer than about 3 seconds'</em>,
+      works on all systems when you use the mouse. When you use the keyboard, it works on Windows, but not on Mac&thinsp;OS&ensp;X and Linux.
+      </li>
+      <li>Mac&thinsp;OS&ensp;X:<br>
+      Some users got errors when they installed the new HP-15C Simulator Font version under macOS El Capitan and newer. Font validation
+      under macOS Sierra reports no warnings or errors. It is recommended to <em>deinstall</em> any older version before installing the
+      new version. Despite the errors, the font should be installed and can be used.
+      </li>
+      <li>Mac&thinsp;OS&ensp;X:<br>
+      A user reported that the Simulator does not run on Mac&thinsp;OS&ensp;X 10.6 "Snow Leopard". It seems that at least Mac&thinsp;OS&ensp;X 10.7 "Lion" is needed.
+      </li>
+    </ul>
+  </li>
+  <br>
+</ul>
+
+<hr style="display: block; border-style: solid; width:96%; border-width: 1px; margin-top:30px; margin-bottom:20px; border-color: #F0F2DA;">
+
+<h2>Version 3.4.01, Build 5544</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Fixed error when run under Windows 10.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 3.4.00, Build 5544</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li><span class="KeyLabel">EEX</span> did not work for real numbers with 10 digits, e.g. <code>1.234567890</code>.</li>
+      <li>Implemented that <span class="KeyLabel">CHS</span> doesn't enable the stack lift if the value in the <span class="register">X</span>-register is 0.</li>
+      <li><span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">R</span> did not reset everything when the Simulator was in PRGM mode.</li>
+      <li><span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span>: Some commands were counted as two-bytes codes but are only one-byte codes.</li>
+      <li>DM-15 interface: The functions <span class="KeyLabel">RCL</span>&nbsp;<span class="KeyLabel">&divide;</span>&nbsp;<span class="KeyLabel">.</span>&nbsp;<span class="KeyLabel">0</span>&hellip;<span class="KeyLabel">9</span>,
+      <span class="KeyLabel">RCL</span>&nbsp;<span class="KeyLabel">&#215;</span>&nbsp;<span class="fKeyLabel">I</span> and
+      <span class="KeyLabel">RCL</span>&nbsp;<span class="KeyLabel">&#8722;</span>&nbsp;<span class="fKeyLabel">I</span> were not correctly encoded/decoded.</li>
+      <li>DM-15 interface: Writing to the DM-15 while it was switched off, then switching it on and trying to write again, resulted in an error.</li>
+      <li>DM-15 interface: When reading a storage registers from the DM-15, the register on the simulator was not always set, when the register was zero.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li><em>NEW:</em> 64bit version for Windows.</li>
+      <li>Executables are now packed using tclkit 8.6.4 (was: 8.5.9).<br>
+      This change leads to significantly larger executables, because current tclkit versions are no longer upx-compressed.
+      On the other hand, the new Tcl/Tk version increases the program execution performance up to 30%.
+      </li>
+      <li>DM-15 support: Highest allowed COM-port changed from 16 to 255; the limit under Windows.</li>
+      <li>DM-15 support: The timeout for the serial interface can be set between 1 and 5 seconds.</li>
+      <li>DM-15 support: In modes with more then 64 registers, <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span> inserts a period after the pool registers to separate them from the used registers, e.g. <span class="DisplayInline">&nbsp;19.&nbsp;60.151-5</span>.</li>
+      <li>Documentation dialogue: If there are unsaved changes, a warning appears when closing the dialogue.</li>
+      <li>Documentation dialogue: The "Usage" field now has an undo/redo feature.</li>
+      <li>Preferences: Added language "Portuguese (brazilian)". Graças Renato Bezerra da Silva e Mauro Nacif Rocha.</li>
+      <li>Preferences: New option to control how the addresses of storage registers and labels between 10 and 19 are displayed.</li>
+      <li>Preferences: New options for the HTML export:
+        <ul>
+        <li>Single-column program listing.</li>
+        <li>Print keys in black and white.<p></li>
+        </ul>
+        These features are helpful if you use a printout to review programs. Both features are disabled by default.
+      </li>
+      <li>Mac&thinsp;OS&ensp;X: With Tcl/Tk 8.6.4 the Mac&thinsp;OS&ensp;X implementation has undergone significant internal changes. As a visible result,
+      the simulator UI is rendered smaller, with the same font set, compared to previous Tcl/Tk versions.</li>
+      <li>Mac&thinsp;OS&ensp;X: Font sets are now separated from those for Linux/X11 to achieve better rendering results.</li>
+      <li>Larger font sets for all operating systems. This was requested by many users using high resolution displays.</li>
+      <li>All dialogues now have a standard button and a default behaviour for <span class="ShortCut">Enter</span> and <span class="ShortCut">Esc</span>.</li>
+      <li>When saving a new program, the file name is now preset.</li>
+      <li>New short-cuts<br>
+        <div style="margin-left:1em; line-height: 1.5em;">
+          <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">C</span> (Mac&thinsp;OS&ensp;X: <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">&#8984;</span>&ndash;<span class="ShortCut">C</span>): The contents of the X register is copied using the current display format.<br>
+          <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">E</span> (Mac&thinsp;OS&ensp;X: <span class="ShortCut">&#8984;</span>&ndash;<span class="ShortCut">E</span>): Export Program to HTML.<br>
+          <span class="ShortCut">Control</span>&ndash;<span class="ShortCut">&uarr;</span>&thinsp;/&thinsp;<span class="ShortCut">&darr;</span> (Mac&thinsp;OS&ensp;X: <span class="ShortCut">&#8984;</span>&ndash;<span class="ShortCut">&uarr;</span>&thinsp;/&thinsp;<span class="ShortCut">&darr;</span>): Read from / Write to DM-15.<br>
+          <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">+</span>&thinsp;/&thinsp;<span class="ShortCut">-</span> (Mac&thinsp;OS&ensp;X: <span class="ShortCut">&#8984;</span>&ndash;<span class="ShortCut">+</span>&thinsp;/&thinsp;<span class="ShortCut">-</span>):
+          Cycle forwards (+) or backwards (-) through the available font sets.<br>
+        </div>
+      </li>
+      <li>The program examples are now provided in a separate download package.</li>
+      <li>Justin B. Alms has contributed programs to convert decimal numbers into binary numbers and vice versa.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>Mac&thinsp;OS&ensp;X:<br>
+      Some system related buttons and menu entries are always in English. This is a bug in Tcl/Tk where these entries are hardcoded and not localised.<br>
+      Older OS X version seem to have done the localisation on their own, but recent versions do not overrule the application.
+      </li>
+      <li>Fedora:<br>
+      You may need to install "<code>libXss.so</code>" or a package containing this library, e.g. "<code>libXScrnSaver</code>", to run the Simulator.
+      </li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Acknowledgements</em>
+  <p>
+  Thanks to Uli Hornstein for finding an error in the DM-15 communication; to John Patterson for improving the documentation
+  functions and macOS integration; to Gustavo J. Vilches, Mauro Rocha Nacif, Zoltan Hubert, René Franquinet and
+  Marco Vedovato Franquinet for their help with the translations.
+  </li>
+  <br>
+</ul>
+
+<h2>Version 3.3.00, Build 5403</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li><span class="KeyLabel">EEX</span> did not work when you entered a real number, that uses all 10 digits, e.g. <code>1.234567890</code>.</li>
+      <li>Deleting a positive exponent larger than 9 with <span class="KeyLabel">&#8592;</span> led to an internal error.</li>
+      <li>The ranges for <span class="fKeyLabel">Py,x</span> and <span class="fKeyLabel">Cy,x</span> not resulting in an overflow were smaller than on the real HP-15C.</li>
+      <li><span class="gKeyLabel">SF</span>, <span class="gKeyLabel">CF</span> and <span class="gKeyLabel">F?</span> reported an error when <span class="fKeyLabel">I</span> contained a negative value.</li>
+      <li>If an error occurred while reading a program file, the file was locked for other applications until the Simulator was closed.</li>
+      <li>In same cases, it was still possible to load a program that required more program registers than are available.</li>
+      <li>In some cases, the simulator refused erroneously to read from the DM-15 because of "too many storage registers" on the DM-15.</li>
+      <li>The DM-15 firmware versions DM15CC_MEM1B/DM15_M1B have actually 229 registers and not 228.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li>The Mnemonic Converter understands more Unicode characters and transcriptions; e.g. &divide;, &times;, &#8593;, &#8595;, &#931;.</li>
+      <li>Loading a program after an error occurred, i.e. the display show <span class="DisplayInline">&nbsp;&nbsp;ERROR&nbsp;&nbsp;N&nbsp;</span>,
+          now resets the status and the <span class="register">X</span>-register is shown.</li>
+      <li>Programs run around 20% faster.</li>
+      <li>Small layout improvements in the HTML export of programs.</li>
+      <li>Accept "<code>KP_Separator</code>" for the decimal point on the numeric keypad. This fixes a problem with some (non English) Xmodmaps on Linux.</li>
+      <li>A double click on the display with the left mouse button (&thinsp;<span class="ShortCut">B1</span>&thinsp;) copies the contents of the <span class="register">X</span>-register to the operating systems clipboard.</li>
+      <li>The user interface and the help files use now the exact program file encoding "UTF-16 (LE)" instead of the generic "Unicode".</li>
+      <li>Updated Dutch translation. Met dank aan René Franquinet.</li>
+      <li>Thanks to Rich Messeder for the review and the improvement of the online help.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>Linux:<br>
+      If keyboard-repeat is enabled in your window manager, and one of the functions <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">PREFIX</span>,
+      <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span> or <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">i</span>
+      is invoked via the keyboard, the pause after releasing the last key is longer than it should be, if the key was held longer than 5 seconds.
+      This doesn't happen when the functions are invoked using the mouse.
+      </li>
+      <li>Fedora:<br>
+      You may need to install "<code>libXss.so</code>" or a package containing this library, e.g. "<code>libXScrnSaver</code>", to run the Simulator.
+      </li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 3.2.00, Build 5319</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>In Complex mode with <span class="register">X</span>&nbsp;=&nbsp;<code>0</code> and <span class="register">iX</span>&nbsp;&gt;&nbsp;<code>1</code>, <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">TAN<sup>-1</sup></span> computed the wrong sign for the imaginary part.</li>
+      <li>In Complex mode with <span class="register">X</span>&nbsp;=&nbsp;<code>0</code> and <span class="register">iX</span>&nbsp;=&nbsp;<code>1</code> or <code>-1</code>, <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">TAN<sup>-1</sup></span> resulted in an <span class="DisplayInline">&nbsp;&nbsp;ERROR&nbsp;&nbsp;4&nbsp;</span> instead of an overflow.</li>
+      <li>In Complex mode with <span class="register">X</span>&nbsp;&gt;&nbsp;<code>0</code> and <span class="register">iX</span>&nbsp;=&nbsp;<code>0</code>, <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">HYP<sup>-1</sup></span>&nbsp;<span class="KeyLabel">TAN</span> computed the wrong sign for the imaginary part.</li>
+      <li>In Complex mode results of <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">&#8594;R</span> are more accurate for even multiples of 90° (&pi;).</li>
+      <li>When single stepping through a program in Complex mode, the imaginary <span class="register">X</span>-register was not reset to zero when it should.</li>
+      <li>When a <span class="KeyLabel">RCL</span> <span class="KeyLabel">&#43;</span>, <span class="KeyLabel">&#8722;</span>, <span class="KeyLabel">&#215;</span> or
+      <span class="KeyLabel">&divide;</span> command immediately followed an <span class="KeyLabel">ENTER</span> command in a program, the imaginary
+      <span class="register">X</span>-register was wrongly set to zero.</li>
+      <li>When single stepping through a program some stack lifts were suppressed, thus the content of the <span class="register">X</span>-register was overwritten.</li>
+      <li>Using <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">F?</span>, <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">TEST</span>, <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">DSE</span> or <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">ISG</span> in Run mode could result in an invalid program status.</li>
+      <li>After interrupting a running program with a key or mouse click, restarting the program with <span class="KeyLabel">R/S</span> sometimes failed.</li>
+      <li>It was possible to open a program that required more program registers than were available. Now this gives <span class="DisplayInline">&nbsp;&nbsp;ERROR&nbsp;&nbsp;4&nbsp;</span>.</li>
+      <li>In Run mode <span class="KeyLabel">R/S</span> did not look pressed when pressed and did not show the current program line.</li>
+      <li>Rolling the stack up and down with the mouse was broken in version 3.1.00.</li>
+      <li>Numbers were not rounded correctly to the decimal places. For example with <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">FIX</span>&nbsp;<span class="KeyLabel">2</span>
+      the number <code>2.005</code> was displayed as <code>2.00</code> but the correct form is <code>2.01</code>. Please note that the rounding applies to the display, but not to the value of the number itself.</li>
+      <li>In <span class="fKeyLabel">USER</span> mode the keys <span class="fKeyLabel">A</span>&#8230;<span class="fKeyLabel">E</span> did not work correctly. Whether pressed directly or prefixed.</li>
+      <li>After <span class="fKeyLabel">&#8747;xy</span> ran into in error (<span class="DisplayInline">&nbsp;&nbsp;ERROR&nbsp;&nbsp;N&nbsp;</span>) you had to restart the simulator to use the function again.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>Linux:<br>
+      If keyboard-repeat is enabled in your window manager, and one of the functions <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">PREFIX</span>,
+      <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span> or <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">i</span>
+      is invoked via the keyboard, the pause after releasing the last key is longer than it should be, if the key was held longer than 5 seconds.
+      This doesn't happen when the functions are invoked using the mouse.
+      </li>
+      <li>Fedora:<br>
+      You may need to install "<code>libXss.so</code>" or a package containing this library, e.g. "<code>libXScrnSaver</code>", to run the Simulator.
+      </li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li><em>NEW:</em> Support for Michael's and David's <a href="https://www.swissmicros.com/" target="_blank">DM-15/DM-15CC</a>.<br>
+        If you order a DM-15 because of my simulator please mention that in your order at SwissMicros. For "How did you find us?" select "hp-15c-simulator@arcor.de".</li>
+      <li>In DM-15 modes with more then 64 registers, <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span> adds a period between storage and pool registers: <span class="DisplayInline">&nbsp;19.110&nbsp;&nbsp;0-0</span></li>
+      <li>In the DM-15 mode with 229 registers, the number of program steps is limited to 999.</li>
+      <li>When changing the interface language while the program documentation window is open, the documentation window is automatically updated.</li>
+      <li>Subroutines in the HTML export can be indented to show the program structure.</li>
+      <li>When copying numbers from the clipboard, all characters at the beginning and the end of the clipboard data
+      that can not be part of a number are removed. Examples: <code>##1.234##</code> becomes <code>1.234</code> ,
+      <code>"1.6"</code> becomes <code>1.6</code> and <code>-123+</code> becomes <code>-123</code>.</li>
+      <li>New preferences setting: "Copy program when in PRGM mode".</li>
+      <li>Linux: A native 64bit version is available because most 64bit distributions do not support 32bit applications by default.</li>
+      <li>Added language "Dutch (flemish)". Met dank aan Ronny Verbeek.</li>
+      <li>Additions and corrections to the language files by Gonzalo Balerdi for Spanish, by Zoltan Hubert for French and by Marco Vedovato for Italian.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 3.1.00, Build 5215</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Reducing the number of available data storage registers erroneously reduced the numeric labels addressable with
+      <span class="KeyLabel">GSB</span> and <span class="KeyLabel">GTO</span>.</li>
+      <li>The simulator crashed when pasting from the clipboard and if the content contained a new line character.
+        Now only the characters up to the first new line character are analysed.</li>
+      <li>If a program used a data storage register only in a <span class="KeyLabel">STO</span> or <span class="KeyLabel">RCL</span>
+      command followed by <span class="KeyLabel">&#43;</span>, <span class="KeyLabel">&#8722;</span>, <span class="KeyLabel">&#215;</span> or <span class="KeyLabel">&divide;</span>,
+      that register was not added to the list of used registers in the documentation.</li>
+      <li>Results of <span class="KeyLabel">y<sup>x</sup></span> were wrong in Complex mode. This was due to an incorrect code change in version 3.0.00.</li>
+      <li>When using register <span class="register">I</span> with <span class="KeyLabel">GSB</span> or <span class="KeyLabel">GTO</span> to address a program step, it was possible
+      to address a step one greater than the highest defined program step.</li>
+      <li>When single stepping through a program with <span class="KeyLabel">SST</span> in Run mode, pressing <span class="KeyLabel">R/S</span>
+      while the program was entering a number, the number became corrupted leading to wrong results.</li>
+      <li><span class="fKey">f</span>&nbsp;<span class="fKeyLabel">DSE</span> and <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">ISG</span> sometimes failed due to rounding errors.</li>
+      <li>When the simulator was closed while entering a number, the memory file could contain invalid numbers.</li>
+      <li>Windows executable: After starting the Simulator, the user interface did not have the focus.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>Linux:<br>
+      If keyboard-repeat is enabled in your window manager, and one of the functions <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">PREFIX</span>,
+      <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span> or <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">i</span>
+      is invoked via the keyboard, the pause after releasing the last key is longer than it should be, if the key was held longer than 5 seconds.
+      This doesn't happen when the functions are invoked using the mouse.
+      </li>
+      <li>Fedora:<br>
+      You may need to install "<code>libXss.so</code>" or a package containing this library, e.g. "<code>libXScrnSaver</code>", to run the Simulator.
+      </li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li><em>NEW:</em> An Mnemonic Converter written by Nina Scholz.<br>
+      This tool accepts various mnemonic formats and converts them into valid HP-15C key sequences.
+      HP-15C programs are often shown in mnemonic format only and the converter saves the manual typing of the program.<br>
+      It is written in JavaScript and you can find it in the simulator help under "Programs / Mnemonic Converter".
+      </li>
+      <li>Programs run up to 75% faster, depending on the functions they use.</li>
+      <li>Edward Shore contributed several programs from his <a href="https://edspi31415.blogspot.de" target="_blank">calculator blog</a>. You can find them in the directory "<code>progs/Eddie's</code>".</li>
+      <li>The highlighting of the blue functions becomes deactivated when the mouse is moved away, even if the key is still pressed.</li>
+      <li>In the preferences, the default for the "Delay value" is now 0 ms instead of 100 ms.</li>
+      <li>The labels <span class="fKeyLabel">A</span>&#8230;<span class="fKeyLabel">E</span> are now included in the documentation even if they are only used in a <span class="KeyLabel">GSB</span>
+      or <span class="KeyLabel">GTO</span> command.</li>
+      <li><span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span> now returns the correct values for used registers and free bytes.
+      In previous versions it was only an approximation, because it was assumed that all commands allocate one byte, but on the real HP-15C some allocate two bytes.</li>
+      <li>Like on the real HP-15C, Complex mode now reduces the number of free registers by 5.</li>
+      <li>After pasting a number from the clipboard, the stack is not locked anymore. The next input (a digit or a clipboard paste operation) performs a
+      stack lift before writing to the <span class="register">X</span>-register. Without the stack lift, the pasted value was overwritten. This new behaviour is
+      the same as when you press e.g. <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">&#960;</span>.</li>
+      <li>When loading a program while the program documentation window is open, the documentation window is automatically updated.</li>
+      <li>Added Italian language for popup menus and dialogues. Grazie a Marco Vedovato.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 3.0.00, Build 5207</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>When the <span class="register">X</span>-register was zero, some operations could still have a minus sign in the result.</li>
+      <li>Operations on stack and data storage registers could result in invalid values being stored in the storage register. This was not detected until the registers content was moved to the <span class="register">X</span>-register.</li>
+      <li>The functions <span class="KeyLabel">y<sup>x</sup></span>, <span class="KeyLabel">&#8543;x</span>, <span class="gKeyLabel"> &#916;%</span>, <span class="KeyLabel">&divide;</span>, <span class="KeyLabel">STO</span> <span class="KeyLabel">&divide;</span>
+        and <span class="KeyLabel">RCL</span> <span class="KeyLabel">&divide;</span> sometimes threw an overflow error where they should throw an <span class="DisplayInline">&nbsp;&nbsp;ERROR&nbsp;&nbsp;N&nbsp;</span>.</li>
+      <li>Improved accuracy of the inverse complex trigonometric functions. This was contributed by Barry Mead.</li>
+      <li>Improved accuracy and speed of the Gamma function. This was contributed by Barry Mead.</li>
+      <li>The <span class="register">X</span>-register of the imaginary stack was not reset correctly in some cases.</li>
+      <li>Integration (<span class="fKeyLabel">&#8747;<sup>x</sup><sub>y</sub></span>) and root finding (<span class="fKeyLabel">SOLVE</span>) did not work inside a program. Solved with support from Barry Mead.</li>
+      <li>In <span class="fKeyLabel">USER</span> mode, pressing the prefix key <span class="fKey">f</span> followed by one of the five user definable function keys did not invoke the exchanged function.</li>
+      <li>When leaving the "Save program" dialogue box with the "Cancel" button, the program directory path was reset to the default value.</li>
+      <li>Corrected mnemonics:
+      <div style="line-height: 1.5em;">
+        <ul>
+         <li><span class="KeyLabel">STO</span> <span class="fKeyLabel">(i)</span> was displayed as <span class="KeyLabel">STO</span> <span class="KeyLabel">COS</span></li>
+         <li><span class="KeyLabel">STO</span> <span class="fKeyLabel">I</span> was displayed as <span class="KeyLabel">STO</span> <span class="KeyLabel">TAN</span></li>
+         <li><span class="KeyLabel">STO</span> and <span class="KeyLabel">RCL</span> <span class="fKeyLabel">RAN&nbsp;#</span> was displayed as <span class="KeyLabel">STO</span> and <span class="KeyLabel">RCL</span> <span class="KeyLabel">ENTER</span></li>
+         <li><span class="fKeyLabel">SOLVE</span> and <span class="fKeyLabel">&#8747;<sup>x</sup><sub>y</sub></span> using a label <span class="fKeyLabel">A</span>&#8230;<span class="fKeyLabel">E</span>
+         were displayed using the basic key faces <span class="KeyLabel">&#8730;x&#773;</span>&#8230;<span class="KeyLabel">&#8543;x</span></li>
+         <li><span class="fKey">f</span> <span class="fKeyLabel">x&#8596;</span> <span class="fKeyLabel">(i)</span> was displayed as <span class="fKey">f</span> <span class="fKeyLabel">x&#8596;</span> <span class="KeyLabel">COS</span></li>
+         <li><span class="fKey">f</span> <span class="fKeyLabel">x&#8596;</span> <span class="fKeyLabel">I</span> was displayed as <span class="fKey">f</span> <span class="fKeyLabel">x&#8596;</span> <span class="KeyLabel">TAN</span></li>
+         <li><span class="fKey">f</span> <span class="fKeyLabel">SCI</span> <span class="fKeyLabel">I</span> was displayed as <span class="fKey">f</span> <span class="fKeyLabel">SCI</span> <span class="KeyLabel">TAN</span></li>
+         <li><span class="fKey">f</span> <span class="fKeyLabel">ENG</span> <span class="fKeyLabel">I</span> was displayed as <span class="fKey">f</span> <span class="fKeyLabel">ENG</span> <span class="KeyLabel">TAN</span></li>
+        </ul>
+      </div>
+      <br>
+      </li>
+      <li>Windows: The path to the memory file could contain invalid characters.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>Linux:<br>
+      If keyboard-repeat is enabled in your window manager, and one of the functions <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">PREFIX</span>,
+      <span class="gKey">g</span>&nbsp;<span class="gKeyLabel">MEM</span> or <span class="fKey">f</span>&nbsp;<span class="fKeyLabel">i</span>
+      is invoked via the keyboard, the pause after releasing the last key is longer than it should be, if the key was held longer than 5 seconds.
+      This doesn't happen when the functions are invoked using the mouse.
+      </li>
+      <li>Fedora:<br>
+      You may need to install "<code>libXss.so</code>" or a package containing this library, e.g. "<code>libXScrnSaver</code>", to run the Simulator.
+      </li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li>New and improved user interface.</li>
+      <li>If "Access "f" and "g" functions directly" is activated, the labels can be highlighted when the mouse is moved over them.</li>
+      <li>More and improved usage of Unicode characters on the key faces.</li>
+      <li>Changes to the preference settings become active immediately.</li>
+      <li>Improved mouse and keyboard handling. Simulator buttons remain pressed as long as the key or mouse button is pressed.
+      In previous Simulator versions this worked only for some keyboard keys.</li>
+      <li>New function to "Reset memory". This is in the "Memory&#8230;" submenu of the context popup menu.</li>
+      <li>Adds missing function <span class="KeyLabel">RCL</span>&nbsp;<span class="fKeyLabel">DIM</span>&nbsp;<span class="fKeyLabel">(i)</span>.</li>
+      <li>A documentation can be stored together with HP-15C programs. Menu entry "Program description&#8230;".</li>
+      <li>The program documentation and the program code can be exported as HTML.</li>
+      <li>The Preferences dialogue now opens always centered on the screen.</li>
+      <li>Improved documentation (excessive use of CSS3).</li>
+      <li>Windows 95/98/NT4/2000 are no longer supported.</li>
+      <li>New short-cuts<br>
+      <div style="margin-left:1em; line-height: 1.5em;">
+        <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">F1</span> : Display the help file for the current program (if available).<br>
+        <span class="ShortCut">F12</span> : Opens the program description dialogue box.<br>
+        <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">R</span> : Reset the memory to the default value.<br>
+      </div>
+      </li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<hr style="display: block; border-style: solid; width:96%; border-width: 1px; margin-top:30px; margin-bottom:20px; border-color: #F0F2DA;">
+
+<h2>Version 2.0.03, build 5119</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>The function <span class="fKeyLabel">PSE</span> did not really pause a program.</li>
+      <li>The function <span class="fKeyLabel">&#8594;R</span> calculated wrong results for the right angles &pi; and 1.5&times;&pi; in RAD mode, respectively 180° (200°) and 270° (300°) in DEG (GRAD) mode.</li>
+      <li>Enabling "Strict HP-15 behaviour" caused an internal error in some calculations.</li>
+      <li>The function <span class="fKeyLabel">&#0375;,r</span> lifted the stack twice instead of once, if stack lift was enabled.</li>
+      <li>The flashing of the word "running" during program execution was unsteady.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li>Added an FAQ page to the online help and the home page.</li>
+      <li>Calculation of <span class="KeyLabel">TAN</span> for odd multiples of 45° now always results in an integer.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 2.0.02, build 5106</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Language settings of the operating system for British and US English were not always recognized correctly.</li>
+      <li>The fallback to British English language settings failed on some systems.</li>
+      <li>Numbers with more than ten digits could be entered.</li>
+      <li>Pressing <span class="KeyLabel">EEX</span> more than once while entering a number corrupted the input.</li>
+      <li>Mac OS: Storage menus were corrupted when all 9 digits of the mantissa were used.</li>
+      <li>Mac OS: Clicking with the right mouse button when the application didn't have the focus caused an internal Tcl/Tk error.</li>
+      <li>Mac OS: Clicking the application menu bar while a simulator popup menu is open no longer disables the menu bar permanently.</li>
+      <li>Mac OS: System menu entries in the HP-15C menu are now always in the system language. </li>
+      <li>Mac OS: Menu entries not valid while a popup menu is open are disabled.</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li>The language for menus and dialogue boxes can now be set independent from the system setting.</li>
+      <li>Mac OS: Executables is now also packed using tclkit 8.5.9. This results also in a significant smaller installation file.</li>
+      <li>More native operating system GUI elements are used if available.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 2.0.01, build 5037</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Back side wasn't displayed when "Stay on top" was on.</li>
+      <li>After back side was turned off keyboard was inactive.</li>
+      <li>If "Extended Unicode chars for key faces" was <em>not</em> checked some keyboard keys, e.g. period and decimal point on the keypad, were bound to the wrong function.</li>
+      <li>Linux: When <span class="register">X</span>-register was zero, <span class="gKeyLabel">ABS</span> and <span class="fKeyLabel">PREFIX</span> had "<code>-0</code>" as result (Tcl/Tk internal error).</li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Known issues</em>
+    <ul>
+      <li>Mac OS:<br>
+      Clicking the application menu bar while a simulator popup menu is open disables the menu bar permanently.<br>
+      This is a Cocoa related problem of the Tcl/Tk Mac&thinsp;OS&ensp;X port.</li>
+      <li>Mac OS:<br>
+      Some menu entries in the HP-15C menu are always in English.
+      </li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+      <li>Windows and Linux executables are now packed using tclkit 8.5.9.</li>
+      <li>The simulator source code and the various icons are no longer included in the platform specific packages. Please download the source package if you want these files.</li>
+      <li>Linux: More modern behaviour of menus: Active item follows the mouse motion. Help menu entry is not longer right aligned in a menu bar (Tcl/Tk internal improvements).</li>
+      <li>Linux: Icons are now packed directly into in the executable.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 2.0.00, build 5034</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Help file couldn't be displayed if path contained a space.<br></li>
+      <li><span class="fKeyLabel">PSE</span> paused execution when called from outside a program which it shouldn't<br></li>
+      <li><span class="gKeyLabel">Clx</span> and <span class="KeyLabel">&#8592;</span> followed by some functions caused an invalid stack lift<br></li>
+      <li>Pressing <span class="KeyLabel">EEX</span> didn't work when entering numbers with more than 7 digits in the mantissa but mantissa had comma</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Known issues</em>
+    <ul>
+      <li>Mac OS:<br>
+      Clicking the application menu bar while a simulator popup menu is open disables the menu bar permanently.<br>
+      This is a Cocoa related problem of the Tcl/Tk Mac&thinsp;OS&ensp;X port.</li>
+      <li>Mac OS:<br>
+      Some menu entries in the HP-15C menu are always in English.
+      </li>
+    </ul>
+    <br>
+  </li>
+
+  <li><em>Changes</em>
+    <ul>
+      <li>Added support for Mac&thinsp;OS&ensp;X. This includes:
+        <ul>
+          <li>Special popup menus for the stack, the data storage register menus and the program menu. Pop-ups are closed by pressing <span class="ShortCut">Esc</span>.</li>
+          <li><span class="KeyLabel">ON</span> popup menu can be invoked via &lt;Command&gt;-&lt;B1&gt;</li>
+          <li>Multi-touch touchpad gestures to emulate the right mouse button are supported</li>
+          <li>Adapted keyboard modifiers:<br>
+          <div style="margin-left:1em; line-height: 1.5em;">
+            <span class="ShortCut">Ctrl</span> key is mapped to <span class="ShortCut">Command</span> (&#8984;) key<br>
+            <span class="ShortCut">Alt</span> key is mapped to <span class="ShortCut">Option</span> (&#8997;) key<br>
+          </div>
+          </li>
+          <li>Integration in the Apple menu bar</li>
+        </ul>
+        <br>
+      </li>
+      <li>New preferences setting: Direct access to "f" and "g" can be switched On/Off</li>
+      <li>New preferences setting: Toggle menu bar On/Off</li>
+      <li>Added function "Stay on top"</li>
+      <li>Extended <span class="KeyLabel">ON</span> popup menu: "Stay on top", "Show back side"</li>
+      <li>Renamed <span class="KeyLabel">ON</span> popup menu entry "<code>1.000,00 -> 1,000.00</code>" to "Swap comma and period"</li>
+      <li>Removed key accelerators from all menus. Each function can be access via a short-cut.</li>
+      <li>Menus for the stack, the data storage registers and the program now always use the fixed width font specified by the windowing system.</li>
+      <li>Menu entries in the stack and the data storage register menus are now right aligned.</li>
+      <li>New short-cuts<br>
+      <div style="margin-left:1em; line-height: 1.5em;">
+        <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">,</span> : Show Preferences dialogue (inspired by Mac OS)<br>
+        <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">T</span> : Simulator stays on top of all other windows on the screen<br>
+        <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">Q</span> : Exit the HP-15C Simulator<br>
+        <span class="ShortCut">Shift</span>&ndash;<span class="ShortCut">Esc</span> : Clear all - set all registers to zero<br>
+      </div>
+      </li>
+      <li>In two column mode storage menus show the same number of registers in each column.</li>
+      <li>Added multi language support for popup menus and dialogue boxes.
+        Currently English, French, German and Spanish are supported. The default and fallback language is British English (en_GB).</li>
+      <li>Added HP-15C back side</li>
+      <li>"About" dialogue box now appears always in the middle of the screen</li>
+      <li>"URW Fonts" are no longer supported.</li>
+      <li>Changed licence to GPL version 3</li>
+      <li>HP-15C Simulator now requires Tcl/Tk 8.5.0 or later.</li>
+      <li>Linux: Font Sets are now independent of the screen resolution</li>
+      <li>All dialogues and menus now use the native operating system GUI elements (switched to ttk widget set).</li>
+      <li>Removed a workaround for Tcl/Tk 8.4.x:<br>
+        A decimal point was appended to a number as soon as you typed in the 10th
+        digit make it a real number thus avoiding an integer overflow.</li>
+      <li>When copying data from the operating system's clipboard the number's format is now detected automatically</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<hr style="display: block; border-style: solid; width:96%; border-width: 1px; margin-top:30px; margin-bottom:20px; border-color: #F0F2DA;">
+
+<h2>Version 1.2.13, build 5001</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>When using <span class="KeyLabel">CHS</span> on the exponent, the minus sign didn't appear while the exponent was zero, i.e. 00. This was a difference to the real HP-15C (Thanks to Mark W).</li>
+      <li>Function <span class="gKeyLabel">&#8594;P</span> calculated wrong angles for data outside of the first quadrant (Thanks to Manfred B.).</li>
+      <li>Function <span class="gKeyLabel">&#8594;P</span> always calculated the resulting angle in DEG. Now the angle is given in the current mode, i.e. DEG, RAD or GRAD (Thanks to Manfred B.).</li>
+      <li>Function <span class="fKeyLabel">&#8594;R</span> calculates more accurate results for multiples of &pi;/2.</li>
+      <li><span class="fKeyLabel">USER</span> mode didn't switch key <span class="KeyLabel">&#8543;x</span> (label <span class="fKeyLabel">E</span>) (Thanks to Roman K.).</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+      <li>Windows and Linux executables are now both packed using tclkit 8.5.7.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.12, build 4929</h2>
+<ul>
+  <li><em>Changes</em>
+    <ul>
+      <li>Highest supported screen resolution set to 200 dpi for all operating systems (user request).</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.11, build 4909</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Fixed errors due to switch from Tcl/Tk 8.4.13 to 8.5.6 in functions <span class="gKeyLabel">&#8594;H</span> and <span class="fKeyLabel">&#8594;H.MS</span>.</li>
+      <li>Function <span class="fKeyLabel">&#931;</span> (clear statistics registers) did not clear register 7.</li>
+      <li>Fixed missing variables in function <span class="fKeyLabel">&#0375;,r</span> (linear expolation).</li>
+      <li>Copy/paste using <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">C</span>&thinsp;/&thinsp;<span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">V</span> was broken since version 1.2.09.</li>
+      <li><span class="KeyLabel">RCL</span> <span class="fKeyLabel">RAN&thinsp;#</span> did not return the last seed.</li>
+      <li><span class="fKeyLabel">RAN&thinsp;#</span> did not reset the seed properly. The same seed therefore not always produced the same sequence of random numbers.</li>
+      <li>Mac&thinsp;OS&ensp;X: Problem preventing starting the simulator on Mac&thinsp;OS&ensp;X solved.<br>
+          Please note that Mac&thinsp;OS&ensp;X is still not officially supported!</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+      <li>Windows and Linux executables are now both packed using tclkit 8.5.6.</li>
+      <li>Linux: <span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">V</span> could not be used to copy the HP-15C x-register to Gnome or Qt based applications. Only mouse button <span class="ShortCut">B2</span> (middle mouse button) worked as
+        this is the standard under X Windows. Now both methods to access the clipboard content are supported.</li>
+      <li>New preferences setting: Precision can be set to strict HP-15C compliance or platform maximum. See online help for more details.</li>
+      <li>New preferences setting: Usage of extended Unicode characters for key faces can be switch On/Off. See online help for more details.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.10, build 4851</h2>
+  <ul>
+    <li><em>Bug fixes</em>
+      <ul>
+        <li>Octal number bug fix had problems with values between 0 and 1</li>
+      </ul>
+      <br>
+    </li>
+    <li><em>Changes</em>
+    <ul>
+      <li>More Unicode characters used for interface and documentation to make them look more like the real HP-15C.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.09, build 4851</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li><span class="KeyLabel">SIN</span>, <span class="KeyLabel">COS</span> and <span class="KeyLabel">TAN</span> now return the correct values for right angles.</li>
+      <li>Input with a leading zero followed by either an "8" or a "9" led to an error<br>(The Tcl interpreter treats numbers with a leading zero as octal numbers).</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+      <li>Executables are now packed using tclkit 8.5.x (was: 8.4.13)</li>
+      <li>Font antialiasing is now available for UNIX/Linux with Tcl/Tk 8.5.x</li>
+      <li>New default font set (DejaVu Fonts) for UNIX/Linux for best effect of font antialiasing.<br>If you have already installed an earlier version of the simulator you need to select this font set in the preferences manually!</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.08, build 4730</h2>
+<ul>
+  <li><em>Changes</em>
+    <ul>
+      <li>MS Windows Vista: Added support for Windows Vista.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.07, build 4717</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>MS Windows: Portuguese and some other regional settings caused error upon shut down.</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+      <li>Changed time stamp format in memory file.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.06, build 4715</h2>
+  <ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>No font set was found when unsupported dpi settings were detected.</li>
+      <li>Linux: Correctly display Unicode characters in X11 titlebars.</li>
+      <li>Linux: Added encodings to tclkit to correctly display all special characters.</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+      <li>Executables are now packed using tclkit based on Tcl/Tk 8.4.13 (was: 8.4.9).</li>
+      <li>Added information about operating system, platform, machine type, executable and Tcl/Tk version in the "About" dialogue box.</li>
+      <li>Linux: Popup menus are now "sticky".</li>
+      <li>MS Windows: Highest supported screen resolution changed from 140 dpi to 150 dpi (user request).</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.05, build 4631</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>The handling of floating point numbers by the Tcl/Tk internal "int()" function caused wrong results in the time conversion functions <span class="gKeyLabel">&#8594;H</span> and <span class="fKeyLabel">&#8594;H.MS</span> in some cases.</li>
+      <li>Eliminated remaining HTML warnings in the online documentation.</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+       <li>Unix: Made Firefox the default browser.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.04, build 4608</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>MS Windows: Comma was not fully visible when using large fonts (120 dpi).</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+      <li>MS Windows: Added fonts sets for 120 dpi and higher</li>
+      <li>Improved appearance of HP logo at higher display resolutions.</li>
+      <li>Changes to the display resolution are detected automatically and an appropriate font set is being chosen.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.03, build 4604</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>Memory files saved manually could contain invalid simulator states.</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+      <li>MS Windows: Icons are now packed directly into in the executable.</li>
+      <li>Linux: Icons for KDE are provided as PNG files.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.02, build 4603</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>After switching from "RAD" and "GRAD" mode back to "DEG" mode trigonometric functions did not work properly anymore.</li>
+      <li>In ENG mode numbers were displayed wrong in some cases.</li>
+    </ul>
+    <br>
+  </li>
+  <li><em>Changes</em>
+    <ul>
+      <li>Display colour is now closer to that of the real HP-15C.</li>
+      <li>Default precision after initialisation changed from FIX(3) to FIX(4) like on the real HP-15C.</li>
+      <li>New short-cuts<br>
+      <div style="margin-left:1em; line-height: 1.5em;">
+        <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">&#43;</span> : Change the sign of the number in the display. Same as <span class="ShortCut">Alt</span>&ndash;<span class="ShortCut">&#8722;</span><br>
+        <span class="ShortCut">l</span> : Lower case L. <span class="gKeyLabel">LSTx</span>
+      </div>
+      <li>Overworked and extended keyboard section in the online help.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.01, build 4537</h2>
+<ul>
+  <li><em>Bug fixes</em>
+    <ul>
+      <li>When closing the simulator by clicking the <span class="KeyLabel">ON</span> key, the status was not stored properly.</li>
+      <li>Clicking close to the <span class="fKey">f</span> and <span class="gKey">g</span> button caused the simulator to go into an infinite loop.</li>
+    </ul>
+    <br>
+  </li>
+</ul>
+
+<h2>Version 1.2.00, build 4530</h2>
+<ul>
+  <li>First publicly available version. </li>
+</ul>
+</body>
+</html>

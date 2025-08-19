@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="formats/layout.css">
+  <link rel="stylesheet" type="text/css" href="formats/formats.css">
+  <link rel="stylesheet" type="text/css" href="formats/converter.css">
+  <link rel="stylesheet" type="text/css" href="js/MnemonicConverter.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <script type="text/javascript" src="js/MnemonicConverter.js"></script>
+  <script type="text/javascript">
+    var oPrgm = new HP15cNamesSpace.MnemonicToKeycode();
+    oPrgm.setSimulator(true);
+  </script>
+  <title>HP-15C: Mnemonic Converter</title>
+</head>
+
+<body style="margin: 10px;">
+
+  <form action="" id="finput" method="post">
+    <script type="text/javascript">
+      function fConvert() {
+        document.getElementById('keycode').innerHTML = oPrgm.convert(document.getElementById('mnemonicsID').value);
+      }
+
+      function finputClear() {
+        document.getElementById('mnemonicsID').value = '';
+        document.getElementById('keycode').innerHTML = '';
+      }
+
+      function finputToClipboard() {
+        navigator.clipboard.writeText(document.getElementById("keycode").innerHTML);
+      }
+    </script>
+
+    <div id="container_outer">
+      <div class="formheader">
+        </p>
+       	<input form="finput" type="button" name="Clear" value="Clear" class="KeyButton" onclick="finputClear();">&emsp;
+        <input form="finput" type="button" name="Convert" value="Convert" class="KeyButton" onclick="fConvert();">
+        <span style="min-width: 5em;">&emsp;</span>
+      	<input type="checkbox" name="prefix" id="prefix" value="true" checked="checked" onchange="oPrgm.setPrefixKey(this.checked);" /><label for="prefix">Show prefix keys <span class="fKey">f</span> and <span class="gKey">g</span>&emsp;</label>
+    	  <input type="checkbox" name="ompl" id="ompl" value="true" checked="checked" onchange="oPrgm.setOMPL(this.checked);" /><label for="ompl">One mnemonic per line&emsp;&emsp;</label>
+        <input form="finput" type="button" name="CopyToClipboard" value="Copy to Clipboard" class="KeyButton" onclick="finputToClipboard();">
+        <p>
+      </div>
+
+      <div>
+        <div class="finputHead">Mnemonics</div>
+        <div class="finputFrame">
+          <textarea id="mnemonicsID" name="mnemonics" class="finputText"></textarea>
+        </div>
+      </div>
+      <div>
+        <div class="finputHead" style="border-left-width: 0px;">Key Codes</div>
+        <div class="finputFrame" style="border-left-width: 0px;">
+          <div id="keycode" class="finputKeycode"></div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</body>
+</html>

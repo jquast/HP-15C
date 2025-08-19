@@ -1,0 +1,430 @@
+/* Formatting for standard HTML tags */
+@font-face {
+  font-family: 'HP15CWebFont';
+  src: url('../fonts/HP-15C_Simulator_Font.ttf');
+}
+
+body {
+  background-color: #BBBFB0;
+  font-family:Helvetica,sans-serif;
+  margin: 0px;
+}
+
+h1 {
+  font-family: Helvetica,sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+h2 {
+  font-family : Helvetica,sans-serif;
+  padding-top: 0.5em;
+}
+
+h3 {
+  font-family: Helvetica,sans-serif;
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  border: none;
+  background-color: #C0C2AE;
+}
+
+code {
+  font-family: Courier New,serif;
+}
+
+pre {
+  font-family: Courier New,serif;
+}
+
+ul {
+  font-family: Helvetica,sans-serif;
+  margin-top: 1em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+figure {
+  margin-left: 10px;
+}
+
+/* Links */
+
+a.internal:link {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+  background-color: #D1D1D1;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+
+a.internal:visited {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+  background-color: #D1D1D1;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+
+a.internal:hover {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: underline;
+  color: #000000;
+  background-color: #D1D1D1;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+
+a.internal:active {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+  background-color: #D1D1D1;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+
+/* HP-15C keys */
+
+.KeyLabel, .KPLabel {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  font-style: normal;
+  color: white;
+  background-color: #454545;
+}
+
+.fKeyLabel, .KPfLabel {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #E1A83E;
+  background-color: #454545;
+}
+
+.gKeyLabel, .KPgLabel {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #6CB7BD;
+  background-color: #454545;
+}
+
+.KeyLabel, .fKeyLabel, .gKeyLabel {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+  min-width: 1.7em;
+  max-height: 2.6ex;
+  display: inline-block;
+}
+
+.KeyButton {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  font-style: normal;
+  text-align: center;
+  color: white;
+  background-color: #454545;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+}
+
+.fKey, .KPfKey {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: black;
+  text-align: center;
+  background-color: #E1A83E;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  border-radius: 4px;
+}
+
+.gKey, .KPgKey {
+  font-family: Helvetica,sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: black;
+  text-align: center;
+  background-color: #6CB7BD;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  border-radius: 4px;
+}
+
+/* HP-15C display */
+
+.Display {
+  font-family: "HP15C Simulator Font", Courier, monospace;
+  font-size: 1.2em;
+  background-color: #9E9E87;
+  border-width: 1px;
+  border-style: inset;
+  border-radius: 0.2em;
+}
+
+.DisplayInactive {
+  font-family: "HP15C Simulator Font", Courier, monospace;
+  font-size: 1.2em;
+  background-color: #D9DEDD;
+  border-color: black;
+  border-width: 1px;
+  border-style: dashed;
+  border-radius: 0.2em;
+}
+
+.DisplayInline {
+  font-family: "HP15C Simulator Font", HP15CWebFont, Courier, monospace;
+  font-weight: normal;
+  font-size: 1.2em;
+  padding: .0em .1em .0em .1em;
+  border-color: #9E9E87;
+  background-color: #9E9E87;
+  border-width: 1px;
+  border-style: inset;
+  border-radius: 0.2em;
+}
+
+.noBorder {
+  border-width: 0px;
+  border-style: solid;
+  border-color: white;
+}
+
+.register {
+  font-family: Courier New,serif;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.ShortCut {
+  display: inline-block;
+  min-width: 1em;
+  padding: .2em .3em;
+  vertical-align: text-top;
+  font: normal .85em/1 Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 2px #FFFFFF;
+  border-radius: .3em;
+  border: none;
+  user-select: none;
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#D2D2D2', endColorstr='#FFFFFF');
+  background: linear-gradient(to bottom, #D2D2D2, #FFFFFF);
+  color: #323232;
+  box-shadow: inset 0 0 1px #FFFFFF, inset 0 0 .4em #C8C8C8, 0 .1em 0 #828282, 0 .11em 0 rgba(0, 0, 0, .4), 0 .1em .11em rgba(0, 0, 0, .9);
+}
+
+.MenuEntry {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.Command {
+  font-family: Courier New,serif;
+  font-weight: bold;
+}
+
+/* CSS Formatting Styles */
+
+.Image {
+  margin-left: 20px;
+  border: 0;
+}
+
+.ScreenShot {
+  float: left;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.FigAside{
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 10px;"
+}
+
+/* Tables */
+
+.TblStack {
+  empty-cells: show;
+  margin-left: 20px;
+  margin-top: 1em;
+  background-color: #D9DEDD;
+  border: 3px;
+  border-color: #F1F6F5;
+  border-width: 10px;
+  border-style: solid;
+}
+
+.TblNoBorder {
+  empty-cells: show;
+  border-collapse: collapse;
+  vertical-align: top;
+  margin-left: 20px;
+  margin-top: 1em;
+  border-width: 0px;
+}
+
+.TblLayout {
+  empty-cells: show;
+  border-collapse: collapse;
+  margin-left: 20px;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.TblHead {
+  font-family: Helvetica,sans-serif;
+  text-align: left;
+  vertical-align: top;
+  color: #6CB7BD;
+  background-color: #545454;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.TblTopLeft, .TblTopLeftSep {
+  font-family: Helvetica,sans-serif;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.TblTopLeftSep {
+  border-top-width: 2px;
+}
+
+.TblCentered {
+  font-family: Helvetica,sans-serif;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.TblshCut, .TblshCutSep {
+  font-family: Helvetica,sans-serif;
+  font-style: italic;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  line-height: 1.5em;
+}
+
+.TblshCutSep {
+  border-top-width: 2px;
+}
+
+.TblMenuItem {
+  font-family: Courier New,serif;
+  text-align: left;
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* Keypad */
+
+.KeyPad {
+  border: 5pt solid #F1F6F5;
+  border-collapse: collapse;
+  empty-cells: show;
+  background-color: #848484;
+  text-align: center;
+}
+
+.KPcell {
+  border-color: #AAA;
+  border-style: solid;
+  border-width: 1px;
+  border-right-color: white;
+  border-left-color: white;
+  padding: .1em 0 .1em 0;
+}
+
+.KPsep {
+  border-color: #AAA;
+  border-style: solid;
+  border-width: 1px;
+  border-left-color: white;
+  border-right-color: white;
+  border-top-width: 3px;
+  border-top-color: white;
+  padding: .1em 0 .1em 0;
+}
+
+.KPLabel, .KPfLabel, .KPgLabel, .KPfKey, .KPgKey {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 2.3em;
+}
+
+.KPshort {
+  font-style: italic;
+  text-align: center;
+  color: #DDD;
+}
+
+.KeyImage {
+  border: 0pt;
+  vertical-align: middle;
+  padding-left: .5em;
+  padding-right: .5em;
+}

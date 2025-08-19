@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="formats/layout.css">
+  <link rel="stylesheet" type="text/css" href="formats/formats.css">
+  <link rel="stylesheet" type="text/css" href="formats/converter.css">
+  <link rel="stylesheet" type="text/css" href="js/MnemonicConverter.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js/MnemonicConverter.js"></script>
+  <script type="text/javascript">
+    var oPrgm = new HP15cNamesSpace.MnemonicToKeycode();
+    oPrgm.setSimulator(true);
+  </script>
+  <title>HP-15C: Mnemonic Converter</title>
+</head>
+
+<body>
+
+<div class="sidenav">
+
+  <div id="logo_frame">
+    <div id="logo" style="text-align:center;">
+      <a href="index.html"><img src="images/HP-15C_small.png" title="Home" width="116" height="81" alt="HP-15C_small.png 116x81" style="padding-top: 10px; border-width:0"></a><br>
+      <span style="font-size:75%; color:#6CB7BD;">Version 5.0.01, Build 6512</span>
+    </div>
+  </div>
+  <div id="navigation_frame">
+  <div id="navigation">
+    <a href="introduction.html" class="Content1">Introduction</a><br>
+    <br>
+    <a href="usage.html" class="Content1">Usage</a><br>
+    <br>
+    <a href="programs.html" class="Content1">Programs</a><br>
+      <div class="Content2">
+        <a href="programs.html#prgmmode">PRGM Mode</a><br>
+        <a href="programs.html#prgmdocu">Documentation</a><br>
+        <a href="programs.html#prgmfiles">Program Files</a><br>
+        <a href="mnemonics.html">Mnemonic Converter</a><br>
+      </div>
+    <br>
+    <a href="menus.html" class="Content1">Menus</a><br>
+    <br>
+    <a href="keyboard.html" class="Content1">Keyboard</a><br>
+    <br>
+    <a href="devices.html" class="Content1">Devices</a><br>
+    <br>
+    <a href="preferences.html" class="Content1">Preferences</a><br>
+    <br>
+    <a href="FAQ.html" class="Content1">FAQ</a><br>
+    <br>
+    <a href="links.html" class="Content1">Links</a><br>
+    </div>
+  </div>
+  <div id="contact_frame_1">
+    <div class="contact">
+    &copy; 2025 Torsten Manz
+    <a href="mailto:info@HP-15C-Simulator.de" title="Write an email to the author.">
+      <img src="images/mail_logo.gif" width="20" height="14" alt="mail_logo.gif 20x14" style="border-width:0; vertical-align: top;">
+    </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="contnav">
+
+  <div id="header_border">
+    <div id="header_frame">
+      <div id="header" style="text-align:center;">
+        <span style="font-size:200%;font-weight:bold;color:#545454;">HP-15C Simulator</span>
+        <br><br>
+        <span style="font-size:150%;font-weight:bold;">For Windows, Linux and macOS</span>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <h1><a id="links">Mnemonic Converter</a></h1>
+    <p>
+    On the Internet HP-15C programs are often presented as mnemonics. The Mnemonic Converter translates them into valid
+    HP-15C key code sequences. The keycode sequences can be copied and pasted into the Simulator in PRGM mode.
+    <p>
+    The Mnemonic Converter has been developed by Nina Scholz.
+    <p>
+    <h2>Instructions</h2>
+    <ol>
+      <li>Open the converter in a new <a href="converter.html" target="MCwindow" class="internal">window/tab</a> or as a
+        <a class="internal" target="MCpopup" href="converter.html"
+           onclick="window.open('converter.html','HP-15C: Mnenomic Converter','status=no,location=no,toolbar=no,menubar=no,left=600,top=10,width=910,height=920'); return false;">
+          popup</a>.
+      </li>
+      <li>Paste a program in mnemonic format into the Mnemonics text area on the left.</li>
+      <li>Press <span class="KeyLabel">Convert</span> and the resulting program code will appear in the Key Codes area.</li>
+      <li>Correct any errors.</li>
+      <li>Press <span class="KeyLabel">Copy to Clipboard</span> and paste (<span class="ShortCut">Ctrl</span>&ndash;<span class="ShortCut">V</span> or <span class="ShortCut">B3</span>)
+      the key codes into the HP-15C Simulator in PRGM mode.</li>
+      <li>Press <span class="KeyLabel">Clear</span> to clear the Mnemonics and the Key Codes area.</li>
+    </ol>
+
+    <p>
+    <h2>Examples</h2>
+    Examples of Mnemonics and formats understood by the converter:
+    <table class="TblLayout">
+      <colgroup>
+        <col style="width: 16em;">
+        <col style="width: 15%;">
+        <col style="">
+      </colgroup>
+      <thead>
+          <tr>
+            <th class="TblHead">Mnemonics</th>
+            <th class="TblHead">Key Codes</th>
+            <th class="TblHead">Description</th>
+          </tr>
+        </thead>
+      <tbody>
+        <tr>
+          <td class="TblTopLeft"><code>GoTo .9<br>Goto ,9<br>GTO 19</code></td>
+          <td class="TblTopLeft"><code style="white-space: pre-wrap;">{    22 48  9 } GTO .9</code></td>
+          <td class="TblTopLeft">Upper and lower case letters can be mixed.<br>You can use a comma or a period to address labels (and registers) above 9.<br>
+          You can use short and long names.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft"><code>123.456,789<br>123,456.789</code></td>
+          <td class="TblTopLeft"><code style="white-space: pre-wrap;">{           1 } 1<br>{           2 } 2<br>{           3 } 3<br>{           4 } 4
+{           5 } 5<br>{           6 } 6<br>{          48 } .<br>{           7 } 7<br>{           8 } 8<br>{           9 } 9</code></td>
+          <td class="TblTopLeft">Numbers are converted into a sequence of digits.<br>The rightmost comma or period is interpreted as the decimal point.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft"><code>ISG 8 STO ENTER STO RAN#</code></td>
+          <td class="TblTopLeft"><code style="white-space: pre-wrap;">{    42  6  8 } f ISG 8<br>{       44 36 } STO RAN#<br>{       44 36 } STO RAN#</code></td>
+          <td class="TblTopLeft">Uncheck "One mnemonic per line" to allow multiple mnemonics per line.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft"><code>x square</code></td>
+          <td class="TblTopLeft"><code style="white-space: pre;">x square
+  <span class="MCerror">&#11172; Error in line 014 </span>
+  The command <span class="MCcommand">X</span> is unknown.
+  Valid commands are:
+  <span class="MCargument">0</span>, <span class="MCargument">1</span>, <span class="MCargument">2</span>, <span class="MCargument">3</span>, <span class="MCargument">4</span>, <span class="MCargument">5</span>, <span class="MCargument">6</span>, <span class="MCargument">7</span>, <span class="MCargument">8</span>, <span class="MCargument">9</span>, <span class="MCargument">SQR</span>, <span class="MCargument">e^x</span>, <span class="MCargument">10^x</span>, <span class="MCargument">y^x</span>, <span class="MCargument">1/x</span>,
+  <span class="MCargument">CHS</span>, <span class="MCargument">/</span>, <span class="MCargument">GTO</span>, <span class="MCargument">EEX</span>, <span class="MCargument">*</span>, <span class="MCargument">R/S</span>, <span class="MCargument">GSB</span>, <span class="MCargument">R down</span>, <span class="MCargument">x&gt;&lt;y</span>, <span class="MCargument">ENTER</span>, <span class="MCargument">-</span>,
+  <span class="MCargument">f</span>, <span class="MCargument">g</span>, <span class="MCargument">STO</span>, <span class="MCargument">uSTO (USER mode)</span>, <span class="MCargument">RCL</span>, &hellip;
+  </code></td>
+          <td class="TblTopLeft">If a command is unknown, an error is displayed along with the supported commands.</td>
+        </tr>
+        <tr>
+          <td class="TblTopLeft"><code>g TEST 45</code></td>
+          <td class="TblTopLeft"><code style="white-space: pre;">TEST 45
+       <span class="MCerror">&#11172; Error in line 042 </span>
+  The 2nd argument is invalid: <span class="MCargument">45</span> is not a parameter of <span class="MCcommand">TEST</span>.
+  Valid parameters are:
+  <span class="MCargument">0 (x!=0?)</span>, <span class="MCargument">1 (x&gt;0?)</span>, <span class="MCargument">2 (x&lt;0?)</span>, <span class="MCargument">3 (x&gt;=0?)</span>, <span class="MCargument">4 (x&lt;=0?)</span>,
+  <span class="MCargument">5 (x=y?)</span>, <span class="MCargument">6 (x!=y?)</span>, <span class="MCargument">7 (x&gt;y?)</span>, <span class="MCargument">8 (x&lt;y?)</span>, <span class="MCargument">9 (x&gt;=y?)</span>
+  </code></td>
+          <td class="TblTopLeft">If an mnemonic cannot be converted, an error is displayed.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+</body>
+</html>
