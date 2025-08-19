@@ -1,7 +1,16 @@
 Jeff's Own HP-15C Simulator
 ---------------------------
 
-This is a fork of the `HP-15C <https://hp-15c-simulator.de/>`_ to fix one single bug: that keyboard input is lost.
+This is a fork of the `HP-15C <https://hp-15c-simulator.de/>`_ to fix one single
+bug, that **keyboard input is lost** with casual keyboard use. 
+
+The Bug
+=======
+
+In this Video, numbers 3 and 1 are typed in rapid succession, but, the number
+'1' is discarded.
+
+.. image:: HP-15CsimOrig.gif
 
 In this Video, numbers 3 and 1 are typed, but the number '1' is discarded.
 
@@ -11,11 +20,37 @@ From Torsten's `FAQ <https://hp-15c-simulator.de/FAQ>`_:
 
    > If I rapidly type a sequence of numbers, the entered keyboard number(s) are ignored. For example, if I type 123 quickly, the 2 is missed and I get 13 on the display.
 
-   >  While a key on the computer keyboard is being pressed, all other key presses are ignored. When you pressed the , you were still holding down the . This is exactly how the real HP-15C behaves. 
+   > While a key on the computer keyboard is being pressed, all other key presses are ignored. When you pressed the 2️⃣, you were still holding down the 1️⃣. This is exactly how the real HP-15C behaves.
 
-I reached out to Torsten Manz in many successive e-mails, but he strongly suggests that, although he gets several requests to fix it, that it is an intentional design for exacting emulated behavior and is not a priority to be fixed.
+I reached out to Torsten Manz by e-mail to explain the bug and this fix in detail,
+but, he strongly suggests that although he gets several requests to fix it, that
+it is working as designed, and it is not a priority to be fixed.
 
-I suggest that a calculator should discarding keyboard input when users are typing too quickly, that it is a high priority bug that should be addressed, and is the purpose of this fork.
+The Fix
+=======
+
+With the bugfix applied to HP-15.tcl in this repository, numbers 3 and 1 are typed
+very rapidly without loss and displayed in this video:
+
+.. image:: HP-15CsimImproved.gif
+
+This repository is a full copy of the source code, Version 5.0.01, with the
+patch applied for your convenience. You may also attempt to apply the patch file
+`bugfix-HP-15C-keystrokes-lost.patch <bugfix-HP-15C-keystrokes-lost.patch>`_ to
+any later version.
+
+A Feature, really?
+==================
+
+Torsten Manz believes his software is accurately simulating the behavior of the
+real HP-15C calculator by dropping keystrokes.
+
+On an HP-12C I can slowly press down 1️⃣, and while still holding it down,
+press and hold down 2️⃣. Then, release 1️⃣ and 2️⃣ in that order. This
+"galloping" motion can be performed at speeds approximately three times
+faster than what the software emulation bug discards input for:
+
+.. image:: HP-12CLosslessKeystrokes.gif
 
 Installing
 ==========
@@ -24,6 +59,7 @@ No binary distributions are released, run the source directly, for example::
 
     tclsh HP-15.tcl
 
+<<<<<<< HEAD
 
 Details of Bugfix 
 =================
