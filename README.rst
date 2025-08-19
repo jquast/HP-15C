@@ -29,12 +29,14 @@ However, I suggest users should be allowed to use more than 1 finger to enter di
      In HP-15C.tcl v5.0.01, proc key_press at L9041 begins by handling active GUI buttons, *only* if 
      any other key is not already currently active, eventually calling dispatch_key to process it.
      
+```
      >  if {[lindex [.gui gettags pressed] 0] eq ""} {
      >     # process GUI button stuff
      >     # USER mode stuff
      >     
      >     dispatch_key $code
      >   }
+```
      
      Combined with the timer defined at L9086, "after 30", in proc key_release to release the visual
      GUI button, this effectively skips processing of any subsequent keystrokes for 30ms after each 
