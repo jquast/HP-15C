@@ -7,9 +7,11 @@ bug, that **keyboard input is lost** with casual keyboard use.
 The Bug
 =======
 
-In this Video, numbers '3' and '1' are typed in succession, but, the number '1' keeps getting discarded discarded.
+In this Video, numbers '3' and '1' are typed in succession, but, the number '1' keeps getting discarded!
 
 .. image:: HP-15CsimOrig.gif
+
+If you are not careful to type slow enough, keystrokes are discarded and lost by `HP-15C <https://hp-15c-simulator.de/>`_!
 
 From Torsten's `FAQ <https://hp-15c-simulator.de/FAQ>`_:
 
@@ -17,7 +19,7 @@ From Torsten's `FAQ <https://hp-15c-simulator.de/FAQ>`_:
 
    > While a key on the computer keyboard is being pressed, all other key presses are ignored. When you pressed the 2️⃣, you were still holding down the 1️⃣. This is exactly how the real HP-15C behaves.
 
-I reached out to Torsten Manz by e-mail to explain the bug and this fix in detail,
+I reached out to Torsten Manz by e-mail to explain the bug and fix in detail,
 but, he strongly suggests that although he gets several requests to fix it, that
 it is working as designed, and it is not a priority to be fixed.
 
@@ -37,13 +39,14 @@ any later version.
 A Feature, really?
 ==================
 
-Torsten Manz believes his software is accurately simulating the behavior of the
-real HP-15C calculator by dropping keystrokes.
+Torsten Manz strongly suggests his software is accurately simulating the behavior
+of the real HP-15C calculator by dropping keystrokes if typed "too quickly" as
+described in his FAQ and in private response to my e-mail below.
 
 On an HP-12C I can slowly press down '1', and while still holding it down,
 press and hold down '2'. Then, release '1' and '2' in that order. This
 "galloping" motion can be performed at speeds approximately three to five
-times faster than what the software emulation bug allows:
+times faster on a real calculator than what Torsten's software allows:
 
 .. image:: HP-12CLosslessKeystrokes.gif
 
@@ -56,10 +59,10 @@ No binary distributions are released, run the source directly, for example::
 
 <<<<<<< HEAD
 
-Details of Bugfix 
+Details of Bugfix
 =================
 
-In this Video, with bugfix applied, numbers 3 and 1 are typed very rapidly without loss:
+With bugfix applied, keystrokes are not lost. This is a video of numbers 3 and 1 are typed very rapidly, in succession, without loss:
 
 .. image:: HP-15CsimImproved.gif
 
@@ -109,8 +112,6 @@ any later version.
 Licensing
 =========
 
-Jeff's Own HP-15C Simulator is a Modified Version of HP-15C 5.0.01 by Torsten Manz.
-
 (c) 1997-2025 Torsten Manz
 (c) 2025 Jeff Quast <contact@jeffquast.com>
 
@@ -127,7 +128,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
----
-This is a modified version of the original software.
+Jeff's Own HP-15C Simulator is a Modified Version of the original software, HP-15C 5.0.01, by Torsten Manz.
 The source code for this program is available at https://github.com/jquast/HP-15C/.
 The original source code can be found at https://hp-15c-simulator.de/.
