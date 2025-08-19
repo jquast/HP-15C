@@ -7,12 +7,7 @@ bug, that **keyboard input is lost** with casual keyboard use.
 The Bug
 =======
 
-In this Video, numbers 3 and 1 are typed in rapid succession, but, the number
-'1' is discarded.
-
-.. image:: HP-15CsimOrig.gif
-
-In this Video, numbers 3 and 1 are typed, but the number '1' is discarded.
+In this Video, numbers '3' and '1' are typed in succession, but, the number '1' keeps getting discarded discarded.
 
 .. image:: HP-15CsimOrig.gif
 
@@ -45,10 +40,10 @@ A Feature, really?
 Torsten Manz believes his software is accurately simulating the behavior of the
 real HP-15C calculator by dropping keystrokes.
 
-On an HP-12C I can slowly press down 1️⃣, and while still holding it down,
-press and hold down 2️⃣. Then, release 1️⃣ and 2️⃣ in that order. This
-"galloping" motion can be performed at speeds approximately three times
-faster than what the software emulation bug discards input for:
+On an HP-12C I can slowly press down '1', and while still holding it down,
+press and hold down '2'. Then, release '1' and '2' in that order. This
+"galloping" motion can be performed at speeds approximately three to five
+times faster than what the software emulation bug allows:
 
 .. image:: HP-12CLosslessKeystrokes.gif
 
