@@ -27,7 +27,7 @@ The Fix
 =======
 
 With the bugfix applied to HP-15.tcl in this repository, numbers 3 and 1 are typed
-very rapidly without loss and displayed in this video:
+very rapidly without loss, displayed in this video:
 
 .. image:: HP-15CsimImproved.gif
 
