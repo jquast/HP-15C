@@ -1,9 +1,14 @@
 Jeff's Own HP-15C Simulator
 ---------------------------
 
-This is a fork of the `HP-15C <https://hp-15c-simulator.de/>`_ to fix one single bug: that keyboard input is lost.
+This is a fork of the `HP-15C <https://hp-15c-simulator.de/>`_ to fix one single
+bug, that **keyboard input is lost** with casual keyboard use. 
 
-In this Video, numbers 3 and 1 are typed, but the number '1' is discarded.
+The Bug
+=======
+
+In this Video, numbers 3 and 1 are typed in rapid succession, but, the number
+'1' is discarded.
 
 .. image:: HP-15CsimOrig.gif
 
@@ -11,18 +16,37 @@ From Torsten's `FAQ <https://hp-15c-simulator.de/FAQ>`_:
 
    > If I rapidly type a sequence of numbers, the entered keyboard number(s) are ignored. For example, if I type 123 quickly, the 2 is missed and I get 13 on the display.
 
-   >  While a key on the computer keyboard is being pressed, all other key presses are ignored. When you pressed the 2️⃣, you were still holding down the 1️⃣. This is exactly how the real HP-15C behaves.
+   > While a key on the computer keyboard is being pressed, all other key presses are ignored. When you pressed the 2️⃣, you were still holding down the 1️⃣. This is exactly how the real HP-15C behaves.
 
-I reached out to Torsten Manz in many successive e-mails to explain in detail that the TCL/TK discarding rapid successive inputs is a bug, but he strongly suggests that although he gets several requests to fix it, that it is working as designed, it is a more exacting emulated behavior of the HP-15C, and it is not a priority to be fixed.
+I reached out to Torsten Manz by e-mail to explain the bug and this fix in detail,
+but, he strongly suggests that although he gets several requests to fix it, that
+it is working as designed, and it is not a priority to be fixed.
 
-I suggest that a calculator should NEVER discard keyboard input when typed "too quickly", causes miscalculations, and should be considered a **high priority bug and not a feature**.
+The Fix
+=======
 
-The Feature
-===========
+With the bugfix applied to HP-15.tcl in this repository, numbers 3 and 1 are typed
+very rapidly without loss and displayed in this video:
 
-Further, after studying the source code I believe the emulated behavior of blocking *subsequent* keys 30ms after any keypress is also a bug, that this behavior is not found in the real calculator, and that the TCL/TK code by Mr. Torsten makes an incorrect determination of converting rapid simultanous keypresses into blocking multi-presses as suggested.
+.. image:: HP-15CsimImproved.gif
 
-On a Genuine HP-12C I can slowly press down 1️⃣, and while still holding it down, press and hold down 2️⃣. Then, release 1️⃣ and 2️⃣ in that order. I do not belive that a genuine HP-15C will be any different when done quickly.
+This repository is a full copy of the source code, Version 5.0.01, with the
+patch applied for your convenience. You may also attempt to apply the patch file
+`bugfix-HP-15C-keystrokes-lost.patch <bugfix-HP-15C-keystrokes-lost.patch>`_ to
+any later version.
+
+A Feature, really?
+==================
+
+Torsten Manz believes his software is accurately simulating the behavior of the
+real HP-15C calculator by dropping keystrokes.
+
+On an HP-12C I can slowly press down 1️⃣, and while still holding it down,
+press and hold down 2️⃣. Then, release 1️⃣ and 2️⃣ in that order. This
+"galloping" motion can be performed at speeds approximately three times
+faster than what the software emulation bug discards input for:
+
+.. image:: HP-12CLosslessKeystrokes.gif
 
 Installing
 ==========
@@ -31,12 +55,8 @@ No binary distributions are released, run the source directly, for example::
 
     tclsh HP-15.tcl
 
-Details of Bugfix 
-=================
-
-In this Video, with bugfix applied, numbers 3 and 1 are typed very rapidly without loss:
-
-.. image:: HP-15CsimImproved.gif
+The Details
+===========
 
 The fix is described below,
 
@@ -75,11 +95,6 @@ The fix is described below,
      Cheers,
      Jeff Quast
      contact@jeffquast.com
-
-This repository is a full copy of the source code, Version 5.0.01,
-provided for your convenience. You may also attempt to apply the patch,
-`bugfix-HP-15C-keystrokes-lost.patch <bugfix-HP-15C-keystrokes-lost.patch>`_ to
-any later version.
 
 Licensing
 =========
