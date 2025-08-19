@@ -60,7 +60,9 @@ No binary distributions are released, run the source directly, for example::
 Details of Bugfix
 =================
 
-With bugfix applied, keystrokes are not lost. This is a video of numbers 3 and 1 are typed very rapidly, in succession, without loss:
+With the bugfix applied in this repository, keystrokes are not lost.
+
+A video of numbers '3' and '1' typed very rapidly, in succession:
 
 .. image:: HP-15CsimImproved.gif
 
