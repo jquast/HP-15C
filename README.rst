@@ -57,8 +57,6 @@ No binary distributions are released, run the source directly, for example::
 
     tclsh HP-15.tcl
 
-<<<<<<< HEAD
-
 Details of Bugfix
 =================
 
